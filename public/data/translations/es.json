@@ -1,0 +1,16 @@
+{
+  "nav.home": "Inicio",
+  "nav.menu": "Carta",
+  "nav.gallery": "Galería",
+  "nav.contact": "Contacto",
+  "hero.title": "Cocina de Autor",
+  "hero.subtitle": "Una experiencia gastronómica inolvidable",
+  "hero.cta": "Reservar Mesa",
+  "menu.title": "Nuestra Carta",
+  "menu.subtitle": "Elaborada con pasión",
+  "contact.address": "Dirección",
+  "contact.phone": "Teléfono",
+  "contact.email": "Correo",
+  "footer.copyright": "Todos los derechos reservados"
+}
+

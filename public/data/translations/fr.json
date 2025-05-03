@@ -1,0 +1,16 @@
+{
+  "nav.home": "Accueil",
+  "nav.menu": "Carte",
+  "nav.gallery": "Galerie",
+  "nav.contact": "Contact",
+  "hero.title": "Cuisine de Signature",
+  "hero.subtitle": "Une expérience gastronomique inoubliable",
+  "hero.cta": "Réserver une Table",
+  "menu.title": "Notre Carte",
+  "menu.subtitle": "Élaborée avec passion",
+  "contact.address": "Adresse",
+  "contact.phone": "Téléphone",
+  "contact.email": "Email",
+  "footer.copyright": "Tous droits réservés"
+}
+

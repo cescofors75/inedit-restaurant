@@ -1,0 +1,165 @@
+{
+  "home": {
+    "id": "home-page",
+    "title": {
+      "en": "INÈDIT Restaurant - Home",
+      "es": "INÈDIT Restaurant - Inicio",
+      "ca": "INÈDIT Restaurant - Inici",
+      "fr": "[TRANSLATE TO FRENCH: INÈDIT Restaurant - Inicio]",
+      "it": "[TRANSLATE TO ITALIAN: INÈDIT Restaurant - Inicio]",
+      "de": "[TRANSLATE TO GERMAN: INÈDIT Restaurant - Inicio]",
+      "ru": "[TRANSLATE TO RUSSIAN: INÈDIT Restaurant - Inicio]"
+    },
+    "slug": "home",
+    "content": {
+      "welcome": {
+        "en": "Welcome to INÈDIT Restaurant",
+        "es": "Bienvenido a INÈDIT Restaurant",
+        "ca": "Benvingut a INÈDIT Restaurant",
+        "fr": "[TRANSLATE TO FRENCH: Bienvenido a INÈDIT Restaurant]",
+        "it": "[TRANSLATE TO ITALIAN: Bienvenido a INÈDIT Restaurant]",
+        "de": "[TRANSLATE TO GERMAN: Bienvenido a INÈDIT Restaurant]",
+        "ru": "[TRANSLATE TO RUSSIAN: Bienvenido a INÈDIT Restaurant]"
+      },
+      "description": {
+        "en": "Experience exceptional signature cuisine in a unique atmosphere",
+        "es": "Experimenta una cocina de autor excepcional en un ambiente único",
+        "ca": "Experimenta una cuina d'autor excepcional en un ambient únic",
+        "fr": "[TRANSLATE TO FRENCH: Experimenta una cocina de autor excepcional en un ambiente único]",
+        "it": "[TRANSLATE TO ITALIAN: Experimenta una cocina de autor excepcional en un ambiente único]",
+        "de": "[TRANSLATE TO GERMAN: Experimenta una cocina de autor excepcional en un ambiente único]",
+        "ru": "[TRANSLATE TO RUSSIAN: Experimenta una cocina de autor excepcional en un ambiente único]"
+      }
+    },
+    "seo": {
+      "title": {
+        "en": "INÈDIT | Signature Cuisine Restaurant",
+        "es": "INÈDIT | Restaurante de Cocina de Autor",
+        "ca": "INÈDIT | Restaurant de Cuina d'Autor",
+        "fr": "[TRANSLATE TO FRENCH: INÈDIT | Restaurante de Cocina de Autor]",
+        "it": "[TRANSLATE TO ITALIAN: INÈDIT | Restaurante de Cocina de Autor]",
+        "de": "[TRANSLATE TO GERMAN: INÈDIT | Restaurante de Cocina de Autor]",
+        "ru": "[TRANSLATE TO RUSSIAN: INÈDIT | Restaurante de Cocina de Autor]"
+      },
+      "description": {
+        "en": "Experience exceptional signature cuisine in a unique atmosphere",
+        "es": "Experimenta una cocina de autor excepcional en un ambiente único",
+        "ca": "Experimenta una cuina d'autor excepcional en un ambient únic",
+        "fr": "[TRANSLATE TO FRENCH: Experimenta una cocina de autor excepcional en un ambiente único]",
+        "it": "[TRANSLATE TO ITALIAN: Experimenta una cocina de autor excepcional en un ambiente único]",
+        "de": "[TRANSLATE TO GERMAN: Experimenta una cocina de autor excepcional en un ambiente único]",
+        "ru": "[TRANSLATE TO RUSSIAN: Experimenta una cocina de autor excepcional en un ambiente único]"
+      },
+      "keywords": ["restaurant", "signature cuisine", "gourmet", "fine dining"]
+    }
+  },
+  "menu": {
+    "id": "menu-page",
+    "title": {
+      "en": "Our Menu",
+      "es": "Nuestra Carta",
+      "ca": "La Nostra Carta",
+      "fr": "[TRANSLATE TO FRENCH: Nuestra Carta]",
+      "it": "[TRANSLATE TO ITALIAN: Nuestra Carta]",
+      "de": "[TRANSLATE TO GERMAN: Nuestra Carta]",
+      "ru": "[TRANSLATE TO RUSSIAN: Nuestra Carta]"
+    },
+    "slug": "menu",
+    "content": {
+      "intro": {
+        "en": "Discover our seasonal menu",
+        "es": "Descubre nuestro menú de temporada",
+        "ca": "Descobreix el nostre menú de temporada",
+        "fr": "[TRANSLATE TO FRENCH: Descubre nuestro menú de temporada]",
+        "it": "[TRANSLATE TO ITALIAN: Descubre nuestro menú de temporada]",
+        "de": "[TRANSLATE TO GERMAN: Descubre nuestro menú de temporada]",
+        "ru": "[TRANSLATE TO RUSSIAN: Descubre nuestro menú de temporada]"
+      },
+      "note": {
+        "en": "All dishes are prepared with locally sourced ingredients",
+        "es": "Todos los platos están preparados con ingredientes locales",
+        "ca": "Tots els plats estan preparats amb ingredients locals",
+        "fr": "[TRANSLATE TO FRENCH: Todos los platos están preparados con ingredientes locales]",
+        "it": "[TRANSLATE TO ITALIAN: Todos los platos están preparados con ingredientes locales]",
+        "de": "[TRANSLATE TO GERMAN: Todos los platos están preparados con ingredientes locales]",
+        "ru": "[TRANSLATE TO RUSSIAN: Todos los platos están preparados con ingredientes locales]"
+      }
+    },
+    "seo": {
+      "title": {
+        "en": "Menu | INÈDIT Restaurant",
+        "es": "Carta | INÈDIT Restaurant",
+        "ca": "Carta | INÈDIT Restaurant",
+        "fr": "[TRANSLATE TO FRENCH: Carta | INÈDIT Restaurant]",
+        "it": "[TRANSLATE TO ITALIAN: Carta | INÈDIT Restaurant]",
+        "de": "[TRANSLATE TO GERMAN: Carta | INÈDIT Restaurant]",
+        "ru": "[TRANSLATE TO RUSSIAN: Carta | INÈDIT Restaurant]"
+      },
+      "description": {
+        "en": "Explore our seasonal and signature dishes",
+        "es": "Explora nuestros platos de temporada y de autor",
+        "ca": "Explora els nostres plats de temporada i d'autor",
+        "fr": "[TRANSLATE TO FRENCH: Explora nuestros platos de temporada y de autor]",
+        "it": "[TRANSLATE TO ITALIAN: Explora nuestros platos de temporada y de autor]",
+        "de": "[TRANSLATE TO GERMAN: Explora nuestros platos de temporada y de autor]",
+        "ru": "[TRANSLATE TO RUSSIAN: Explora nuestros platos de temporada y de autor]"
+      },
+      "keywords": ["menu", "food", "cuisine", "dishes"]
+    }
+  },
+  "contact": {
+    "id": "contact-page",
+    "title": {
+      "en": "Contact Us",
+      "es": "Contacto",
+      "ca": "Contacte",
+      "fr": "[TRANSLATE TO FRENCH: Contacto]",
+      "it": "[TRANSLATE TO ITALIAN: Contacto]",
+      "de": "[TRANSLATE TO GERMAN: Contacto]",
+      "ru": "[TRANSLATE TO RUSSIAN: Contacto]"
+    },
+    "slug": "contact",
+    "content": {
+      "intro": {
+        "en": "Get in touch with us",
+        "es": "Ponte en contacto con nosotros",
+        "ca": "Posa't en contacte amb nosaltres",
+        "fr": "[TRANSLATE TO FRENCH: Ponte en contacto con nosotros]",
+        "it": "[TRANSLATE TO ITALIAN: Ponte en contacto con nosotros]",
+        "de": "[TRANSLATE TO GERMAN: Ponte en contacto con nosotros]",
+        "ru": "[TRANSLATE TO RUSSIAN: Ponte en contacto con nosotros]"
+      },
+      "details": {
+        "en": "We'd love to hear from you and answer any questions you may have",
+        "es": "Nos encantaría saber de ti y responder cualquier pregunta que puedas tener",
+        "ca": "Ens encantaria saber de tu i respondre qualsevol pregunta que puguis tenir",
+        "fr": "[TRANSLATE TO FRENCH: Nos encantaría saber de ti y responder cualquier pregunta que puedas tener]",
+        "it": "[TRANSLATE TO ITALIAN: Nos encantaría saber de ti y responder cualquier pregunta que puedas tener]",
+        "de": "[TRANSLATE TO GERMAN: Nos encantaría saber de ti y responder cualquier pregunta que puedas tener]",
+        "ru": "[TRANSLATE TO RUSSIAN: Nos encantaría saber de ti y responder cualquier pregunta que puedas tener]"
+      }
+    },
+    "seo": {
+      "title": {
+        "en": "Contact | INÈDIT Restaurant",
+        "es": "Contacto | INÈDIT Restaurant",
+        "ca": "Contacte | INÈDIT Restaurant",
+        "fr": "[TRANSLATE TO FRENCH: Contacto | INÈDIT Restaurant]",
+        "it": "[TRANSLATE TO ITALIAN: Contacto | INÈDIT Restaurant]",
+        "de": "[TRANSLATE TO GERMAN: Contacto | INÈDIT Restaurant]",
+        "ru": "[TRANSLATE TO RUSSIAN: Contacto | INÈDIT Restaurant]"
+      },
+      "description": {
+        "en": "Find our location and contact information",
+        "es": "Encuentra nuestra ubicación e información de contacto",
+        "ca": "Troba la nostra ubicació i informació de contacte",
+        "fr": "[TRANSLATE TO FRENCH: Encuentra nuestra ubicación e información de contacto]",
+        "it": "[TRANSLATE TO ITALIAN: Encuentra nuestra ubicación e información de contacto]",
+        "de": "[TRANSLATE TO GERMAN: Encuentra nuestra ubicación e información de contacto]",
+        "ru": "[TRANSLATE TO RUSSIAN: Encuentra nuestra ubicación e información de contacto]"
+      },
+      "keywords": ["contact", "location", "reservation", "find us"]
+    }
+  }
+}
+

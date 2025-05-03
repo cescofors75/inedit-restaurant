@@ -1,0 +1,16 @@
+{
+  "nav.home": "Home",
+  "nav.menu": "Menu",
+  "nav.gallery": "Gallery",
+  "nav.contact": "Contact",
+  "hero.title": "Signature Cuisine",
+  "hero.subtitle": "An unforgettable dining experience",
+  "hero.cta": "Book a Table",
+  "menu.title": "Our Menu",
+  "menu.subtitle": "Crafted with passion",
+  "contact.address": "Address",
+  "contact.phone": "Phone",
+  "contact.email": "Email",
+  "footer.copyright": "All rights reserved"
+}
+

@@ -1,0 +1,71 @@
+{
+  "images": [
+    {
+      "id": "gallery-1",
+      "title": {
+        "en": "Restaurant Interior",
+        "es": "Interior del Restaurante",
+        "ca": "Interior del Restaurant",
+        "fr": "[TRANSLATE TO FRENCH: Interior del Restaurante]",
+        "it": "[TRANSLATE TO ITALIAN: Interior del Restaurante]",
+        "de": "[TRANSLATE TO GERMAN: Interior del Restaurante]",
+        "ru": "[TRANSLATE TO RUSSIAN: Interior del Restaurante]"
+      },
+      "description": {
+        "en": "The elegant dining room",
+        "es": "El elegante comedor",
+        "ca": "L'elegant menjador",
+        "fr": "[TRANSLATE TO FRENCH: El elegante comedor]",
+        "it": "[TRANSLATE TO ITALIAN: El elegante comedor]",
+        "de": "[TRANSLATE TO GERMAN: El elegante comedor]",
+        "ru": "[TRANSLATE TO RUSSIAN: El elegante comedor]"
+      },
+      "image": "/images/gallery/interior.jpg"
+    },
+    {
+      "id": "gallery-2",
+      "title": {
+        "en": "Signature Dish",
+        "es": "Plato Estrella",
+        "ca": "Plat Estrella",
+        "fr": "[TRANSLATE TO FRENCH: Plato Estrella]",
+        "it": "[TRANSLATE TO ITALIAN: Plato Estrella]",
+        "de": "[TRANSLATE TO GERMAN: Plato Estrella]",
+        "ru": "[TRANSLATE TO RUSSIAN: Plato Estrella]"
+      },
+      "description": {
+        "en": "Our chef's special creation",
+        "es": "La creación especial de nuestro chef",
+        "ca": "La creació especial del nostre xef",
+        "fr": "[TRANSLATE TO FRENCH: La creación especial de nuestro chef]",
+        "it": "[TRANSLATE TO ITALIAN: La creación especial de nuestro chef]",
+        "de": "[TRANSLATE TO GERMAN: La creación especial de nuestro chef]",
+        "ru": "[TRANSLATE TO RUSSIAN: La creación especial de nuestro chef]"
+      },
+      "image": "/images/gallery/dish.jpg"
+    },
+    {
+      "id": "gallery-3",
+      "title": {
+        "en": "Bar Area",
+        "es": "Zona de Bar",
+        "ca": "Zona de Bar",
+        "fr": "[TRANSLATE TO FRENCH: Zona de Bar]",
+        "it": "[TRANSLATE TO ITALIAN: Zona de Bar]",
+        "de": "[TRANSLATE TO GERMAN: Zona de Bar]",
+        "ru": "[TRANSLATE TO RUSSIAN: Zona de Bar]"
+      },
+      "description": {
+        "en": "Enjoy a pre-dinner drink",
+        "es": "Disfruta de una copa antes de cenar",
+        "ca": "Gaudeix d'una copa abans de sopar",
+        "fr": "[TRANSLATE TO FRENCH: Disfruta de una copa antes de cenar]",
+        "it": "[TRANSLATE TO ITALIAN: Disfruta de una copa antes de cenar]",
+        "de": "[TRANSLATE TO GERMAN: Disfruta de una copa antes de cenar]",
+        "ru": "[TRANSLATE TO RUSSIAN: Disfruta de una copa antes de cenar]"
+      },
+      "image": "/images/gallery/bar.jpg"
+    }
+  ]
+}
+

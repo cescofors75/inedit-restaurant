@@ -1,0 +1,214 @@
+{
+  "categories": [
+    {
+      "id": "starters",
+      "name": {
+        "en": "Starters",
+        "es": "Entrantes",
+        "ca": "Entrants",
+        "fr": "[TRANSLATE TO FRENCH: Entrantes]",
+        "it": "[TRANSLATE TO ITALIAN: Entrantes]",
+        "de": "[TRANSLATE TO GERMAN: Entrantes]",
+        "ru": "[TRANSLATE TO RUSSIAN: Entrantes]"
+      },
+      "slug": "starters",
+      "description": {
+        "en": "Begin your culinary journey",
+        "es": "Comienza tu viaje culinario",
+        "ca": "Comença el teu viatge culinari",
+        "fr": "[TRANSLATE TO FRENCH: Comienza tu viaje culinario]",
+        "it": "[TRANSLATE TO ITALIAN: Comienza tu viaje culinario]",
+        "de": "[TRANSLATE TO GERMAN: Comienza tu viaje culinario]",
+        "ru": "[TRANSLATE TO RUSSIAN: Comienza tu viaje culinario]"
+      }
+    },
+    {
+      "id": "mains",
+      "name": {
+        "en": "Main Courses",
+        "es": "Platos Principales",
+        "ca": "Plats Principals",
+        "fr": "[TRANSLATE TO FRENCH: Platos Principales]",
+        "it": "[TRANSLATE TO ITALIAN: Platos Principales]",
+        "de": "[TRANSLATE TO GERMAN: Platos Principales]",
+        "ru": "[TRANSLATE TO RUSSIAN: Platos Principales]"
+      },
+      "slug": "mains",
+      "description": {
+        "en": "Signature dishes",
+        "es": "Platos de autor",
+        "ca": "Plats d'autor",
+        "fr": "[TRANSLATE TO FRENCH: Platos de autor]",
+        "it": "[TRANSLATE TO ITALIAN: Platos de autor]",
+        "de": "[TRANSLATE TO GERMAN: Platos de autor]",
+        "ru": "[TRANSLATE TO RUSSIAN: Platos de autor]"
+      }
+    },
+    {
+      "id": "desserts",
+      "name": {
+        "en": "Desserts",
+        "es": "Postres",
+        "ca": "Postres",
+        "fr": "[TRANSLATE TO FRENCH: Postres]",
+        "it": "[TRANSLATE TO ITALIAN: Postres]",
+        "de": "[TRANSLATE TO GERMAN: Postres]",
+        "ru": "[TRANSLATE TO RUSSIAN: Postres]"
+      },
+      "slug": "desserts",
+      "description": {
+        "en": "Sweet endings",
+        "es": "Dulces finales",
+        "ca": "Dolços finals",
+        "fr": "[TRANSLATE TO FRENCH: Dulces finales]",
+        "it": "[TRANSLATE TO ITALIAN: Dulces finales]",
+        "de": "[TRANSLATE TO GERMAN: Dulces finales]",
+        "ru": "[TRANSLATE TO RUSSIAN: Dulces finales]"
+      }
+    }
+  ],
+  "items": [
+    {
+      "id": "tuna-tataki",
+      "name": {
+        "en": "Tuna Tataki",
+        "es": "Tataki de Atún",
+        "ca": "Tataki de Tonyina",
+        "fr": "[TRANSLATE TO FRENCH: Tataki de Atún]",
+        "it": "[TRANSLATE TO ITALIAN: Tataki de Atún]",
+        "de": "[TRANSLATE TO GERMAN: Tataki de Atún]",
+        "ru": "[TRANSLATE TO RUSSIAN: Tataki de Atún]"
+      },
+      "description": {
+        "en": "Lightly seared tuna with sesame crust",
+        "es": "Atún ligeramente sellado con costra de sésamo",
+        "ca": "Tonyina lleugerament segellada amb crosta de sèsam",
+        "fr": "[TRANSLATE TO FRENCH: Atún ligeramente sellado con costra de sésamo]",
+        "it": "[TRANSLATE TO ITALIAN: Atún ligeramente sellado con costra de sésamo]",
+        "de": "[TRANSLATE TO GERMAN: Atún ligeramente sellado con costra de sésamo]",
+        "ru": "[TRANSLATE TO RUSSIAN: Atún ligeramente sellado con costra de sésamo]"
+      },
+      "price": "18",
+      "categoryId": "starters",
+      "image": "/images/menu/tuna-tataki.jpg"
+    },
+    {
+      "id": "tomato-salad",
+      "name": {
+        "en": "Heirloom Tomato Salad",
+        "es": "Ensalada de Tomate de Herencia",
+        "ca": "Amanida de Tomàquet d'Herència",
+        "fr": "[TRANSLATE TO FRENCH: Ensalada de Tomate de Herencia]",
+        "it": "[TRANSLATE TO ITALIAN: Ensalada de Tomate de Herencia]",
+        "de": "[TRANSLATE TO GERMAN: Ensalada de Tomate de Herencia]",
+        "ru": "[TRANSLATE TO RUSSIAN: Ensalada de Tomate de Herencia]"
+      },
+      "description": {
+        "en": "With buffalo mozzarella and basil",
+        "es": "Con mozzarella de búfala y albahaca",
+        "ca": "Amb mozzarella de búfala i alfàbrega",
+        "fr": "[TRANSLATE TO FRENCH: Con mozzarella de búfala y albahaca]",
+        "it": "[TRANSLATE TO ITALIAN: Con mozzarella de búfala y albahaca]",
+        "de": "[TRANSLATE TO GERMAN: Con mozzarella de búfala y albahaca]",
+        "ru": "[TRANSLATE TO RUSSIAN: Con mozzarella de búfala y albahaca]"
+      },
+      "price": "14",
+      "categoryId": "starters"
+    },
+    {
+      "id": "iberian-pork",
+      "name": {
+        "en": "Iberian Pork",
+        "es": "Cerdo Ibérico",
+        "ca": "Porc Ibèric",
+        "fr": "[TRANSLATE TO FRENCH: Cerdo Ibérico]",
+        "it": "[TRANSLATE TO ITALIAN: Cerdo Ibérico]",
+        "de": "[TRANSLATE TO GERMAN: Cerdo Ibérico]",
+        "ru": "[TRANSLATE TO RUSSIAN: Cerdo Ibérico]"
+      },
+      "description": {
+        "en": "With potato purée and seasonal vegetables",
+        "es": "Con puré de patata y verduras de temporada",
+        "ca": "Amb puré de patata i verdures de temporada",
+        "fr": "[TRANSLATE TO FRENCH: Con puré de patata y verduras de temporada]",
+        "it": "[TRANSLATE TO ITALIAN: Con puré de patata y verduras de temporada]",
+        "de": "[TRANSLATE TO GERMAN: Con puré de patata y verduras de temporada]",
+        "ru": "[TRANSLATE TO RUSSIAN: Con puré de patata y verduras de temporada]"
+      },
+      "price": "24",
+      "categoryId": "mains",
+      "image": "/images/menu/pork.jpg"
+    },
+    {
+      "id": "seabass",
+      "name": {
+        "en": "Mediterranean Sea Bass",
+        "es": "Lubina Mediterránea",
+        "ca": "Llobarro Mediterrani",
+        "fr": "[TRANSLATE TO FRENCH: Lubina Mediterránea]",
+        "it": "[TRANSLATE TO ITALIAN: Lubina Mediterránea]",
+        "de": "[TRANSLATE TO GERMAN: Lubina Mediterránea]",
+        "ru": "[TRANSLATE TO RUSSIAN: Lubina Mediterránea]"
+      },
+      "description": {
+        "en": "With fennel and citrus",
+        "es": "Con hinojo y cítricos",
+        "ca": "Amb fonoll i cítrics",
+        "fr": "[TRANSLATE TO FRENCH: Con hinojo y cítricos]",
+        "it": "[TRANSLATE TO ITALIAN: Con hinojo y cítricos]",
+        "de": "[TRANSLATE TO GERMAN: Con hinojo y cítricos]",
+        "ru": "[TRANSLATE TO RUSSIAN: Con hinojo y cítricos]"
+      },
+      "price": "26",
+      "categoryId": "mains"
+    },
+    {
+      "id": "chocolate-souffle",
+      "name": {
+        "en": "Chocolate Soufflé",
+        "es": "Soufflé de Chocolate",
+        "ca": "Soufflé de Xocolata",
+        "fr": "[TRANSLATE TO FRENCH: Soufflé de Chocolate]",
+        "it": "[TRANSLATE TO ITALIAN: Soufflé de Chocolate]",
+        "de": "[TRANSLATE TO GERMAN: Soufflé de Chocolate]",
+        "ru": "[TRANSLATE TO RUSSIAN: Soufflé de Chocolate]"
+      },
+      "description": {
+        "en": "With vanilla ice cream",
+        "es": "Con helado de vainilla",
+        "ca": "Amb gelat de vainilla",
+        "fr": "[TRANSLATE TO FRENCH: Con helado de vainilla]",
+        "it": "[TRANSLATE TO ITALIAN: Con helado de vainilla]",
+        "de": "[TRANSLATE TO GERMAN: Con helado de vainilla]",
+        "ru": "[TRANSLATE TO RUSSIAN: Con helado de vainilla]"
+      },
+      "price": "12",
+      "categoryId": "desserts",
+      "image": "/images/menu/chocolate-souffle.jpg"
+    },
+    {
+      "id": "cheesecake",
+      "name": {
+        "en": "Basque Cheesecake",
+        "es": "Pastel de Queso Vasco",
+        "ca": "Pastís de Formatge Basc",
+        "fr": "[TRANSLATE TO FRENCH: Pastel de Queso Vasco]",
+        "it": "[TRANSLATE TO ITALIAN: Pastel de Queso Vasco]",
+        "de": "[TRANSLATE TO GERMAN: Pastel de Queso Vasco]",
+        "ru": "[TRANSLATE TO RUSSIAN: Pastel de Queso Vasco]"
+      },
+      "description": {
+        "en": "With berry compote",
+        "es": "Con compota de bayas",
+        "ca": "Amb compota de baies",
+        "fr": "[TRANSLATE TO FRENCH: Con compota de bayas]",
+        "it": "[TRANSLATE TO ITALIAN: Con compota de bayas]",
+        "de": "[TRANSLATE TO GERMAN: Con compota de bayas]",
+        "ru": "[TRANSLATE TO RUSSIAN: Con compota de bayas]"
+      },
+      "price": "10",
+      "categoryId": "desserts"
+    }
+  ]
+}
+

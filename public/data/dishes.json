@@ -1,0 +1,99 @@
+[
+  {
+    "id": "dish1",
+    "name": {
+      "en": "Seafood Paella",
+      "es": "Paella de Marisco",
+      "ca": "Paella de Marisc",
+      "fr": "[TRANSLATE TO FRENCH: Paella de Marisco]",
+      "it": "[TRANSLATE TO ITALIAN: Paella de Marisco]",
+      "de": "[TRANSLATE TO GERMAN: Paella de Marisco]",
+      "ru": "[TRANSLATE TO RUSSIAN: Paella de Marisco]"
+    },
+    "description": {
+      "en": "Authentic paella with the best fresh seafood from the Mediterranean.",
+      "es": "Auténtica paella con los mejores mariscos frescos del Mediterráneo.",
+      "ca": "Autèntica paella amb els millors mariscs frescos del Mediterrani.",
+      "fr": "[TRANSLATE TO FRENCH: Auténtica paella con los mejores mariscos frescos del Mediterráneo.]",
+      "it": "[TRANSLATE TO ITALIAN: Auténtica paella con los mejores mariscos frescos del Mediterráneo.]",
+      "de": "[TRANSLATE TO GERMAN: Auténtica paella con los mejores mariscos frescos del Mediterráneo.]",
+      "ru": "[TRANSLATE TO RUSSIAN: Auténtica paella con los mejores mariscos frescos del Mediterráneo.]"
+    },
+    "price": "22.50",
+    "category": "main",
+    "image": "/images/dishes/paella.jpg"
+  },
+  {
+    "id": "dish2",
+    "name": {
+      "en": "Galician Octopus",
+      "es": "Pulpo a la Gallega",
+      "ca": "Pop a la Gallega",
+      "fr": "[TRANSLATE TO FRENCH: Pulpo a la Gallega]",
+      "it": "[TRANSLATE TO ITALIAN: Pulpo a la Gallega]",
+      "de": "[TRANSLATE TO GERMAN: Pulpo a la Gallega]",
+      "ru": "[TRANSLATE TO RUSSIAN: Pulpo a la Gallega]"
+    },
+    "description": {
+      "en": "Cooked octopus served with potatoes, paprika and olive oil.",
+      "es": "Pulpo cocido servido con patatas, pimentón y aceite de oliva.",
+      "ca": "Pop cuit servit amb patates, pebre vermell i oli d'oliva.",
+      "fr": "[TRANSLATE TO FRENCH: Pulpo cocido servido con patatas, pimentón y aceite de oliva.]",
+      "it": "[TRANSLATE TO ITALIAN: Pulpo cocido servido con patatas, pimentón y aceite de oliva.]",
+      "de": "[TRANSLATE TO GERMAN: Pulpo cocido servido con patatas, pimentón y aceite de oliva.]",
+      "ru": "[TRANSLATE TO RUSSIAN: Pulpo cocido servido con patatas, pimentón y aceite de oliva.]"
+    },
+    "price": "18.00",
+    "category": "starters",
+    "image": "/images/dishes/pulpo.jpg"
+  },
+  {
+    "id": "dish3",
+    "name": {
+      "en": "Catalan Cream",
+      "es": "Crema Catalana",
+      "ca": "Crema Catalana",
+      "fr": "[TRANSLATE TO FRENCH: Crema Catalana]",
+      "it": "[TRANSLATE TO ITALIAN: Crema Catalana]",
+      "de": "[TRANSLATE TO GERMAN: Crema Catalana]",
+      "ru": "[TRANSLATE TO RUSSIAN: Crema Catalana]"
+    },
+    "description": {
+      "en": "Traditional Catalan dessert with a caramelized sugar layer.",
+      "es": "Postre tradicional catalán con una capa de azúcar caramelizada.",
+      "ca": "Postre tradicional català amb una capa de sucre caramel·litzada.",
+      "fr": "[TRANSLATE TO FRENCH: Postre tradicional catalán con una capa de azúcar caramelizada.]",
+      "it": "[TRANSLATE TO ITALIAN: Postre tradicional catalán con una capa de azúcar caramelizada.]",
+      "de": "[TRANSLATE TO GERMAN: Postre tradicional catalán con una capa de azúcar caramelizada.]",
+      "ru": "[TRANSLATE TO RUSSIAN: Postre tradicional catalán con una capa de azúcar caramelizada.]"
+    },
+    "price": "7.50",
+    "category": "desserts",
+    "image": "/images/dishes/crema-catalana.jpg"
+  },
+  {
+    "id": "dish4",
+    "name": {
+      "en": "Andalusian Gazpacho",
+      "es": "Gazpacho Andaluz",
+      "ca": "Gaspatxo Andalús",
+      "fr": "[TRANSLATE TO FRENCH: Gazpacho Andaluz]",
+      "it": "[TRANSLATE TO ITALIAN: Gazpacho Andaluz]",
+      "de": "[TRANSLATE TO GERMAN: Gazpacho Andaluz]",
+      "ru": "[TRANSLATE TO RUSSIAN: Gazpacho Andaluz]"
+    },
+    "description": {
+      "en": "Cold tomato, cucumber, pepper, and garlic soup, served with croutons.",
+      "es": "Sopa fría de tomate, pepino, pimiento y ajo, servida con picatostes.",
+      "ca": "Sopa freda de tomàquet, cogombre, pebrot i all, servida amb crostons.",
+      "fr": "[TRANSLATE TO FRENCH: Sopa fría de tomate, pepino, pimiento y ajo, servida con picatostes.]",
+      "it": "[TRANSLATE TO ITALIAN: Sopa fría de tomate, pepino, pimiento y ajo, servida con picatostes.]",
+      "de": "[TRANSLATE TO GERMAN: Sopa fría de tomate, pepino, pimiento y ajo, servida con picatostes.]",
+      "ru": "[TRANSLATE TO RUSSIAN: Sopa fría de tomate, pepino, pimiento y ajo, servida con picatostes.]"
+    },
+    "price": "9.00",
+    "category": "starters",
+    "image": "/images/dishes/gazpacho.jpg"
+  }
+]
+

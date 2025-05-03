@@ -1,0 +1,102 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 39 33% 96%;
+  --primary: 0 0% 11%;
+  --brand: 212 26% 38%;
+  --foreground: 0 0% 11%;
+  --card: 0 0% 100%;
+  --card-foreground: 0 0% 11%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 0 0% 11%;
+  --muted: 210 40% 96.1%;
+  --muted-foreground: 215.4 16.3% 46.9%;
+  --accent: 212 26% 38%;
+  --accent-foreground: 0 0% 100%;
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 0 0% 98%;
+  --border: 214.3 31.8% 91.4%;
+  --input: 214.3 31.8% 91.4%;
+  --ring: 212 26% 38%;
+  --radius: 0.5rem;
+  --selected-color: 212 26% 38%;
+}
+
+.dark {
+  --background: 0 0% 8%;
+  --primary: 0 0% 98%;
+  --brand: 212 50% 50%;
+  --foreground: 0 0% 98%;
+  --card: 0 0% 12%;
+  --card-foreground: 0 0% 98%;
+  --popover: 0 0% 10%;
+  --popover-foreground: 0 0% 98%;
+  --muted: 217.2 32.6% 12%;
+  --muted-foreground: 215 20.2% 65.1%;
+  --accent: 212 50% 50%;
+  --accent-foreground: 0 0% 100%;
+  --destructive: 0 62.8% 30.6%;
+  --destructive-foreground: 0 0% 98%;
+  --border: 217.2 32.6% 20%;
+  --input: 217.2 32.6% 20%;
+  --ring: 212 50% 50%;
+  --selected-color: 212 50% 50%;
+}
+
+@layer base {
+  body {
+    @apply antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-serif;
+  }
+}
+
+@layer components {
+  .container {
+    @apply px-4 mx-auto max-w-7xl sm:px-6 lg:px-8;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center px-6 py-3 text-base font-medium text-white transition-colors duration-300 bg-brand rounded-md hover:bg-brand/90 focus:outline-none focus:ring-2 focus:ring-brand focus:ring-offset-2;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center px-6 py-3 text-base font-medium text-brand transition-colors duration-300 bg-transparent border border-brand rounded-md hover:bg-brand/10 focus:outline-none focus:ring-2 focus:ring-brand focus:ring-offset-2;
+  }
+
+  .section-padding {
+    @apply py-16 md:py-24;
+  }
+
+  .fade-in {
+    @apply transition-opacity duration-500 ease-in-out;
+  }
+}
+
+/* Custom styles for tabs */
+[data-state="active"][class*="TabsTrigger"] {
+  color: white;
+  background-color: var(--selected-color);
+  border-color: var(--selected-color);
+  font-weight: 600;
+}
+
+/* Make tabs scrollable on mobile */
+.TabsList {
+  overflow-x: auto;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+}
+
+.TabsList::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}

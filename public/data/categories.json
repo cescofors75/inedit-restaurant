@@ -1,0 +1,69 @@
+[
+  {
+    "id": "starters",
+    "name": {
+      "en": "Starters",
+      "es": "Entrantes",
+      "ca": "Entrants",
+      "fr": "[TRANSLATE TO FRENCH: Entrantes]",
+      "it": "[TRANSLATE TO ITALIAN: Entrantes]",
+      "de": "[TRANSLATE TO GERMAN: Entrantes]",
+      "ru": "[TRANSLATE TO RUSSIAN: Entrantes]"
+    },
+    "slug": "starters",
+    "description": {
+      "en": "Delicious starters to begin your gastronomic experience.",
+      "es": "Deliciosos entrantes para comenzar tu experiencia gastronómica.",
+      "ca": "Deliciosos entrants per començar la teva experiència gastronòmica.",
+      "fr": "[TRANSLATE TO FRENCH: Deliciosos entrantes para comenzar tu experiencia gastronómica.]",
+      "it": "[TRANSLATE TO ITALIAN: Deliciosos entrantes para comenzar tu experiencia gastronómica.]",
+      "de": "[TRANSLATE TO GERMAN: Deliciosos entrantes para comenzar tu experiencia gastronómica.]",
+      "ru": "[TRANSLATE TO RUSSIAN: Deliciosos entrantes para comenzar tu experiencia gastronómica.]"
+    }
+  },
+  {
+    "id": "main",
+    "name": {
+      "en": "Main Courses",
+      "es": "Platos Principales",
+      "ca": "Plats Principals",
+      "fr": "[TRANSLATE TO FRENCH: Platos Principales]",
+      "it": "[TRANSLATE TO ITALIAN: Platos Principales]",
+      "de": "[TRANSLATE TO GERMAN: Platos Principales]",
+      "ru": "[TRANSLATE TO RUSSIAN: Platos Principales]"
+    },
+    "slug": "main",
+    "description": {
+      "en": "Our exquisite main dishes.",
+      "es": "Nuestros exquisitos platos principales.",
+      "ca": "Els nostres exquisits plats principals.",
+      "fr": "[TRANSLATE TO FRENCH: Nuestros exquisitos platos principales.]",
+      "it": "[TRANSLATE TO ITALIAN: Nuestros exquisitos platos principales.]",
+      "de": "[TRANSLATE TO GERMAN: Nuestros exquisitos platos principales.]",
+      "ru": "[TRANSLATE TO RUSSIAN: Nuestros exquisitos platos principales.]"
+    }
+  },
+  {
+    "id": "desserts",
+    "name": {
+      "en": "Desserts",
+      "es": "Postres",
+      "ca": "Postres",
+      "fr": "[TRANSLATE TO FRENCH: Postres]",
+      "it": "[TRANSLATE TO ITALIAN: Postres]",
+      "de": "[TRANSLATE TO GERMAN: Postres]",
+      "ru": "[TRANSLATE TO RUSSIAN: Postres]"
+    },
+    "slug": "desserts",
+    "description": {
+      "en": "Sweet ending for a perfect meal.",
+      "es": "Final dulce para una comida perfecta.",
+      "ca": "Final dolç per a un àpat perfecte.",
+      "fr": "[TRANSLATE TO FRENCH: Final dulce para una comida perfecta.]",
+      "it": "[TRANSLATE TO ITALIAN: Final dulce para una comida perfecta.]",
+      "de": "[TRANSLATE TO GERMAN: Final dulce para una comida perfecta.]",
+      "ru": "[TRANSLATE TO RUSSIAN: Final dulce para una comida perfecta.]"
+    }
+  }
+]
+

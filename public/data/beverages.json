@@ -1,0 +1,236 @@
+{
+  "categories": [
+    {
+      "id": "wines",
+      "name": {
+        "en": "Wines",
+        "es": "Vinos",
+        "ca": "Vins",
+        "fr": "Vins",
+        "it": "Vini",
+        "de": "Weine",
+        "ru": "Вина"
+      },
+      "slug": "wines",
+      "description": {
+        "en": "Our selection of fine wines",
+        "es": "Nuestra selección de vinos",
+        "ca": "La nostra selecció de vins",
+        "fr": "Notre sélection de vins",
+        "it": "La nostra selezione di vini",
+        "de": "Unsere Auswahl an Weinen",
+        "ru": "Наша коллекция вин"
+      }
+    },
+    {
+      "id": "cocktails",
+      "name": {
+        "en": "Cocktails",
+        "es": "Cócteles",
+        "ca": "Còctels",
+        "fr": "Cocktails",
+        "it": "Cocktail",
+        "de": "Cocktails",
+        "ru": "Коктейли"
+      },
+      "slug": "cocktails",
+      "description": {
+        "en": "Signature and classic cocktails",
+        "es": "Cócteles clásicos y de autor",
+        "ca": "Còctels clàssics i d'autor",
+        "fr": "Cocktails classiques et signature",
+        "it": "Cocktail classici e firmati",
+        "de": "Signature- und klassische Cocktails",
+        "ru": "Фирменные и классические коктейли"
+      }
+    },
+    {
+      "id": "spirits",
+      "name": {
+        "en": "Spirits",
+        "es": "Licores",
+        "ca": "Licors",
+        "fr": "Spiritueux",
+        "it": "Liquori",
+        "de": "Spirituosen",
+        "ru": "Крепкие напитки"
+      },
+      "slug": "spirits",
+      "description": {
+        "en": "Premium spirits and liqueurs",
+        "es": "Licores y destilados premium",
+        "ca": "Licors i destil·lats premium",
+        "fr": "Spiritueux et liqueurs premium",
+        "it": "Liquori e distillati premium",
+        "de": "Premium-Spirituosen und Liköre",
+        "ru": "Элитные спиртные напитки и ликеры"
+      }
+    },
+    {
+      "id": "non-alcoholic",
+      "name": {
+        "en": "Non-Alcoholic",
+        "es": "Sin Alcohol",
+        "ca": "Sense Alcohol",
+        "fr": "Sans Alcool",
+        "it": "Analcolici",
+        "de": "Alkoholfrei",
+        "ru": "Безалкогольные"
+      },
+      "slug": "non-alcoholic",
+      "description": {
+        "en": "Refreshing alternatives",
+        "es": "Alternativas refrescantes",
+        "ca": "Alternatives refrescants",
+        "fr": "Alternatives rafraîchissantes",
+        "it": "Alternative rinfrescanti",
+        "de": "Erfrischende Alternativen",
+        "ru": "Освежающие альтернативы"
+      }
+    }
+  ],
+  "items": [
+    {
+      "id": "rioja-reserva",
+      "name": {
+        "en": "Rioja Reserva",
+        "es": "Rioja Reserva",
+        "ca": "Rioja Reserva",
+        "fr": "Rioja Reserva",
+        "it": "Rioja Reserva",
+        "de": "Rioja Reserva",
+        "ru": "Риоха Резерва"
+      },
+      "description": {
+        "en": "Rich red wine with notes of dark fruit and oak",
+        "es": "Vino tinto con notas de frutos rojos y roble",
+        "ca": "Vi negre amb notes de fruita vermella i roure",
+        "fr": "Vin rouge riche aux notes de fruits noirs et de chêne",
+        "it": "Vino rosso ricco con note di frutti scuri e quercia",
+        "de": "Reichhaltiger Rotwein mit Noten von dunklen Früchten und Eiche",
+        "ru": "Насыщенное красное вино с нотами темных фруктов и дуба"
+      },
+      "price": "38",
+      "categoryId": "wines",
+      "image": "/images/beverages/rioja.jpg"
+    },
+    {
+      "id": "albarino",
+      "name": {
+        "en": "Albariño",
+        "es": "Albariño",
+        "ca": "Albariño",
+        "fr": "Albariño",
+        "it": "Albariño",
+        "de": "Albariño",
+        "ru": "Альбариньо"
+      },
+      "description": {
+        "en": "Crisp white wine with citrus and mineral notes",
+        "es": "Vino blanco fresco con notas cítricas y minerales",
+        "ca": "Vi blanc fresc amb notes cítriques i minerals",
+        "fr": "Vin blanc vif aux notes d'agrumes et minérales",
+        "it": "Vino bianco fresco con note agrumate e minerali",
+        "de": "Knackiger Weißwein mit Zitrus- und Mineralnoten",
+        "ru": "Свежее белое вино с цитрусовыми и минеральными нотами"
+      },
+      "price": "32",
+      "categoryId": "wines"
+    },
+    {
+      "id": "negroni",
+      "name": {
+        "en": "Negroni",
+        "es": "Negroni",
+        "ca": "Negroni",
+        "fr": "Negroni",
+        "it": "Negroni",
+        "de": "Negroni",
+        "ru": "Негрони"
+      },
+      "description": {
+        "en": "Classic cocktail with gin, vermouth rosso, and Campari",
+        "es": "Cóctel clásico con ginebra, vermut rojo y Campari",
+        "ca": "Còctel clàssic amb ginebra, vermut vermell i Campari",
+        "fr": "Cocktail classique avec gin, vermouth rouge et Campari",
+        "it": "Cocktail classico con gin, vermouth rosso e Campari",
+        "de": "Klassischer Cocktail mit Gin, Vermouth Rosso und Campari",
+        "ru": "Классический коктейль с джином, красным вермутом и Кампари"
+      },
+      "price": "14",
+      "categoryId": "cocktails",
+      "image": "/images/beverages/negroni.jpg"
+    },
+    {
+      "id": "mojito",
+      "name": {
+        "en": "Mojito",
+        "es": "Mojito",
+        "ca": "Mojito",
+        "fr": "Mojito",
+        "it": "Mojito",
+        "de": "Mojito",
+        "ru": "Мохито"
+      },
+      "description": {
+        "en": "Refreshing cocktail with rum, mint, lime, and soda",
+        "es": "Cóctel refrescante con ron, menta, lima y soda",
+        "ca": "Còctel refrescant amb rom, menta, llima i soda",
+        "fr": "Cocktail rafraîchissant avec rhum, menthe, citron vert et soda",
+        "it": "Cocktail rinfrescante con rum, menta, lime e soda",
+        "de": "Erfrischender Cocktail mit Rum, Minze, Limette und Soda",
+        "ru": "Освежающий коктейль с ромом, мятой, лаймом и содовой"
+      },
+      "price": "12",
+      "categoryId": "cocktails"
+    },
+    {
+      "id": "highland-whisky",
+      "name": {
+        "en": "Highland Single Malt",
+        "es": "Single Malt de las Highlands",
+        "ca": "Single Malt de les Highlands",
+        "fr": "Single Malt des Highlands",
+        "it": "Single Malt delle Highlands",
+        "de": "Highland Single Malt",
+        "ru": "Хайленд Сингл Молт"
+      },
+      "description": {
+        "en": "Aged 12 years, notes of honey and heather",
+        "es": "Envejecido 12 años, notas de miel y brezo",
+        "ca": "Envellit 12 anys, notes de mel i bruc",
+        "fr": "Vieilli 12 ans, notes de miel et de bruyère",
+        "it": "Invecchiato 12 anni, note di miele ed erica",
+        "de": "12 Jahre gereift, mit Noten von Honig und Heidekraut",
+        "ru": "Выдержка 12 лет, ноты меда и вереска"
+      },
+      "price": "16",
+      "categoryId": "spirits",
+      "image": "/images/beverages/whisky.jpg"
+    },
+    {
+      "id": "virgin-mojito",
+      "name": {
+        "en": "Virgin Mojito",
+        "es": "Mojito Sin Alcohol",
+        "ca": "Mojito Sense Alcohol",
+        "fr": "Mojito Sans Alcool",
+        "it": "Mojito Analcolico",
+        "de": "Alkoholfreier Mojito",
+        "ru": "Безалкогольный Мохито"
+      },
+      "description": {
+        "en": "Non-alcoholic version with fresh mint, lime, and soda",
+        "es": "Versión sin alcohol con menta fresca, lima y soda",
+        "ca": "Versió sense alcohol amb menta fresca, llima i soda",
+        "fr": "Version sans alcool avec menthe fraîche, citron vert et soda",
+        "it": "Versione analcolica con menta fresca, lime e soda",
+        "de": "Alkoholfreie Version mit frischer Minze, Limette und Soda",
+        "ru": "Безалкогольная версия со свежей мятой, лаймом и содовой"
+      },
+      "price": "8",
+      "categoryId": "non-alcoholic"
+    }
+  ]
+}
+

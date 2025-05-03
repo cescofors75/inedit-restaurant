@@ -1,0 +1,16 @@
+{
+  "nav.home": "Главная",
+  "nav.menu": "Меню",
+  "nav.gallery": "Галерея",
+  "nav.contact": "Контакты",
+  "hero.title": "Авторская кухня",
+  "hero.subtitle": "Незабываемый гастрономический опыт",
+  "hero.cta": "Забронировать столик",
+  "menu.title": "Наше меню",
+  "menu.subtitle": "Приготовлено с любовью",
+  "contact.address": "Адрес",
+  "contact.phone": "Телефон",
+  "contact.email": "Эл. почта",
+  "footer.copyright": "Все права защищены"
+}
+
