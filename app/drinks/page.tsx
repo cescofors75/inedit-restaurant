@@ -5,140 +5,91 @@ import { fetchAllBeverageData } from "@/lib/client-api"
 import { useLanguage } from "@/context/language-context"
 
 // Define interfaces for beverage data
-interface WineItem {
-  id: string;
-  name: string;
-  region: string;
-  price: string;
-  glass?: boolean;
-  note?: string;
+interface MultiLanguageText {
+  en: string;
+  es: string;
+  ca: string;
+  fr: string;
+  it: string;
+  de: string;
+  ru: string;
+  [key: string]: string;
 }
 
-interface WineCategory {
+interface Subcategory {
   id: string;
-  label: string;
-  wines: WineItem[];
-}
-
-interface CocktailItem {
-  id: string;
-  name: string;
-  price: string;
-}
-
-interface CocktailCategory {
-  id: string;
-  category: string;
-  items: CocktailItem[];
-}
-
-interface BeverageItem {
-  id: string;
-  name: string;
-  price: string;
+  name: MultiLanguageText;
 }
 
 interface BeverageCategory {
   id: string;
-  category: string;
-  items: BeverageItem[];
+  name: MultiLanguageText;
+  slug: string;
+  description: MultiLanguageText;
+  subcategories?: Subcategory[];
 }
 
-interface SpiritItem {
+interface BeverageItem {
   id: string;
-  name: string;
+  name: MultiLanguageText;
+  description: MultiLanguageText;
   price: string;
-}
-
-interface SpiritCategory {
-  id: string;
-  category: string;
-  items: SpiritItem[];
+  categoryId: string;
+  subcategoryId?: string;
+  image?: string;
 }
 
 export default function DrinksPage() {
   const { language, t } = useLanguage();
-  const [searchTerm, setSearchTerm] = useState("")
-  const [activeTab, setActiveTab] = useState("wine")
-  const [activeWineCategory, setActiveWineCategory] = useState("sparkling")
+  const [searchTerm, setSearchTerm] = useState("");
+  const [activeTab, setActiveTab] = useState("wines");
+  const [activeSubcategory, setActiveSubcategory] = useState("");
   
   // Add state variables for beverage data
-  const [wineCategories, setWineCategories] = useState<WineCategory[]>([])
-  const [cocktails, setCocktails] = useState<CocktailCategory[]>([])
-  const [beverages, setBeverages] = useState<BeverageCategory[]>([])
-  const [spirits, setSpirits] = useState<SpiritCategory[]>([])
-  const [isLoading, setIsLoading] = useState(true)
-  const [error, setError] = useState<string | null>(null)
+  const [categories, setCategories] = useState<BeverageCategory[]>([]);
+  const [items, setItems] = useState<BeverageItem[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
 
-  // Fetch beverage data when component mounts or language changes
+  // Fetch beverage data when component mounts
   useEffect(() => {
     const fetchData = async () => {
       setIsLoading(true);
       setError(null);
       
       try {
-        const data = await fetchAllBeverageData(language);
+        // Instead of making API calls, we'll use the JSON data directly
+        // This would normally come from an API call:
+        // const data = await fetchAllBeverageData(language);
         
-        // Process and set the data to state
-        if (data.categories && data.items) {
-          // Process wines
-          const wineData = data.categories.filter(cat => cat.type === 'wine') || [];
-          setWineCategories(wineData.map(cat => ({
-            id: cat.id,
-            label: cat.name,
-            wines: data.items.filter(item => item.categoryId === cat.id).map(item => ({
-              id: item.id,
-              name: item.name,
-              region: item.region || '',
-              price: item.price || '',
-              glass: item.glass || false,
-              note: item.description || ''
-            }))
-          })));
+        // For testing, we'll load it directly from the structure
+        const response = await fetch('/data/beverages.json');
+        const data = await response.json();
+        
+        console.log('Loaded beverage data:', data);
+        
+        if (data && data.categories && data.items) {
+          setCategories(data.categories);
+          setItems(data.items);
           
-          // Process cocktails
-          const cocktailCategories = data.categories.filter(cat => cat.type === 'cocktail') || [];
-          setCocktails(cocktailCategories.map(cat => ({
-            id: cat.id,
-            category: cat.name,
-            items: data.items.filter(item => item.categoryId === cat.id).map(item => ({
-              id: item.id,
-              name: item.name,
-              price: item.price || ''
-            }))
-          })));
-          
-          // Process beverages
-          const beverageCategories = data.categories.filter(cat => cat.type === 'beverage') || [];
-          setBeverages(beverageCategories.map(cat => ({
-            id: cat.id,
-            category: cat.name,
-            items: data.items.filter(item => item.categoryId === cat.id).map(item => ({
-              id: item.id,
-              name: item.name,
-              price: item.price || ''
-            }))
-          })));
-          
-          // Process spirits
-          const spiritCategories = data.categories.filter(cat => cat.type === 'spirit') || [];
-          setSpirits(spiritCategories.map(cat => ({
-            id: cat.id,
-            category: cat.name,
-            items: data.items.filter(item => item.categoryId === cat.id).map(item => ({
-              id: item.id,
-              name: item.name,
-              price: item.price || ''
-            }))
-          })));
-          
-          // Set the first wine category as active if available
-          if (wineData.length > 0 && wineData[0].id) {
-            setActiveWineCategory(wineData[0].id);
+          // Set the first category as active if available
+          if (data.categories.length > 0) {
+            setActiveTab(data.categories[0].id);
+            
+            // If the first category has subcategories, set the first subcategory as active
+            const firstCategory = data.categories[0];
+            if (firstCategory.subcategories && firstCategory.subcategories?.length > 0) {
+              setActiveSubcategory(firstCategory.subcategories[0].id);
+            } else {
+              setActiveSubcategory("");
+            }
           }
+        } else {
+          console.error('Invalid data structure received:', data);
+          setError('Data structure is invalid');
         }
       } catch (err) {
-        console.error('Error fetching beverage data:', err);
+        console.error('Error loading beverage data:', err);
         setError(err instanceof Error ? err.message : 'Failed to load beverage data');
       } finally {
         setIsLoading(false);
@@ -146,188 +97,217 @@ export default function DrinksPage() {
     };
     
     fetchData();
-  }, [language]);
-  const filterWines = (wines: WineItem[] = []) => {
-    if (!wines || wines.length === 0) return [];
-    if (!searchTerm) return wines;
-    return wines.filter(
-      (wine) =>
-        wine.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        (wine.region && wine.region.toLowerCase().includes(searchTerm.toLowerCase())),
+  }, []);
+
+  // Handle tab change
+  const handleTabChange = (categoryId: string) => {
+    setActiveTab(categoryId);
+    
+    // Find the selected category
+    const category = categories.find(cat => cat.id === categoryId);
+    
+    // If the category has subcategories, set the first one as active
+    if (category?.subcategories && category.subcategories?.length > 0) {
+      setActiveSubcategory(category.subcategories[0].id);
+    } else {
+      setActiveSubcategory("");
+    }
+  };
+
+  // Get the current active category
+  const getActiveCategory = () => {
+    return categories.find(cat => cat.id === activeTab) || null;
+  };
+
+  // Filter items based on search term, active category and subcategory
+  const filterItems = (items: BeverageItem[]) => {
+    if (!items || items.length === 0) return [];
+    
+    // First filter by category
+    let filteredItems = items.filter(item => item.categoryId === activeTab);
+    
+    // Then by subcategory if active
+    if (activeSubcategory && getActiveCategory()?.subcategories) {
+      filteredItems = filteredItems.filter(item => item.subcategoryId === activeSubcategory);
+    }
+    
+    // Then by search term if present
+    if (!searchTerm) return filteredItems;
+    
+    return filteredItems.filter(item => 
+      item.name[language]?.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      item.description[language]?.toLowerCase().includes(searchTerm.toLowerCase())
+    );
+  };
+
+  // Get the currently selected category name in the active language
+  const getActiveCategoryName = () => {
+    const activeCategory = categories.find(cat => cat.id === activeTab);
+    return activeCategory?.name[language] || '';
+  };
+
+  // Get the currently selected subcategory name in the active language
+  const getActiveSubcategoryName = () => {
+    const activeCategory = getActiveCategory();
+    if (!activeCategory || !activeCategory.subcategories || !activeSubcategory) return '';
+    
+    const subcategory = activeCategory.subcategories.find(subcat => subcat.id === activeSubcategory);
+    return subcategory?.name[language] || '';
+  };
+
+  // Loading state
+  if (isLoading) {
+    return (
+      <div className="container mx-auto px-4 py-12">
+        <div className="text-center mb-12">
+          <h1 className="text-4xl md:text-5xl font-serif font-bold mb-4">Bebidas</h1>
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            Cargando nuestra selección de bebidas...
+          </p>
+        </div>
+        <div className="max-w-5xl mx-auto">
+          <div className="flex justify-center">
+            <div className="w-12 h-12 border-4 border-t-brand border-r-transparent border-b-transparent border-l-transparent rounded-full animate-spin"></div>
+          </div>
+        </div>
+      </div>
     );
   }
 
-  // Find the active wine category
-  const activeWineCategoryData =
-    wineCategories.find((category) => category.id === activeWineCategory) || 
-    (wineCategories.length > 0 ? wineCategories[0] : { id: '', label: '', wines: [] })
-
-  return (
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
+  // Error state
+  if (error) {
+    return (
+      <div className="container mx-auto px-4 py-12">
+        <div className="text-center mb-8">
           <h1 className="text-4xl md:text-5xl font-serif font-bold mb-4">Bebidas</h1>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-8">
-            Nuestra selección de vinos, cócteles y bebidas para complementar la experiencia gastronómica de INÈDIT.
+          <p className="text-lg text-red-500 max-w-2xl mx-auto">
+            Error al cargar las bebidas: {error}
           </p>
         </div>
+        <div className="max-w-5xl mx-auto text-center">
+          <button
+            onClick={() => window.location.reload()}
+            className="px-6 py-3 bg-brand text-white rounded-md font-medium"
+          >
+            Intentar de nuevo
+          </button>
+        </div>
+      </div>
+    );
+  }
 
-        <div className="max-w-5xl mx-auto">
-          {/* Botones principales */}
-          <div className="flex flex-wrap gap-2 mb-12 justify-center">
+  return (
+    <div className="pt-20 pb-16 bg-background">
+    <div className="container mx-auto px-4 py-12">
+      <div className="text-center mb-12">
+        <h1 className="text-4xl md:text-5xl font-serif font-bold mb-4">
+          {language === 'es' ? 'Bebidas' : 'Drinks'}
+        </h1>
+        <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-8">
+          {language === 'es' 
+            ? 'Nuestra selección de bebidas para complementar la experiencia gastronómica.'
+            : 'Our selection of drinks to complement your dining experience.'}
+        </p>
+      </div>
+
+      <div className="max-w-5xl mx-auto">
+        {/* Main tab buttons for categories */}
+        <div className="flex flex-wrap gap-2 mb-6 justify-center">
+          {categories.map(category => (
             <button
-              onClick={() => setActiveTab("wine")}
+              key={category.id}
+              onClick={() => handleTabChange(category.id)}
               className={`px-8 py-3 rounded-md text-lg transition-colors ${
-                activeTab === "wine" ? "bg-brand text-white font-medium" : "bg-gray-100 text-gray-700 hover:bg-gray-200"
+                activeTab === category.id ? "bg-brand text-white font-medium" : "bg-gray-100 text-gray-700 hover:bg-gray-200"
               }`}
             >
-              Vinos
+              {category.name[language] || category.name.en}
             </button>
-            <button
-              onClick={() => setActiveTab("cocktails")}
-              className={`px-8 py-3 rounded-md text-lg transition-colors ${
-                activeTab === "cocktails"
-                  ? "bg-brand text-white font-medium"
-                  : "bg-gray-100 text-gray-700 hover:bg-gray-200"
-              }`}
-            >
-              Cócteles
-            </button>
-            <button
-              onClick={() => setActiveTab("beverages")}
-              className={`px-8 py-3 rounded-md text-lg transition-colors ${
-                activeTab === "beverages"
-                  ? "bg-brand text-white font-medium"
-                  : "bg-gray-100 text-gray-700 hover:bg-gray-200"
-              }`}
-            >
-              Otras Bebidas
-            </button>
+          ))}
+        </div>
+
+        {/* Subcategory buttons - only shown for wine category */}
+        {getActiveCategory()?.subcategories &&  (
+          <div className="flex flex-wrap gap-2 mb-8 justify-center">
+            {getActiveCategory()?.subcategories?.map(subcat => (
+              <button
+                key={subcat.id}
+                onClick={() => setActiveSubcategory(subcat.id)}
+                className={`px-5 py-2 rounded-md text-sm transition-colors ${
+                  activeSubcategory === subcat.id ? "bg-amber-600 text-white font-medium" : "bg-amber-100 text-amber-800 hover:bg-amber-200"
+                }`}
+              >
+                {subcat.name[language] || subcat.name.en}
+              </button>
+            ))}
           </div>
+        )}
 
-          {/* Contenido de Vinos */}
-          {activeTab === "wine" && (
-            <div>
-              <div className="max-w-md mx-auto mb-8">
-                <input
-                  type="text"
-                  placeholder="Buscar por nombre o región..."
-                  className="w-full p-3 border rounded-md"
-                  value={searchTerm}
-                  onChange={(e) => setSearchTerm(e.target.value)}
-                />
-              </div>
+        {/* Search input */}
+        <div className="max-w-md mx-auto mb-8">
+          <input
+            type="text"
+            placeholder={language === 'es' ? "Buscar..." : "Search..."}
+            className="w-full p-3 border rounded-md"
+            value={searchTerm}
+            onChange={(e) => setSearchTerm(e.target.value)}
+          />
+        </div>
 
-              {/* Botones de categorías de vino */}
-              <div className="flex flex-wrap gap-2 mb-4 justify-center">
-                {wineCategories.map((category) => (
-                  <button
-                    key={category.id}
-                    onClick={() => setActiveWineCategory(category.id)}
-                    className={`px-6 py-3 rounded-md text-lg transition-colors ${
-                      activeWineCategory === category.id
-                        ? "bg-brand text-white font-medium"
-                        : "bg-gray-100 text-gray-700 hover:bg-gray-200"
-                    }`}
-                  >
-                    {category.label}
-                  </button>
-                ))}
-              </div>
+        {/* Separator */}
+        <div className="w-full h-px bg-border mb-6 mt-2"></div>
 
-              {/* Separador */}
-              <div className="w-full h-px bg-border mb-6 mt-2"></div>
+        {/* Items list */}
+        <div className="space-y-6 mt-8">
+          <h2 className="text-2xl font-serif font-medium mb-6 text-center">
+            {activeSubcategory ? getActiveSubcategoryName() : getActiveCategoryName()}
+          </h2>
 
-              {/* Lista de vinos */}
-              <div className="space-y-6 mt-8">
-                {filterWines(activeWineCategoryData?.wines || []).length > 0 ? (
-                  filterWines(activeWineCategoryData?.wines || []).map((wine, index) => (
-                    <div
-                      key={index}
-                      className={`bg-white p-5 rounded-lg shadow-sm overflow-hidden ${
-                        index === 0 && activeWineCategory === "rose" ? "mt-8" : "mt-2"
-                      }`}
-                    >
-                      <div className="flex justify-between items-start mb-3 gap-4">
-                        <div>
-                          <h3 className="text-lg font-serif font-medium break-words hyphens-auto">{wine.name}</h3>
-                          <p className="text-sm font-medium text-muted-foreground mb-2">{wine.region}</p>
-                          {wine.note && <p className="text-sm italic text-muted-foreground">{wine.note}</p>}
-                        </div>
-                        <div className="text-right">
-                          {wine.price && <div className="text-brand font-medium">{wine.price}</div>}
-                          {wine.glass && <div className="text-sm text-muted-foreground">Disponible por copa</div>}
-                        </div>
-                      </div>
+          {filterItems(items).length > 0 ? (
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {filterItems(items).map((item) => (
+                <div
+                  key={item.id}
+                  className="bg-white p-5 rounded-lg shadow-sm overflow-hidden"
+                >
+                  <div className="flex justify-between items-start mb-3 gap-4">
+                    <div>
+                      <h3 className="text-lg font-serif font-medium break-words hyphens-auto">
+                        {item.name[language] || item.name.en}
+                      </h3>
+                      <p className="text-sm text-muted-foreground mt-2">
+                        {item.description[language] || item.description.en}
+                      </p>
                     </div>
-                  ))
-                ) : (
-                  <div className="text-center py-8">
-                    <p className="text-lg text-muted-foreground">
-                      No se encontraron vinos que coincidan con su búsqueda.
-                    </p>
+                    <div className="text-right">
+                      <div className="text-brand font-medium">{item.price}€</div>
+                    </div>
                   </div>
-                )}
-              </div>
-            </div>
-          )}
-
-          {/* Contenido de Cócteles */}
-          {activeTab === "cocktails" && (
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {cocktails.map((section, sectionIndex) => (
-                <div key={sectionIndex} className="bg-white p-6 rounded-lg shadow-sm">
-                  <h2 className="text-2xl font-serif font-medium mb-4">{section.category}</h2>
-                  <div className="space-y-4">
-                    {section.items.map((item, index) => (
-                      <div key={index} className="flex justify-between items-center border-b border-gray-100 pb-2">
-                        <h3 className="font-medium">{item.name}</h3>
-                        {item.price && <span className="text-brand">{item.price}</span>}
-                      </div>
-                    ))}
-                  </div>
+                  
+                  {item.image && (
+                    <div className="mt-3 rounded-md overflow-hidden h-32 bg-gray-100">
+                      <img 
+                        src={item.image} 
+                        alt={item.name[language]} 
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                  )}
                 </div>
               ))}
             </div>
-          )}
-
-          {/* Contenido de Otras Bebidas */}
-          {activeTab === "beverages" && (
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {beverages.map((section, sectionIndex) => (
-                <div key={sectionIndex} className="bg-white p-6 rounded-lg shadow-sm">
-                  <h2 className="text-2xl font-serif font-medium mb-4">{section.category}</h2>
-                  <div className="space-y-4">
-                    {section.items.map((item, index) => (
-                      <div key={index} className="flex justify-between items-center border-b border-gray-100 pb-2">
-                        <h3 className="font-medium">{item.name}</h3>
-                        {item.price && <span className="text-brand">{item.price}</span>}
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              ))}
-
-              <div className="bg-white p-6 rounded-lg shadow-sm">
-                <h2 className="text-2xl font-serif font-medium mb-4">Destilados y Licores</h2>
-                <div className="space-y-6">
-                  {spirits.map((section, sectionIndex) => (
-                    <div key={sectionIndex} className="mb-4">
-                      <h3 className="text-xl font-medium mb-2">{section.category}</h3>
-                      <div className="space-y-2">
-                        {section.items.map((item, index) => (
-                          <div key={index} className="flex justify-between items-center border-b border-gray-100 pb-1">
-                            <p>{item.name}</p>
-                            {item.price && <span className="text-brand">{item.price}</span>}
-                          </div>
-                        ))}
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
+          ) : (
+            <div className="text-center py-8">
+              <p className="text-lg text-muted-foreground">
+                {language === 'es' 
+                  ? 'No se encontraron bebidas que coincidan con su búsqueda.'
+                  : 'No drinks found matching your search.'}
+              </p>
             </div>
           )}
         </div>
       </div>
+    </div>
+    </div>
   );
 }

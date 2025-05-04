@@ -8,9 +8,14 @@
   "hero.cta": "Reservar Mesa",
   "menu.title": "Nuestra Carta",
   "menu.subtitle": "Elaborada con pasión",
+  "contact.description": "Nos encantaría saber de ti. Contáctanos con cualquier pregunta, comentario o para consultar sobre eventos privados.",
   "contact.address": "Dirección",
   "contact.phone": "Teléfono",
   "contact.email": "Correo",
-  "footer.copyright": "Todos los derechos reservados"
+  "footer.copyright": "Todos los derechos reservados",
+  "location.title": "Ubicación",
+  "location.hours": "Horario",
+  "gallery.title": "Galería",
+  "cuisine.title": "Cocina de Autor"
 }
 

@@ -151,6 +151,7 @@ export async function getAllPages(locale = 'es'): Promise<Page[]> {
     id: pageData.id,
     title: getLocalizedValue(pageData.title, locale),
     slug,
+    content: pageData.content || {},
     updatedAt: new Date().toISOString() // Simulating an updated timestamp
   }));
 }

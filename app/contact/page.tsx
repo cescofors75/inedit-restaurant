@@ -25,7 +25,7 @@ export default function ContactPage() {
         <div className="text-center mb-12">
           <h1 className="text-4xl md:text-5xl font-serif font-bold mb-4">{t("nav.contact")}</h1>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            We'd love to hear from you. Reach out with any questions, feedback, or to inquire about private events.
+          {t("contact.description")}
           </p>
         </div>
 

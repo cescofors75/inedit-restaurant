@@ -20,7 +20,45 @@
         "it": "La nostra selezione di vini",
         "de": "Unsere Auswahl an Weinen",
         "ru": "Наша коллекция вин"
-      }
+      },
+      "subcategories": [
+        {
+          "id": "red-wines",
+          "name": {
+            "en": "Red Wines",
+            "es": "Vinos Tintos",
+            "ca": "Vins Negres",
+            "fr": "Vins Rouges",
+            "it": "Vini Rossi",
+            "de": "Rotweine",
+            "ru": "Красные вина"
+          }
+        },
+        {
+          "id": "white-wines",
+          "name": {
+            "en": "White Wines", 
+            "es": "Vinos Blancos",
+            "ca": "Vins Blancs",
+            "fr": "Vins Blancs",
+            "it": "Vini Bianchi",
+            "de": "Weißweine",
+            "ru": "Белые вина"
+          }
+        },
+        {
+          "id": "sparkling-wines",
+          "name": {
+            "en": "Sparkling Wines",
+            "es": "Vinos Espumosos",
+            "ca": "Vins Escumosos",
+            "fr": "Vins Mousseux",
+            "it": "Vini Spumanti",
+            "de": "Schaumweine",
+            "ru": "Игристые вина"
+          }
+        }
+      ]
     },
     {
       "id": "cocktails",
@@ -112,6 +150,7 @@
       },
       "price": "38",
       "categoryId": "wines",
+      "subcategoryId": "red-wines",
       "image": "/images/beverages/rioja.jpg"
     },
     {
@@ -135,7 +174,32 @@
         "ru": "Свежее белое вино с цитрусовыми и минеральными нотами"
       },
       "price": "32",
-      "categoryId": "wines"
+      "categoryId": "wines",
+      "subcategoryId": "white-wines"
+    },
+    {
+      "id": "cava-brut",
+      "name": {
+        "en": "Cava Brut",
+        "es": "Cava Brut",
+        "ca": "Cava Brut",
+        "fr": "Cava Brut",
+        "it": "Cava Brut",
+        "de": "Cava Brut",
+        "ru": "Кава Брют"
+      },
+      "description": {
+        "en": "Traditional method sparkling wine with fine bubbles",
+        "es": "Vino espumoso de método tradicional con burbujas finas",
+        "ca": "Vi escumós de mètode tradicional amb bombolles fines",
+        "fr": "Vin mousseux de méthode traditionnelle avec bulles fines",
+        "it": "Vino spumante di metodo tradizionale con bollicine fini",
+        "de": "Schaumwein nach traditioneller Methode mit feinen Perlen",
+        "ru": "Игристое вино традиционного метода с мелкими пузырьками"
+      },
+      "price": "28",
+      "categoryId": "wines",
+      "subcategoryId": "sparkling-wines"
     },
     {
       "id": "negroni",
@@ -233,4 +297,3 @@
     }
   ]
 }
-
