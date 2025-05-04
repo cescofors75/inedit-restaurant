@@ -1,50 +1,80 @@
 "use client"
 
+import { useState, useEffect } from "react"
 import { useLanguage } from "@/context/language-context"
 import Link from "next/link"
-import { useState, useEffect } from "react"
-import { getMenuCategories, getMenuItems, type MenuCategory, type MenuItem } from "@/lib/contentful"
 import Image from "next/image"
 
+// Define interfaces for menu data
+interface MultiLanguageText {
+  en: string;
+  es: string;
+  ca: string;
+  fr: string;
+  it: string;
+  de: string;
+  ru: string;
+  [key: string]: string;
+}
+
+interface MenuItem {
+  id: string;
+  name: MultiLanguageText;
+  description: MultiLanguageText;
+  price: string;
+  category: string; // Using category as string instead of categoryId
+  image?: string;
+}
+
 export default function MenuPreview() {
-  const { t, language } = useLanguage()
-  const [activeCategory, setActiveCategory] = useState("")
-  const [menuCategories, setMenuCategories] = useState<MenuCategory[]>([])
-  const [menuItems, setMenuItems] = useState<MenuItem[]>([])
-  const [loading, setLoading] = useState(true)
+  const { language, t } = useLanguage();
+  const [activeCategory, setActiveCategory] = useState("");
+  const [menuItems, setMenuItems] = useState<MenuItem[]>([]);
+  const [categories, setCategories] = useState<string[]>([]);
+  const [loading, setLoading] = useState(true);
 
+  // Fetch menu data when component mounts
   useEffect(() => {
-    async function fetchMenuData() {
+    const fetchMenuData = async () => {
+      setLoading(true);
+      
       try {
-        setLoading(true)
-        // Fetch menu categories and items from Contentful
-        const categories = await getMenuCategories(language)
-        const items = await getMenuItems(language)
+        // Fetch the JSON data - adjust the path as needed for your project structure
+        const response = await fetch('/data/dishes.json');
+        const data = await response.json();
         
-        setMenuCategories(categories)
-        setMenuItems(items)
-        
-        // Set the first category as active by default if no category is selected yet
-        if (categories.length > 0 && !activeCategory) {
-          setActiveCategory(categories[0].id)
+        if (Array.isArray(data)) {
+          // Store the menu items
+          setMenuItems(data);
+          
+          // Extract unique categories from the items
+          const uniqueCategories = [...new Set(data.map(item => item.category))];
+          setCategories(uniqueCategories);
+          
+          // Set the first category as active if available
+          if (uniqueCategories.length > 0 && !activeCategory) {
+            setActiveCategory(uniqueCategories[0]);
+          }
+        } else {
+          console.error('Invalid menu data structure:', data);
         }
-      } catch (error) {
-        console.error("Error fetching menu data:", error)
+      } catch (err) {
+        console.error('Error loading menu data:', err);
       } finally {
-        setLoading(false)
+        setLoading(false);
       }
-    }
-
-    fetchMenuData()
-  }, [language, activeCategory])
+    };
+    
+    fetchMenuData();
+  }, [activeCategory]);
 
   // Filter items for the active category
-  const activeItems = menuItems.filter(item => 
-    item.category && item.category.sys && item.category.sys.id === activeCategory
-  )
+  const activeItems = menuItems.filter(item => item.category === activeCategory);
 
-  // Find the active category object
-  const activeCategoryObj = menuCategories.find(cat => cat.id === activeCategory)
+  // Get formatted category name (capitalize first letter)
+  const formatCategoryName = (category: string) => {
+    return category.charAt(0).toUpperCase() + category.slice(1);
+  };
 
   if (loading) {
     return (
@@ -68,10 +98,10 @@ export default function MenuPreview() {
           </div>
         </div>
       </section>
-    )
+    );
   }
 
-  if (menuCategories.length === 0) {
+  if (categories.length === 0) {
     return (
       <section className="section-padding bg-background">
         <div className="container mx-auto text-center">
@@ -79,7 +109,7 @@ export default function MenuPreview() {
           <p className="text-muted-foreground">{t("menu.no_items")}</p>
         </div>
       </section>
-    )
+    );
   }
 
   return (
@@ -95,17 +125,17 @@ export default function MenuPreview() {
         <div className="max-w-3xl mx-auto">
           {/* Category navigation */}
           <div className="flex flex-wrap gap-2 mb-4 justify-center">
-            {menuCategories.map((category) => (
+            {categories.map((category) => (
               <button
-                key={category.id}
-                onClick={() => setActiveCategory(category.id)}
+                key={category}
+                onClick={() => setActiveCategory(category)}
                 className={`px-6 py-3 rounded-md text-lg transition-colors ${
-                  activeCategory === category.id
+                  activeCategory === category
                     ? "bg-brand text-white font-medium"
                     : "bg-gray-100 text-gray-700 hover:bg-gray-200"
                 }`}
               >
-                {category.name}
+                {formatCategoryName(category)}
               </button>
             ))}
           </div>
@@ -124,8 +154,8 @@ export default function MenuPreview() {
                   {item.image && (
                     <div className="flex-shrink-0">
                       <Image 
-                        src={`https:${item.image.fields.file.url}`} 
-                        alt={item.name}
+                        src={item.image} 
+                        alt={item.name[language] || item.name.en}
                         width={80}
                         height={80}
                         className="rounded-md object-cover"
@@ -134,10 +164,12 @@ export default function MenuPreview() {
                   )}
                   <div className="flex-1">
                     <div className="flex justify-between items-start">
-                      <h3 className="font-serif font-medium text-lg">{item.name}</h3>
-                      <span className="text-brand font-medium">{item.price}</span>
+                      <h3 className="font-serif font-medium text-lg">{item.name[language] || item.name.en}</h3>
+                      <span className="text-brand font-medium">{item.price}€</span>
                     </div>
-                    <p className="text-muted-foreground text-sm mt-1">{item.description}</p>
+                    <p className="text-muted-foreground text-sm mt-1">
+                      {item.description[language] || item.description.en}
+                    </p>
                   </div>
                 </div>
               ))
@@ -158,5 +190,5 @@ export default function MenuPreview() {
         </div>
       </div>
     </section>
-  )
+  );
 }

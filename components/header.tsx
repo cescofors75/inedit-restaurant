@@ -98,8 +98,8 @@ export default function Header() {
           </nav>
 
           <div className="hidden md:flex items-center space-x-4">
-            {/* Theme Toggle */}
-            <ThemeToggle />
+            {/* Theme Toggle 
+           <ThemeToggle />*/}
 
             {/* Language Selector */}
             <div className="relative">
@@ -191,7 +191,8 @@ export default function Header() {
             {/* Theme Toggle Mobile */}
             <div className="px-3 py-2 flex items-center justify-between">
               <p className="text-sm font-medium text-primary">Theme</p>
-              <ThemeToggle />
+             {/* Theme Toggle 
+           <ThemeToggle />*/}
             </div>
 
             {/* Language Selector Mobile */}
