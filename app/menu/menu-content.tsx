@@ -4,7 +4,7 @@ import { useState, useEffect } from "react"
 import { useLanguage } from "@/context/language-context"
 import Image from "next/image"
 
-// Reutilizamos las mismas interfaces que funcionan en MenuPreview
+// Define interfaces for menu data
 interface MultiLanguageText {
   en: string;
   es: string;
@@ -21,40 +21,92 @@ interface MenuItem {
   name: MultiLanguageText;
   description: MultiLanguageText;
   price: string;
-  categoryId: string; // En lugar de 'category'
+  categoryId: string;
   image?: string;
 }
 
-// Es un poco diferente, pero mantenemos la misma estructura básica
 interface MenuCategory {
   id: string;
   name: MultiLanguageText;
-  description?: MultiLanguageText;
-  slug?: string;
+  slug: string;
+  description: MultiLanguageText;
 }
 
-interface MenuContentProps {
-  initialCategories: MenuCategory[];
-  initialItems: MenuItem[];
+interface MenuData {
+  categories: MenuCategory[];
+  items: MenuItem[];
 }
 
-export default function MenuContent({ initialCategories, initialItems }: MenuContentProps) {
+// MenuContent ahora cargará sus propios datos, similar a MenuPreview
+export default function MenuContent() {
   const { t, language } = useLanguage()
   const [activeCategory, setActiveCategory] = useState<string>("")
-  const [categories, setCategories] = useState<MenuCategory[]>(initialCategories)
-  const [items, setItems] = useState<MenuItem[]>(initialItems)
+  const [menuItems, setMenuItems] = useState<MenuItem[]>([])
+  const [categories, setCategories] = useState<MenuCategory[]>([])
+  const [loading, setLoading] = useState(true)
 
-  // Set initial active category
+  // Fetch menu data when component mounts
   useEffect(() => {
-    if (categories.length > 0 && !activeCategory) {
-      setActiveCategory(categories[0].id)
-    }
-  }, [categories, activeCategory])
+    const fetchMenuData = async () => {
+      setLoading(true);
+      
+      try {
+        // Fetch the JSON data
+        const response = await fetch('/data/menu.json');
+        const data: MenuData = await response.json();
+        
+        if (data && data.categories && data.items) {
+          // Store the menu items and categories
+          setMenuItems(data.items);
+          setCategories(data.categories);
+          
+          // Set the first category as active if available
+          if (data.categories.length > 0 && !activeCategory) {
+            setActiveCategory(data.categories[0].id);
+          }
+        } else {
+          console.error('Invalid menu data structure:', data);
+        }
+      } catch (err) {
+        console.error('Error loading menu data:', err);
+      } finally {
+        setLoading(false);
+      }
+    };
+    
+    fetchMenuData();
+  }, [activeCategory]);
 
-  // Filter items by active category
-  const filteredItems = items.filter(item => 
+  // Filter items for the active category
+  const filteredItems = menuItems.filter(item => 
     item.categoryId === activeCategory
-  )
+  );
+
+  if (loading) {
+    return (
+      <div className="pt-20 pb-16 bg-background">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <div className="h-10 bg-gray-200 animate-pulse rounded w-1/3 mx-auto mb-4"></div>
+            <div className="h-4 bg-gray-200 animate-pulse rounded w-2/3 mx-auto"></div>
+          </div>
+          <div className="max-w-4xl mx-auto">
+            <div className="flex flex-wrap gap-2 mb-8 justify-center">
+              {[1, 2, 3, 4].map((i) => (
+                <div key={i} className="h-12 bg-gray-200 animate-pulse rounded w-24"></div>
+              ))}
+            </div>
+            <div className="w-full h-px bg-gray-200 mb-8 mt-2"></div>
+            <div className="grid grid-cols-1 gap-6">
+              {[1, 2, 3, 4, 5].map((i) => (
+                <div key={i} className="bg-gray-100 animate-pulse p-6 rounded-lg h-32"></div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="pt-20 pb-16 bg-background">
@@ -106,7 +158,7 @@ export default function MenuContent({ initialCategories, initialItems }: MenuCon
                     </div>
                     <span className="text-brand font-medium text-lg ml-4">{item.price} €</span>
                   </div>
-                  {item.image && (
+                  {/*item.image && (
                     <div className="mt-4">
                       <Image 
                         src={item.image}
@@ -116,7 +168,7 @@ export default function MenuContent({ initialCategories, initialItems }: MenuCon
                         className="rounded-md object-cover max-h-48 w-auto mx-auto"
                       />
                     </div>
-                  )}
+                  )*/}
                 </div>
               ))
             ) : (

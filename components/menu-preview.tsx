@@ -22,15 +22,27 @@ interface MenuItem {
   name: MultiLanguageText;
   description: MultiLanguageText;
   price: string;
-  category: string; // Using category as string instead of categoryId
+  categoryId: string; // Usamos categoryId en lugar de category
   image?: string;
+}
+
+interface MenuCategory {
+  id: string;
+  name: MultiLanguageText;
+  slug: string;
+  description: MultiLanguageText;
+}
+
+interface MenuData {
+  categories: MenuCategory[];
+  items: MenuItem[];
 }
 
 export default function MenuPreview() {
   const { language, t } = useLanguage();
   const [activeCategory, setActiveCategory] = useState("");
   const [menuItems, setMenuItems] = useState<MenuItem[]>([]);
-  const [categories, setCategories] = useState<string[]>([]);
+  const [categories, setCategories] = useState<MenuCategory[]>([]);
   const [loading, setLoading] = useState(true);
 
   // Fetch menu data when component mounts
@@ -39,21 +51,18 @@ export default function MenuPreview() {
       setLoading(true);
       
       try {
-        // Fetch the JSON data - adjust the path as needed for your project structure
-        const response = await fetch('/data/dishes.json');
-        const data = await response.json();
+        // Fetch the JSON data 
+        const response = await fetch('/data/menu.json');
+        const data: MenuData = await response.json();
         
-        if (Array.isArray(data)) {
-          // Store the menu items
-          setMenuItems(data);
-          
-          // Extract unique categories from the items
-          const uniqueCategories = [...new Set(data.map(item => item.category))];
-          setCategories(uniqueCategories);
+        if (data && data.categories && data.items) {
+          // Store the menu items and categories
+          setMenuItems(data.items);
+          setCategories(data.categories);
           
           // Set the first category as active if available
-          if (uniqueCategories.length > 0 && !activeCategory) {
-            setActiveCategory(uniqueCategories[0]);
+          if (data.categories.length > 0 && !activeCategory) {
+            setActiveCategory(data.categories[0].id);
           }
         } else {
           console.error('Invalid menu data structure:', data);
@@ -69,11 +78,13 @@ export default function MenuPreview() {
   }, [activeCategory]);
 
   // Filter items for the active category
-  const activeItems = menuItems.filter(item => item.category === activeCategory);
+  const activeItems = menuItems.filter(item => item.categoryId === activeCategory);
 
-  // Get formatted category name (capitalize first letter)
-  const formatCategoryName = (category: string) => {
-    return category.charAt(0).toUpperCase() + category.slice(1);
+  // Get category name in current language
+  const getCategoryName = (categoryId: string) => {
+    const category = categories.find(cat => cat.id === categoryId);
+    if (!category) return categoryId;
+    return category.name[language] || category.name.en;
   };
 
   if (loading) {
@@ -127,15 +138,15 @@ export default function MenuPreview() {
           <div className="flex flex-wrap gap-2 mb-4 justify-center">
             {categories.map((category) => (
               <button
-                key={category}
-                onClick={() => setActiveCategory(category)}
+                key={category.id}
+                onClick={() => setActiveCategory(category.id)}
                 className={`px-6 py-3 rounded-md text-lg transition-colors ${
-                  activeCategory === category
+                  activeCategory === category.id
                     ? "bg-brand text-white font-medium"
                     : "bg-gray-100 text-gray-700 hover:bg-gray-200"
                 }`}
               >
-                {formatCategoryName(category)}
+                {category.name[language] || category.name.en}
               </button>
             ))}
           </div>
@@ -151,7 +162,7 @@ export default function MenuPreview() {
                   key={item.id}
                   className="flex gap-4 border-b border-muted pb-4"
                 >
-                  {item.image && (
+                  {/*item.image && (
                     <div className="flex-shrink-0">
                       <Image 
                         src={item.image} 
@@ -161,7 +172,7 @@ export default function MenuPreview() {
                         className="rounded-md object-cover"
                       />
                     </div>
-                  )}
+                  )*/}
                   <div className="flex-1">
                     <div className="flex justify-between items-start">
                       <h3 className="font-serif font-medium text-lg">{item.name[language] || item.name.en}</h3>
@@ -178,7 +189,17 @@ export default function MenuPreview() {
             )}
           </div>
 
-        
+          <div className="mt-12 text-center">
+            <Link 
+              href="/menu"
+              className="inline-flex items-center px-6 py-3 bg-brand text-white rounded-md font-medium hover:bg-brand/90 transition-colors"
+            >
+              {t("menu.view_full_menu")}
+              <svg xmlns="http://www.w3.org/2000/svg" className="ml-2 h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                <path fillRule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
+              </svg>
+            </Link>
+          </div>
         </div>
       </div>
     </section>
