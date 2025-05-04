@@ -23,7 +23,7 @@ export default function Footer() {
               className="h-10 w-auto invert mb-4"
             />
             <p className="mt-2 text-sm text-gray-300 max-w-xs">
-              INÈDIT offers a unique dining experience that combines traditional techniques with innovative approaches.
+            {t("footer.description")}
             </p>
             <div className="flex space-x-4 mt-6">
               <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
@@ -99,11 +99,7 @@ export default function Footer() {
                   {t("nav.menu")}
                 </Link>
               </li>
-              <li>
-                <Link href="/wine" className="text-sm text-gray-300 hover:text-white transition-colors">
-                  {t("nav.wine")}
-                </Link>
-              </li>
+              
               <li>
                 <Link href="/drinks" className="text-sm text-gray-300 hover:text-white transition-colors">
                   Cocktails & Drinks
@@ -119,11 +115,7 @@ export default function Footer() {
                   {t("nav.contact")}
                 </Link>
               </li>
-              <li>
-                <Link href="/reservation" className="text-sm text-gray-300 hover:text-white transition-colors">
-                  {t("reservation.title")}
-                </Link>
-              </li>
+             
             </ul>
           </div>
         </div>

@@ -4,13 +4,29 @@
   "nav.gallery": "Galleria",
   "nav.contact": "Contatti",
   "hero.title": "Cucina d'Autore",
-  "hero.subtitle": "Un'esperienza gastronomica indimenticabile",
+  "hero.subtitle": "Un'esperienza culinaria indimenticabile",
   "hero.cta": "Prenota un Tavolo",
   "menu.title": "Il Nostro Menu",
-  "menu.subtitle": "Elaborato con passione",
+  "menu.description": "Da INÈDIT, ogni piatto è un capolavoro, realizzato con ingredienti pregiati e tecniche culinarie raffinate. Esplora il nostro menu e scopri la magia della cucina d'autore.",
+  "menu.subtitle": "Creato con passione",
+  "contact.description": "Ci piacerebbe sentirti. Contattaci per domande, feedback o per informazioni su eventi privati.",
   "contact.address": "Indirizzo",
   "contact.phone": "Telefono",
   "contact.email": "Email",
-  "footer.copyright": "Tutti i diritti riservati"
+  "footer.copyright": "Tutti i diritti riservati",
+  "footer.description": "INÈDIT offre un'esperienza culinaria unica che combina tecniche tradizionali con approcci innovativi.",
+  "location.title": "Posizione",
+  "location.description": "Visitaci per sperimentare l'atmosfera unica e la cucina eccezionale di INÈDIT.",
+  "location.hours": "Orari",
+  "gallery.title": "Galleria",
+  "gallery.description": "Esplora l'ambiente, le creazioni culinarie e le esperienze che definiscono INÈDIT.",
+  "cuisine.title": "Cucina d'Autore",
+  "cuisine.description": "Da INÈDIT, uniamo tecniche tradizionali con approcci innovativi per creare esperienze culinarie indimenticabili. Il nostro menu cambia con le stagioni, presentando sempre i migliori ingredienti locali provenienti da produttori fidati in tutta la Catalogna e la costa mediterranea.",
+  "cuisine.description2": "Ogni piatto è un riflesso della nostra passione per l'eccellenza culinaria, combinando rispetto per la tradizione e creatività. Ti invitiamo a intraprendere un viaggio gastronomico che celebra i ricchi sapori e il patrimonio culturale della nostra regione, reimmaginati attraverso la nostra prospettiva unica.",
+  "beverages.title": "Bevande",
+  "beverages.description": "Una selezione di vini, cocktail e bevande analcoliche per accompagnare il tuo pasto.",
+  "reservation.title": "Pronto a Scoprire INÈDIT?",
+  "reservation.description": "Prenota il tuo tavolo ora e intraprendi un viaggio culinario come nessun altro. Non vediamo l'ora di darti il benvenuto!"
+
 }
 

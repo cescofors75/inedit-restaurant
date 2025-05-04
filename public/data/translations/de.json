@@ -1,16 +1,32 @@
 {
   "nav.home": "Startseite",
-  "nav.menu": "Speisekarte",
+  "nav.menu": "Menü",
   "nav.gallery": "Galerie",
   "nav.contact": "Kontakt",
   "hero.title": "Signature-Küche",
-  "hero.subtitle": "Ein unvergessliches kulinarisches Erlebnis",
+  "hero.subtitle": "Ein unvergessliches Speiseerlebnis",
   "hero.cta": "Tisch reservieren",
-  "menu.title": "Unsere Speisekarte",
+  "menu.title": "Unser Menü",
+  "menu.description": "Bei INÈDIT ist jedes Gericht ein Meisterwerk, hergestellt mit den feinsten Zutaten und kulinarischen Techniken. Entdecken Sie unser Menü und erleben Sie den Zauber der Signature-Küche.",
   "menu.subtitle": "Mit Leidenschaft zubereitet",
+  "contact.description": "Wir freuen uns, von Ihnen zu hören. Kontaktieren Sie uns bei Fragen, Feedback oder Anfragen zu privaten Veranstaltungen.",
   "contact.address": "Adresse",
   "contact.phone": "Telefon",
   "contact.email": "E-Mail",
-  "footer.copyright": "Alle Rechte vorbehalten"
+  "footer.copyright": "Alle Rechte vorbehalten",
+  "footer.description": "INÈDIT bietet ein einzigartiges Speiseerlebnis, das traditionelle Techniken mit innovativen Ansätzen verbindet.",
+  "location.title": "Standort",
+  "location.description": "Besuchen Sie uns, um die einzigartige Atmosphäre und die außergewöhnliche Küche von INÈDIT zu erleben.",
+  "location.hours": "Öffnungszeiten",
+  "gallery.title": "Galerie",
+  "gallery.description": "Entdecken Sie das Ambiente, die kulinarischen Kreationen und Erlebnisse, die INÈDIT definieren.",
+  "cuisine.title": "Signature-Küche",
+  "cuisine.description": "Bei INÈDIT verbinden wir traditionelle Techniken mit innovativen Ansätzen, um unvergessliche kulinarische Erlebnisse zu schaffen. Unser Menü wechselt mit den Jahreszeiten und bietet stets die feinsten lokalen Zutaten von vertrauenswürdigen Produzenten aus Katalonien und der Mittelmeerküste.",
+  "cuisine.description2": "Jedes Gericht spiegelt unsere Leidenschaft für kulinarische Exzellenz wider und verbindet Respekt für Tradition mit kreativem Flair. Wir laden Sie ein, sich auf eine gastronomische Reise zu begeben, die die reichen Aromen und das kulturelle Erbe unserer Region feiert, neuinterpretiert durch unsere einzigartige Perspektive.",
+  "beverages.title": "Getränke",
+  "beverages.description": "Eine Auswahl an Weinen, Cocktails und alkoholfreien Getränken als Begleitung zu Ihrer Mahlzeit.",
+  "reservation.title": "Bereit für das INÈDIT-Erlebnis?",
+  "reservation.description": "Reservieren Sie jetzt Ihren Tisch und begeben Sie sich auf eine einzigartige kulinarische Reise. Wir freuen uns darauf, Sie begrüßen zu dürfen!"
+
 }
 

@@ -9,9 +9,9 @@ export default function ReservationCTA() {
   return (
     <section className="py-16 bg-brand text-white">
       <div className="container mx-auto text-center">
-        <h2 className="text-3xl md:text-4xl font-serif font-bold mb-6">Ready to Experience INÈDIT?</h2>
+        <h2 className="text-3xl md:text-4xl font-serif font-bold mb-6">{t("reservation.title")}</h2>
         <p className="text-lg max-w-2xl mx-auto mb-8">
-          Reserve your table today and embark on a culinary journey that will delight your senses.
+        {t("reservation.description")}
         </p>
         <Link
           href="/reservation"

@@ -67,7 +67,8 @@ export default function Gallery({ preview = false }: GalleryProps) {
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-serif font-bold mb-4">{t("gallery.title")}</h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Explore the ambiance, culinary creations, and experiences that define INÈDIT.
+          {t("gallery.description")}
+            
           </p>
         </div>
 

@@ -1,16 +1,32 @@
 {
   "nav.home": "Accueil",
-  "nav.menu": "Carte",
+  "nav.menu": "Menu",
   "nav.gallery": "Galerie",
   "nav.contact": "Contact",
-  "hero.title": "Cuisine de Signature",
-  "hero.subtitle": "Une expérience gastronomique inoubliable",
+  "hero.title": "Cuisine Signature",
+  "hero.subtitle": "Une expérience culinaire inoubliable",
   "hero.cta": "Réserver une Table",
-  "menu.title": "Notre Carte",
-  "menu.subtitle": "Élaborée avec passion",
+  "menu.title": "Notre Menu",
+  "menu.description": "Chez INÈDIT, chaque plat est un chef-d'œuvre, élaboré avec les meilleurs ingrédients et techniques culinaires. Explorez notre menu et découvrez la magie de la cuisine signature.",
+  "menu.subtitle": "Élaboré avec passion",
+  "contact.description": "Nous serions ravis d'avoir de vos nouvelles. Contactez-nous pour toute question, commentaire ou pour vous renseigner sur les événements privés.",
   "contact.address": "Adresse",
   "contact.phone": "Téléphone",
   "contact.email": "Email",
-  "footer.copyright": "Tous droits réservés"
+  "footer.copyright": "Tous droits réservés",
+  "footer.description": "INÈDIT offre une expérience culinaire unique qui allie techniques traditionnelles et approches innovantes.",
+  "location.title": "Emplacement",
+  "location.description": "Venez nous voir pour découvrir l'atmosphère unique et la cuisine exceptionnelle d'INÈDIT.",
+  "location.hours": "Horaires",
+  "gallery.title": "Galerie",
+  "gallery.description": "Explorez l'ambiance, les créations culinaires et les expériences qui définissent INÈDIT.",
+  "cuisine.title": "Cuisine Signature",
+  "cuisine.description": "Chez INÈDIT, nous mêlons techniques traditionnelles et approches innovantes pour créer des expériences culinaires inoubliables. Notre menu évolue avec les saisons, présentant toujours les meilleurs ingrédients locaux provenant de producteurs de confiance à travers la Catalogne et la côte méditerranéenne.",
+  "cuisine.description2": "Chaque plat reflète notre passion pour l'excellence culinaire, alliant respect de la tradition et créativité. Nous vous invitons à embarquer pour un voyage gastronomique qui célèbre les riches saveurs et l'héritage culturel de notre région, réimaginés à travers notre perspective unique.",
+  "beverages.title": "Boissons",
+  "beverages.description": "Une sélection de vins, cocktails et boissons non alcoolisées pour accompagner votre repas.",
+  "reservation.title": "Prêt à Découvrir INÈDIT ?",
+  "reservation.description": "Réservez votre table dès maintenant et embarquez pour un voyage culinaire comme aucun autre. Nous sommes impatients de vous accueillir !"
+
 }
 

@@ -12,7 +12,7 @@ export default function LocationContact() {
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-serif font-bold mb-4">{t("location.title")}</h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Visit us to experience the unique atmosphere and exceptional cuisine of INÈDIT.
+          {t("location.description")}
           </p>
         </div>
 

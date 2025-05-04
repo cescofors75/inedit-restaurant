@@ -178,15 +178,7 @@ export default function MenuPreview() {
             )}
           </div>
 
-          {/* View full menu link */}
-          <div className="text-center mt-10">
-            <Link 
-              href="/menu" 
-              className="inline-flex items-center justify-center rounded-md bg-brand px-6 py-3 text-white font-medium hover:bg-brand/90 transition-colors"
-            >
-              {t("menu.view_full")}
-            </Link>
-          </div>
+        
         </div>
       </div>
     </section>
