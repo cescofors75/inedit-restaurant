@@ -3,11 +3,39 @@
 import { useState, useEffect } from "react"
 import { useLanguage } from "@/context/language-context"
 import Image from "next/image"
-import { type MenuCategory, type MenuItem } from "@/lib/api" // Using our JSON API
+
+// Reutilizamos las mismas interfaces que funcionan en MenuPreview
+interface MultiLanguageText {
+  en: string;
+  es: string;
+  ca: string;
+  fr: string;
+  it: string;
+  de: string;
+  ru: string;
+  [key: string]: string;
+}
+
+interface MenuItem {
+  id: string;
+  name: MultiLanguageText;
+  description: MultiLanguageText;
+  price: string;
+  categoryId: string; // En lugar de 'category'
+  image?: string;
+}
+
+// Es un poco diferente, pero mantenemos la misma estructura básica
+interface MenuCategory {
+  id: string;
+  name: MultiLanguageText;
+  description?: MultiLanguageText;
+  slug?: string;
+}
 
 interface MenuContentProps {
-  initialCategories: MenuCategory[]
-  initialItems: MenuItem[]
+  initialCategories: MenuCategory[];
+  initialItems: MenuItem[];
 }
 
 export default function MenuContent({ initialCategories, initialItems }: MenuContentProps) {
@@ -51,7 +79,7 @@ export default function MenuContent({ initialCategories, initialItems }: MenuCon
                     : "bg-gray-100 text-gray-700 hover:bg-gray-200"
                 }`}
               >
-                {category.name}
+                {category.name[language] || category.name.en}
               </button>
             ))}
           </div>
@@ -69,18 +97,22 @@ export default function MenuContent({ initialCategories, initialItems }: MenuCon
                 >
                   <div className="flex justify-between items-start">
                     <div className="flex-1">
-                      <h3 className="text-xl font-serif font-medium mb-2">{item.name}</h3>
-                      <p className="text-muted-foreground">{item.description}</p>
+                      <h3 className="text-xl font-serif font-medium mb-2">
+                        {item.name[language] || item.name.en}
+                      </h3>
+                      <p className="text-muted-foreground">
+                        {item.description[language] || item.description.en}
+                      </p>
                     </div>
-                    <span className="text-brand font-medium text-lg ml-4">{item.price}</span>
+                    <span className="text-brand font-medium text-lg ml-4">{item.price} €</span>
                   </div>
                   {item.image && (
                     <div className="mt-4">
                       <Image 
-                        src={item.image.url} 
-                        alt={item.name}
-                        width={item.image.width || 800}
-                        height={item.image.height || 600}
+                        src={item.image}
+                        alt={item.name[language] || item.name.en}
+                        width={800}
+                        height={600}
                         className="rounded-md object-cover max-h-48 w-auto mx-auto"
                       />
                     </div>
@@ -96,4 +128,3 @@ export default function MenuContent({ initialCategories, initialItems }: MenuCon
     </div>
   )
 }
-
