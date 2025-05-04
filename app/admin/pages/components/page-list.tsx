@@ -19,9 +19,9 @@ import { Badge } from "@/components/ui/badge"
 // Define the Page type based on the API response
 type Page = {
   id: string
-  title: string
+  title: string | Record<string, string>
   slug: string
-  updatedAt: string
+  updatedAt?: string
 }
 
 export default function PageList() {
@@ -69,15 +69,35 @@ export default function PageList() {
     fetchPages() // Refresh the list after editing
   }
 
-  const formatDate = (dateString: string) => {
-    const date = new Date(dateString)
+  // Helper function to get localized value from multilingual object
+  const getLocalizedValue = (obj: string | Record<string, string>, locale = 'es'): string => {
+    if (typeof obj === 'string') return obj;
+    return obj[locale] || obj['en'] || '';
+  };
+
+  const formatDate = (dateString?: string) => {
+    // Handle undefined, null or empty string
+    if (!dateString) {
+      return "Fecha no disponible";
+    }
+    
+    // Try to create a valid date object
+    const date = new Date(dateString);
+    
+    // Check if the date is valid
+    if (isNaN(date.getTime())) {
+      console.warn(`Invalid date format received: ${dateString}`);
+      return "Fecha inválida";
+    }
+    
+    // Format the date if valid
     return new Intl.DateTimeFormat('es', {
       year: 'numeric',
       month: 'short',
       day: 'numeric',
       hour: '2-digit',
       minute: '2-digit'
-    }).format(date)
+    }).format(date);
   }
 
   // If we're editing a page, show the editor
@@ -144,7 +164,7 @@ export default function PageList() {
         <TableBody>
           {pages.map((page) => (
             <TableRow key={page.id}>
-              <TableCell className="font-medium">{page.title}</TableCell>
+              <TableCell className="font-medium">{getLocalizedValue(page.title)}</TableCell>
               <TableCell>
                 <Badge variant="outline" className="font-mono text-xs">
                   /{page.slug}

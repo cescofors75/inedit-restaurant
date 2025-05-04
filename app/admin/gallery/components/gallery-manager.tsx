@@ -3,7 +3,7 @@
 import { useCallback, useEffect, useState } from "react"
 import { useRouter } from "next/navigation"
 import Image from "next/image"
-import { ImagePlus, Loader2, Trash2, UploadCloud, Search, ImageOff } from "lucide-react"
+import { ImagePlus, Loader2, Trash2, UploadCloud, Search, ImageOff, AlertTriangle } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
 import {
@@ -36,16 +36,19 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog"
 
-// Define the GalleryImage type based on the API response
+// Define the GalleryImage type based on the Supabase model
 type GalleryImage = {
   id: string
-  title: string
-  description?: string
-  image: {
-    url: string
-    width: number
-    height: number
-  }
+  title: Record<string, string>
+  description?: Record<string, string>
+  image_url: string
+  image_width?: number
+  image_height?: number
+  created_at?: string
+  updated_at?: string
+  // Localized convenience properties
+  localizedTitle: string
+  localizedDescription?: string
 }
 
 export default function GalleryManager() {
@@ -56,6 +59,13 @@ export default function GalleryManager() {
   const [isUploading, setIsUploading] = useState(false)
   const [searchQuery, setSearchQuery] = useState("")
   const [selectedImage, setSelectedImage] = useState<string | null>(null)
+  
+  // Image upload form state
+  const [titleInput, setTitleInput] = useState("")
+  const [descriptionInput, setDescriptionInput] = useState("")
+  const [selectedFile, setSelectedFile] = useState<File | null>(null)
+  const [uploadError, setUploadError] = useState<string | null>(null)
+  const [dialogOpen, setDialogOpen] = useState(false)
 
   // Function to fetch gallery images
   const fetchGalleryImages = useCallback(async () => {
@@ -63,7 +73,7 @@ export default function GalleryManager() {
     setError(null)
     
     try {
-      const response = await fetch("/api/admin/gallery")
+      const response = await fetch("/api/admin/gallery?locale=es")
       
       if (!response.ok) {
         throw new Error(`Error: ${response.status}`)
@@ -87,33 +97,109 @@ export default function GalleryManager() {
   // Filter images based on search query
   const filteredImages = searchQuery
     ? images.filter(img => 
-        img.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        (img.description && img.description.toLowerCase().includes(searchQuery.toLowerCase()))
+        img.localizedTitle.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        (img.localizedDescription && img.localizedDescription.toLowerCase().includes(searchQuery.toLowerCase()))
       )
     : images
 
-  // Mock upload function (placeholder)
-  const handleUpload = () => {
-    setIsUploading(true)
-    
-    // Simulate an upload delay
-    setTimeout(() => {
-      setIsUploading(false)
-      // After upload, refresh the gallery
-      fetchGalleryImages()
-    }, 1500)
+  // Function to reset the upload form
+  const resetUploadForm = () => {
+    setTitleInput("")
+    setDescriptionInput("")
+    setSelectedFile(null)
+    setUploadError(null)
   }
 
-  // Mock delete function (placeholder)
-  const handleDelete = (imageId: string) => {
-    // Simulate deletion
-    console.log(`Deleting image: ${imageId}`)
+  // Handle file selection
+  const handleFileSelect = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const files = e.target.files
+    if (files && files.length > 0) {
+      setSelectedFile(files[0])
+      setUploadError(null)
+    }
+  }
+
+  // Handle dialog close
+  const handleDialogClose = () => {
+    setDialogOpen(false)
+    resetUploadForm()
+  }
+
+  // Handle image upload
+  const handleUpload = async () => {
+    // Validate input
+    if (!titleInput.trim()) {
+      setUploadError("El título es obligatorio")
+      return
+    }
+
+    if (!selectedFile) {
+      setUploadError("Debes seleccionar una imagen")
+      return
+    }
+
+    setIsUploading(true)
+    setUploadError(null)
     
-    // Update local state by removing the deleted image
-    setImages(images.filter(img => img.id !== imageId))
-    
-    // Close the dialog
-    setSelectedImage(null)
+    try {
+      // Create form data
+      const formData = new FormData()
+      formData.append("title", titleInput)
+      
+      if (descriptionInput.trim()) {
+        formData.append("description", descriptionInput)
+      }
+      
+      formData.append("file", selectedFile)
+      formData.append("locale", "es") // Default locale
+
+      // Send the upload request
+      const response = await fetch("/api/admin/gallery", {
+        method: "POST",
+        body: formData,
+      })
+
+      if (!response.ok) {
+        const errorData = await response.json()
+        throw new Error(errorData.message || "Error uploading image")
+      }
+
+      // Close dialog and reset form on success
+      setDialogOpen(false)
+      resetUploadForm()
+      
+      // Refresh gallery
+      fetchGalleryImages()
+    } catch (err) {
+      console.error("Failed to upload image:", err)
+      setUploadError(err instanceof Error ? err.message : "Error al subir la imagen")
+    } finally {
+      setIsUploading(false)
+    }
+  }
+
+  // Handle image deletion
+  const handleDelete = async (imageId: string) => {
+    try {
+      // Send delete request with the image ID
+      const response = await fetch(`/api/admin/gallery?id=${imageId}`, {
+        method: "DELETE",
+      })
+
+      if (!response.ok) {
+        const errorData = await response.json()
+        throw new Error(errorData.message || "Error deleting image")
+      }
+
+      // Update local state by removing the deleted image
+      setImages(images.filter(img => img.id !== imageId))
+      
+      // Close the dialog
+      setSelectedImage(null)
+    } catch (err) {
+      console.error("Failed to delete image:", err)
+      setError("No se pudo eliminar la imagen. Por favor, inténtalo de nuevo.")
+    }
   }
 
   if (isLoading) {
@@ -154,7 +240,7 @@ export default function GalleryManager() {
               Gestiona las imágenes de la galería del restaurante
             </CardDescription>
           </div>
-          <Dialog>
+          <Dialog open={dialogOpen} onOpenChange={setDialogOpen}>
             <DialogTrigger asChild>
               <Button className="gap-1">
                 <UploadCloud className="h-4 w-4" />
@@ -169,37 +255,89 @@ export default function GalleryManager() {
                 </DialogDescription>
               </DialogHeader>
               <div className="py-4">
-                <div className="flex items-center justify-center w-full">
-                  <label 
-                    htmlFor="dropzone-file" 
-                    className="flex flex-col items-center justify-center w-full h-64 border-2 border-dashed rounded-lg cursor-pointer bg-muted/40 hover:bg-muted"
-                  >
-                    <div className="flex flex-col items-center justify-center pt-5 pb-6">
-                      <UploadCloud className="w-8 h-8 mb-4 text-muted-foreground" />
-                      <p className="mb-2 text-sm text-muted-foreground">
-                        <span className="font-semibold">Haz click para seleccionar</span> o arrastra y suelta
-                      </p>
-                      <p className="text-xs text-muted-foreground">
-                        SVG, PNG, JPG o GIF (MAX. 2MB)
-                      </p>
-                    </div>
-                    <input id="dropzone-file" type="file" className="hidden" />
-                  </label>
-                </div>
-                <div className="mt-4">
-                  <label className="block text-sm font-medium mb-1">
-                    Título
-                  </label>
-                  <Input placeholder="Título de la imagen" className="mb-3" />
+                <div className="space-y-4">
+                  <div className="space-y-2">
+                    <label htmlFor="title" className="text-sm font-medium">
+                      Título <span className="text-destructive">*</span>
+                    </label>
+                    <Input
+                      id="title"
+                      value={titleInput}
+                      onChange={(e) => setTitleInput(e.target.value)}
+                      placeholder="Título de la imagen"
+                    />
+                  </div>
                   
-                  <label className="block text-sm font-medium mb-1">
-                    Descripción (opcional)
-                  </label>
-                  <Input placeholder="Descripción de la imagen" />
+                  <div className="space-y-2">
+                    <label htmlFor="description" className="text-sm font-medium">
+                      Descripción <span className="text-muted-foreground">(opcional)</span>
+                    </label>
+                    <Input
+                      id="description"
+                      value={descriptionInput}
+                      onChange={(e) => setDescriptionInput(e.target.value)}
+                      placeholder="Descripción de la imagen"
+                    />
+                  </div>
+                  
+                  <div className="space-y-2">
+                    <label htmlFor="file" className="text-sm font-medium">
+                      Imagen <span className="text-destructive">*</span>
+                    </label>
+                    <div className="border rounded-md p-4 text-center">
+                      {selectedFile ? (
+                        <div className="flex flex-col items-center gap-2">
+                          <div className="text-sm font-medium text-primary">{selectedFile.name}</div>
+                          <div className="text-xs text-muted-foreground">
+                            {(selectedFile.size / 1024 / 1024).toFixed(2)} MB
+                          </div>
+                          <Button 
+                            variant="outline" 
+                            size="sm" 
+                            onClick={() => setSelectedFile(null)}
+                          >
+                            Cambiar
+                          </Button>
+                        </div>
+                      ) : (
+                        <div className="flex flex-col items-center gap-2">
+                          <UploadCloud className="h-8 w-8 text-muted-foreground" />
+                          <div className="text-sm">
+                            <label htmlFor="file-upload" className="text-primary hover:underline cursor-pointer">
+                              Seleccionar archivo
+                            </label>
+                            <Input
+                              id="file-upload"
+                              type="file"
+                              accept="image/*"
+                              onChange={handleFileSelect}
+                              className="sr-only"
+                            />
+                          </div>
+                          <div className="text-xs text-muted-foreground">
+                            PNG, JPG, GIF hasta 5MB
+                          </div>
+                        </div>
+                      )}
+                    </div>
+                  </div>
+                  
+                  {uploadError && (
+                    <div className="bg-destructive/10 text-destructive p-3 rounded-md text-sm flex items-start gap-2">
+                      <AlertTriangle className="h-4 w-4 mt-0.5 flex-shrink-0" />
+                      <span>{uploadError}</span>
+                    </div>
+                  )}
                 </div>
               </div>
               <DialogFooter>
-                <Button variant="outline" onClick={() => {}}>Cancelar</Button>
+                <Button 
+                  variant="outline" 
+                  onClick={handleDialogClose}
+                  disabled={isUploading}
+                >
+                  Cancelar
+                </Button>
                 <Button 
                   onClick={handleUpload} 
                   disabled={isUploading}
@@ -252,7 +390,114 @@ export default function GalleryManager() {
                 </Button>
               </DialogTrigger>
               <DialogContent>
-                {/* Same dialog content as above */}
+                <DialogHeader>
+                  <DialogTitle>Subir primera imagen</DialogTitle>
+                  <DialogDescription>
+                    Selecciona una imagen para añadir a la galería.
+                  </DialogDescription>
+                </DialogHeader>
+                <div className="py-4">
+                  <div className="space-y-4">
+                    <div className="space-y-2">
+                      <label htmlFor="title-first" className="text-sm font-medium">
+                        Título <span className="text-destructive">*</span>
+                      </label>
+                      <Input
+                        id="title-first"
+                        value={titleInput}
+                        onChange={(e) => setTitleInput(e.target.value)}
+                        placeholder="Título de la imagen"
+                      />
+                    </div>
+                    
+                    <div className="space-y-2">
+                      <label htmlFor="description-first" className="text-sm font-medium">
+                        Descripción <span className="text-muted-foreground">(opcional)</span>
+                      </label>
+                      <Input
+                        id="description-first"
+                        value={descriptionInput}
+                        onChange={(e) => setDescriptionInput(e.target.value)}
+                        placeholder="Descripción de la imagen"
+                      />
+                    </div>
+                    
+                    <div className="space-y-2">
+                      <label htmlFor="file-first" className="text-sm font-medium">
+                        Imagen <span className="text-destructive">*</span>
+                      </label>
+                      <div className="border rounded-md p-4 text-center">
+                        {selectedFile ? (
+                          <div className="flex flex-col items-center gap-2">
+                            <div className="text-sm font-medium text-primary">{selectedFile.name}</div>
+                            <div className="text-xs text-muted-foreground">
+                              {(selectedFile.size / 1024 / 1024).toFixed(2)} MB
+                            </div>
+                            <Button 
+                              variant="outline" 
+                              size="sm" 
+                              onClick={() => setSelectedFile(null)}
+                            >
+                              Cambiar
+                            </Button>
+                          </div>
+                        ) : (
+                          <div className="flex flex-col items-center gap-2">
+                            <UploadCloud className="h-8 w-8 text-muted-foreground" />
+                            <div className="text-sm">
+                              <label htmlFor="file-upload-first" className="text-primary hover:underline cursor-pointer">
+                                Seleccionar archivo
+                              </label>
+                              <Input
+                                id="file-upload-first"
+                                type="file"
+                                accept="image/*"
+                                onChange={handleFileSelect}
+                                className="sr-only"
+                              />
+                            </div>
+                            <div className="text-xs text-muted-foreground">
+                              PNG, JPG, GIF hasta 5MB
+                            </div>
+                          </div>
+                        )}
+                      </div>
+                    </div>
+                    
+                    {uploadError && (
+                      <div className="bg-destructive/10 text-destructive p-3 rounded-md text-sm flex items-start gap-2">
+                        <AlertTriangle className="h-4 w-4 mt-0.5 flex-shrink-0" />
+                        <span>{uploadError}</span>
+                      </div>
+                    )}
+                  </div>
+                </div>
+                <DialogFooter>
+                  <Button 
+                    variant="outline" 
+                    onClick={handleDialogClose}
+                    disabled={isUploading}
+                  >
+                    Cancelar
+                  </Button>
+                  <Button 
+                    onClick={handleUpload} 
+                    disabled={isUploading}
+                    className="gap-1"
+                  >
+                    {isUploading ? (
+                      <>
+                        <Loader2 className="h-4 w-4 animate-spin" />
+                        <span>Subiendo...</span>
+                      </>
+                    ) : (
+                      <>
+                        <UploadCloud className="h-4 w-4" />
+                        <span>Subir</span>
+                      </>
+                    )}
+                  </Button>
+                </DialogFooter>
               </DialogContent>
             </Dialog>
           </div>
@@ -265,18 +510,18 @@ export default function GalleryManager() {
               >
                 <div className="aspect-square relative">
                   <Image
-                    src={image.image.url}
-                    alt={image.title}
+                    src={image.image_url}
+                    alt={image.localizedTitle}
                     fill
                     sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
                     className="object-cover"
                   />
                 </div>
                 <div className="p-2">
-                  <h3 className="text-sm font-medium truncate">{image.title}</h3>
-                  {image.description && (
+                  <h3 className="text-sm font-medium truncate">{image.localizedTitle}</h3>
+                  {image.localizedDescription && (
                     <p className="text-xs text-muted-foreground truncate">
-                      {image.description}
+                      {image.localizedDescription}
                     </p>
                   )}
                 </div>

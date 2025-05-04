@@ -1,7 +1,11 @@
 import { NextRequest, NextResponse } from "next/server"
 import { isAuthenticated } from "@/lib/auth"
-import { getGalleryImages } from "@/lib/api" // Using our JSON API
 import { z } from "zod"
+import { 
+  getGalleryImagesFromSupabase, 
+  uploadGalleryImageToSupabase, 
+  deleteGalleryImageFromSupabase 
+} from "@/lib/supabase-gallery"
 
 // Schema for validating image upload
 const imageUploadSchema = z.object({
@@ -29,19 +33,10 @@ export async function GET(request: NextRequest) {
     }
 
     const { searchParams } = new URL(request.url)
-    const tag = searchParams.get('tag') // For filtering by tag
     const locale = searchParams.get('locale') || 'es'
 
-    // Get gallery images
-    const images = await getGalleryImages(locale as string)
-    
-    // Filter by tag if specified
-    if (tag) {
-      const filteredImages = images.filter(img => 
-        img.tags && img.tags.includes(tag)
-      )
-      return NextResponse.json(filteredImages)
-    }
+    // Get gallery images from Supabase
+    const images = await getGalleryImagesFromSupabase(locale as string)
     
     return NextResponse.json(images)
   } catch (error) {
@@ -64,14 +59,59 @@ export async function POST(request: NextRequest) {
       )
     }
 
-    // For now, return a not implemented response
-    return NextResponse.json(
-      { 
-        success: true,
-        message: "Image upload with JSON files functionality coming in phase 2" 
-      },
-      { status: 200 }
-    )
+    // Parse the form data from the request
+    const formData = await request.formData();
+    const title = formData.get('title') as string;
+    const description = formData.get('description') as string | null;
+    const locale = formData.get('locale') as string || 'es';
+    const imageFile = formData.get('file') as File;
+
+    // Validate the required fields
+    if (!title || !imageFile) {
+      return NextResponse.json(
+        { message: "Missing required fields: title and image file" },
+        { status: 400 }
+      );
+    }
+
+    // Create multilingual objects for title and description
+    const titleMultilingual: Record<string, string> = {
+      [locale]: title
+    };
+
+    const descriptionMultilingual: Record<string, string> | undefined = description 
+      ? { [locale]: description }
+      : undefined;
+
+    // Todo: In a real implementation, upload the image to Supabase Storage
+    // For now, we'll use a placeholder URL
+    const imageUrl = `https://example.com/images/${imageFile.name}`;
+    
+    // Todo: Get actual image dimensions
+    const imageWidth = 800;
+    const imageHeight = 600;
+
+    // Upload the gallery image to Supabase
+    const newImage = await uploadGalleryImageToSupabase({
+      title: titleMultilingual,
+      description: descriptionMultilingual,
+      image_url: imageUrl,
+      image_width: imageWidth,
+      image_height: imageHeight
+    });
+
+    if (!newImage) {
+      return NextResponse.json(
+        { message: "Failed to upload image to the database" },
+        { status: 500 }
+      );
+    }
+
+    return NextResponse.json({
+      success: true,
+      message: "Image uploaded successfully",
+      image: newImage
+    });
   } catch (error) {
     console.error("Error uploading image:", error)
     return NextResponse.json(
@@ -92,14 +132,33 @@ export async function DELETE(request: NextRequest) {
       )
     }
 
-    // For now, return a not implemented response
-    return NextResponse.json(
-      { 
-        success: true,
-        message: "Image deletion with JSON files functionality coming in phase 2" 
-      },
-      { status: 200 }
-    )
+    // Extract the image ID from the URL
+    const { searchParams } = new URL(request.url);
+    const imageId = searchParams.get('id');
+
+    if (!imageId) {
+      return NextResponse.json(
+        { message: "Image ID is required" },
+        { status: 400 }
+      );
+    }
+
+    // Delete the image from Supabase
+    const success = await deleteGalleryImageFromSupabase(imageId);
+
+    if (!success) {
+      return NextResponse.json(
+        { message: "Failed to delete the image" },
+        { status: 500 }
+      );
+    }
+
+    // Todo: In a real implementation, also delete the image file from storage
+
+    return NextResponse.json({
+      success: true,
+      message: "Image deleted successfully"
+    });
   } catch (error) {
     console.error("Error deleting image:", error)
     return NextResponse.json(

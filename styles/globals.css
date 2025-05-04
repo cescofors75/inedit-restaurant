@@ -92,3 +92,14 @@ body {
     @apply bg-background text-foreground;
   }
 }
+.card button.bg-primary {
+  background-color: white !important;
+  color: black !important;
+  font-weight: 500 !important;
+}
+
+/* Asegurarse de que los íconos también sean visibles */
+.card button.bg-primary svg {
+  color: black !important;
+}
+

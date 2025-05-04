@@ -1,6 +1,10 @@
 import { NextRequest, NextResponse } from "next/server"
 import { isAuthenticated } from "@/lib/auth";
-import { getTranslations } from "@/lib/api"; // Using our JSON file API
+import { 
+  getTranslationsFromSupabase, 
+  updateTranslationsInSupabase, 
+  deleteTranslationKeyFromSupabase 
+} from "@/lib/supabase-translations";
 import { z } from "zod";
 
 // Schema for validating translation updates
@@ -23,8 +27,15 @@ export async function GET(request: NextRequest) {
     const { searchParams } = new URL(request.url)
     const locale = searchParams.get('locale') || 'es'
 
-    // Get translations for the specified locale
-    const translations = await getTranslations(locale)
+    // Get translations for the specified locale from Supabase
+    const translations = await getTranslationsFromSupabase(locale)
+    
+    if (translations === null) {
+      return NextResponse.json(
+        { message: "Failed to fetch translations" },
+        { status: 500 }
+      )
+    }
     
     return NextResponse.json(translations)
   } catch (error) {
@@ -36,6 +47,50 @@ export async function GET(request: NextRequest) {
   }
 }
 
+// DELETE handler to delete a translation key across all locales
+export async function DELETE(request: NextRequest) {
+  try {
+    // Check authentication
+    if (!(await isAuthenticated())) {
+      return NextResponse.json(
+        { message: "Unauthorized" },
+        { status: 401 }
+      )
+    }
+
+    // Get the key to delete from query parameters
+    const { searchParams } = new URL(request.url)
+    const key = searchParams.get('key')
+    
+    if (!key) {
+      return NextResponse.json(
+        { message: "Translation key is required" },
+        { status: 400 }
+      )
+    }
+    
+    // Delete the translation key from Supabase
+    const success = await deleteTranslationKeyFromSupabase(key)
+    
+    if (!success) {
+      return NextResponse.json(
+        { message: "Failed to delete translation key" },
+        { status: 500 }
+      )
+    }
+    
+    return NextResponse.json(
+      { success: true, message: "Translation key deleted successfully" },
+      { status: 200 }
+    )
+  } catch (error) {
+    console.error("Error deleting translation key:", error)
+    return NextResponse.json(
+      { message: "An unexpected error occurred" },
+      { status: 500 }
+    )
+  }
+}
 // PUT handler to update translations
 export async function PUT(request: NextRequest) {
   try {
@@ -61,13 +116,20 @@ export async function PUT(request: NextRequest) {
       )
     }
     
-    // For now, return a not implemented response
-    // This will be updated once we implement JSON file update functionality
+    const { locale, translations } = result.data
+    
+    // Update translations in Supabase
+    const success = await updateTranslationsInSupabase(locale, translations)
+    
+    if (!success) {
+      return NextResponse.json(
+        { message: "Failed to update translations" },
+        { status: 500 }
+      )
+    }
+    
     return NextResponse.json(
-      { 
-        success: true,
-        message: "Update translations with JSON files functionality coming in phase 2" 
-      },
+      { success: true, message: "Translations updated successfully" },
       { status: 200 }
     )
   } catch (error) {

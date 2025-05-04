@@ -5,6 +5,18 @@ import { useRouter } from "next/navigation"
 import { Edit, Filter, Image as ImageIcon, Loader2, Plus, Trash2, Wine } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
+import { Label } from "@/components/ui/label"
+import { Textarea } from "@/components/ui/textarea"
+import { Input } from "@/components/ui/input"
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog"
 import {
   Table,
   TableBody,
@@ -43,22 +55,36 @@ import {
 // Define types based on the API response
 type BeverageCategory = {
   id: string
-  name: string
+  name: string | Record<string, string>
   slug: string
-  description?: string
+  description?: string | Record<string, string>
 }
 
 type BeverageItem = {
   id: string
-  name: string
-  description: string
+  name: string | Record<string, string>
+  description?: string | Record<string, string>
   price: string
-  category: {
-    sys: {
-      id: string
-    }
-  }
-  image?: any
+  category_id?: string
+  image_url?: string
+  image_width?: number
+  image_height?: number
+}
+
+// Define the type for edit form data
+type EditFormData = {
+  id?: string;
+  name?: string;
+  description?: string;
+  price?: string;
+  category_id?: string;
+}
+
+// Function for deleting beverage items (add implementation or import)
+const deleteBeverageItemFromSupabase = async (itemId: string): Promise<boolean> => {
+  // Replace with actual implementation
+  console.log(`Would delete beverage item with ID: ${itemId}`);
+  return true;
 }
 
 export default function BeveragesItemsList() {
@@ -66,11 +92,20 @@ export default function BeveragesItemsList() {
   const [items, setItems] = useState<BeverageItem[]>([])
   const [categories, setCategories] = useState<BeverageCategory[]>([])
   const [selectedCategoryId, setSelectedCategoryId] = useState<string>("all")
+  const [editFormData, setEditFormData] = useState<EditFormData>({})
+  const [isSaving, setIsSaving] = useState(false)
+  const [saveError, setSaveError] = useState<string | null>(null)
   const [isLoading, setIsLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
   const [isCreating, setIsCreating] = useState(false)
   const [isEditing, setIsEditing] = useState<string | null>(null)
   const [isDeleting, setIsDeleting] = useState<string | null>(null)
+  
+  // Helper function to get localized value from multilingual object
+  const getLocalizedValue = (obj: string | Record<string, string>, locale = 'es'): string => {
+    if (typeof obj === 'string') return obj;
+    return obj[locale] || obj['en'] || '';
+  };
 
   // Function to fetch beverages data
   const fetchBeveragesData = useCallback(async () => {
@@ -104,13 +139,69 @@ export default function BeveragesItemsList() {
   // Get filtered items based on selected category
   const filteredItems = selectedCategoryId === "all" 
     ? items
-    : items.filter(item => item.category?.sys?.id === selectedCategoryId)
+    : items.filter(item => item.category_id === selectedCategoryId)
 
   // Find category name from id
   const getCategoryName = (categoryId: string): string => {
     const category = categories.find(cat => cat.id === categoryId)
-    return category ? category.name : "Sin categoría"
+    return category ? getLocalizedValue(category.name) : "Sin categoría"
   }
+
+  const handleEditItem = (itemId: string) => {
+    const item = items.find(i => i.id === itemId);
+    if (item) {
+      setEditFormData({
+        id: item.id,
+        name: getLocalizedValue(item.name),
+        description: item.description ? getLocalizedValue(item.description) : '',
+        price: item.price,
+        category_id: item.category_id,
+      });
+      setIsEditing(itemId);
+    }
+  }
+
+  const handleSaveEdit = async () => {
+    if (!editFormData.id) return;
+    
+    setSaveError(null);
+    setIsSaving(true);
+    
+    try {
+      // Transform data for API
+      const apiData = {
+        id: editFormData.id,
+        type: 'item',
+        name: editFormData.name,
+        description: editFormData.description,
+        price: editFormData.price,
+        categoryId: editFormData.category_id,
+        locale: 'es' // Using Spanish as default locale
+      };
+      
+      // Call API to update item
+      const response = await fetch('/api/admin/menu', {
+        method: 'PUT',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(apiData),
+      });
+      
+      if (!response.ok) {
+        throw new Error(`Failed to update: ${response.status}`);
+      }
+      
+      // Refresh data
+      fetchBeveragesData();
+      setIsEditing(null);
+      setEditFormData({});
+      
+    } catch (error) {
+      console.error('Error updating menu item:', error);
+      setSaveError('Error al guardar los cambios. Inténtalo de nuevo.');
+    } finally {
+      setIsSaving(false);
+    }
+  };
 
   // Functions for handling item actions
   const handleCreateItem = () => {
@@ -118,22 +209,21 @@ export default function BeveragesItemsList() {
     // In a real implementation, this would open a form dialog
   }
 
-  const handleEditItem = (itemId: string) => {
-    setIsEditing(itemId);
-    // In a real implementation, this would open a form dialog with item data
-  }
-
   const confirmDeleteItem = async (itemId: string) => {
     try {
-      // This would make an actual DELETE request to the API
-      console.log(`Deleting beverage: ${itemId}`);
+      // Call the Supabase delete function
+      const success = await deleteBeverageItemFromSupabase(itemId);
       
+      if(!success) {
+        throw new Error(`Failed to delete beverage with id: ${itemId}`);
+      }
       // After deletion, refresh the list
       fetchBeveragesData();
     } catch (error) {
       console.error("Failed to delete beverage:", error);
     } finally {
       setIsDeleting(null);
+      fetchBeveragesData()
     }
   }
 
@@ -163,7 +253,89 @@ export default function BeveragesItemsList() {
   }
 
   return (
-    <Card>
+    <>
+      {/* Edit Item Dialog */}
+      <Dialog open={isEditing !== null} onOpenChange={(open) => !open && setIsEditing(null)}>
+        <DialogContent className="sm:max-w-[500px]">
+          <DialogHeader>
+            <DialogTitle>Editar Bebida</DialogTitle>
+            <DialogDescription>
+              Actualiza la información de la bebida. Haz clic en guardar cuando hayas terminado.
+            </DialogDescription>
+          </DialogHeader>
+          <div className="grid gap-4 py-4">
+            {/* Name input */}
+            <div className="grid gap-2">
+              <Label htmlFor="name">Nombre</Label>
+              <Input 
+                id="name" 
+                value={editFormData.name || ''} 
+                onChange={(e) => setEditFormData({...editFormData, name: e.target.value})}
+              />
+            </div>
+            {/* Description input */}
+            <div className="grid gap-2">
+              <Label htmlFor="description">Descripción</Label>
+              <Textarea 
+                id="description" 
+                value={editFormData.description || ''} 
+                onChange={(e) => setEditFormData({...editFormData, description: e.target.value})}
+              />
+            </div>
+            {/* Price input */}
+            <div className="grid gap-2">
+              <Label htmlFor="price">Precio (€)</Label>
+              <Input 
+                id="price" 
+                value={editFormData.price || ''} 
+                onChange={(e) => setEditFormData({...editFormData, price: e.target.value})}
+              />
+            </div>
+            {/* Category select */}
+            <div className="grid gap-2">
+              <Label htmlFor="category">Categoría</Label>
+              <Select 
+                value={editFormData.category_id || ''} 
+                onValueChange={(value) => setEditFormData({...editFormData, category_id: value})}
+              >
+                <SelectTrigger>
+                  <SelectValue placeholder="Seleccionar categoría" />
+                </SelectTrigger>
+                <SelectContent>
+                  {categories.map(category => (
+                    <SelectItem key={category.id} value={category.id}>
+                      {getLocalizedValue(category.name)}
+                    </SelectItem>
+                  ))}
+                </SelectContent>
+              </Select>
+            </div>
+            
+            {saveError && (
+              <div className="bg-destructive/10 text-destructive p-3 rounded-md text-sm">
+                {saveError}
+              </div>
+            )}
+          </div>
+          <DialogFooter>
+            <Button variant="outline" className="text-black" onClick={() => setIsEditing(null)} disabled={isSaving}>
+              Cancelar
+            </Button>
+            <Button className="text-black" onClick={handleSaveEdit} disabled={isSaving}>
+              {isSaving ? (
+                <>
+                  <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                  Guardando...
+                </>
+              ) : (
+                'Guardar Cambios'
+              )}
+            </Button>
+          </DialogFooter>
+        </DialogContent>
+      </Dialog>
+
+      <Card>
       <CardHeader>
         <div className="flex flex-col sm:flex-row justify-between sm:items-center gap-4">
           <div>
@@ -188,9 +360,9 @@ export default function BeveragesItemsList() {
                 <SelectContent>
                   <SelectItem value="all">Todas las categorías</SelectItem>
                   {categories.map(category => (
-                    <SelectItem key={category.id} value={category.id}>
-                      {category.name}
-                    </SelectItem>
+                <SelectItem key={category.id} value={category.id}>
+                  {getLocalizedValue(category.name)}
+                </SelectItem>
                   ))}
                 </SelectContent>
               </Select>
@@ -231,17 +403,17 @@ export default function BeveragesItemsList() {
                 <TableRow key={item.id}>
                   <TableCell className="font-medium">
                     <div>
-                      <div>{item.name}</div>
+                      <div>{getLocalizedValue(item.name)}</div>
                       {item.description && (
                         <div className="text-muted-foreground text-sm line-clamp-1">
-                          {item.description}
+                          {getLocalizedValue(item.description)}
                         </div>
                       )}
                     </div>
                   </TableCell>
                   <TableCell>
                     <Badge variant="secondary">
-                      {getCategoryName(item.category?.sys?.id)}
+                      {item.category_id ? getCategoryName(item.category_id) : "Sin categoría"}
                     </Badge>
                   </TableCell>
                   <TableCell>
@@ -250,16 +422,13 @@ export default function BeveragesItemsList() {
                     </Badge>
                   </TableCell>
                   <TableCell>
-                    {item.image ? (
+                    {item.image_url ? (
+                      
                       <Badge variant="outline" className="bg-primary/10 gap-1">
                         <ImageIcon className="h-3 w-3" />
-                        <span>Sí</span>
                       </Badge>
                     ) : (
-                      <Badge variant="outline" className="gap-1">
-                        <ImageIcon className="h-3 w-3" />
-                        <span>No</span>
-                      </Badge>
+                     ""
                     )}
                   </TableCell>
                   <TableCell className="text-right">
@@ -311,5 +480,6 @@ export default function BeveragesItemsList() {
         )}
       </CardContent>
     </Card>
+    </>
   )
 }

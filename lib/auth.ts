@@ -49,7 +49,7 @@ export async function setAuthCookie() {
 // Check if admin is authenticated
 export async function isAuthenticated(): Promise<boolean> {
   const cookieStore = cookies();
-  const authCookie = await cookieStore.get('admin_authenticated');
+  const authCookie = cookieStore.get('admin_authenticated');
   return authCookie?.value === 'true';
 }
 

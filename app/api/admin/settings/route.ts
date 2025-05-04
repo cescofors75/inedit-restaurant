@@ -1,7 +1,10 @@
 import { NextRequest, NextResponse } from "next/server"
 import { isAuthenticated } from "@/lib/auth"
-import { getRestaurantSettings } from "@/lib/api" // Using our JSON API
 import { z } from "zod"
+import { 
+  getRestaurantSettingsFromSupabase,
+  updateRestaurantSettingsInSupabase
+} from "@/lib/supabase-api"
 
 // Schema for validating settings update requests
 const contactInfoSchema = z.object({
@@ -52,8 +55,8 @@ export async function GET(request: NextRequest) {
     const { searchParams } = new URL(request.url)
     const locale = searchParams.get('locale') || 'es'
 
-    // Get restaurant settings
-    const settings = await getRestaurantSettings(locale as string)
+    // Get restaurant settings from Supabase
+    const settings = await getRestaurantSettingsFromSupabase(locale as string)
 
     if (!settings) {
       return NextResponse.json(
@@ -99,15 +102,30 @@ export async function PUT(request: NextRequest) {
       )
     }
     
-    // For now, return a not implemented response
-    // This will be updated once we implement JSON file update functionality
-    return NextResponse.json(
-      { 
-        success: true,
-        message: "Update settings with JSON files functionality coming in phase 2" 
-      },
-      { status: 200 }
-    )
+    const validatedData = result.data;
+    const locale = validatedData.locale || 'es';
+    
+    // Update settings in Supabase
+    const updatedSettings = await updateRestaurantSettingsInSupabase({
+      id: validatedData.id,
+      name: validatedData.name,
+      description: validatedData.description,
+      contactInfo: validatedData.contactInfo,
+      openingHours: validatedData.openingHours,
+      socialMedia: validatedData.socialMedia
+    });
+    
+    if (!updatedSettings) {
+      return NextResponse.json(
+        { message: "Failed to update settings" },
+        { status: 500 }
+      )
+    }
+    
+    return NextResponse.json({
+      success: true,
+      data: updatedSettings
+    }, { status: 200 })
   } catch (error) {
     console.error("Error updating settings:", error)
     return NextResponse.json(

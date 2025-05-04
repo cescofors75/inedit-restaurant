@@ -5,6 +5,18 @@ import { useRouter } from "next/navigation"
 import { Edit, Filter, Image as ImageIcon, Loader2, Plus, Trash2, UtensilsCrossed } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
+import { Label } from "@/components/ui/label"
+import { Textarea } from "@/components/ui/textarea"
+import { Input } from "@/components/ui/input"
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog"
 import {
   Table,
   TableBody,
@@ -43,22 +55,36 @@ import {
 // Define types based on the API response
 type MenuCategory = {
   id: string
-  name: string
+  name: string | Record<string, string>
   slug: string
-  description?: string
+  description?: string | Record<string, string>
 }
 
 type MenuItem = {
   id: string
-  name: string
-  description: string
+  name: string | Record<string, string>
+  description?: string | Record<string, string>
   price: string
-  category: {
-    sys: {
-      id: string
-    }
-  }
-  image?: any
+  category_id?: string
+  image_url?: string
+  image_width?: number
+  image_height?: number
+}
+
+// Define the type for edit form data
+type EditFormData = {
+  id?: string;
+  name?: string;
+  description?: string;
+  price?: string;
+  category_id?: string;
+}
+
+// Function for deleting menu items (add implementation or import)
+const deleteMenuItemFromSupabase = async (itemId: string): Promise<boolean> => {
+  // Replace with actual implementation
+  console.log(`Would delete menu item with ID: ${itemId}`);
+  return true;
 }
 
 export default function MenuItemsList() {
@@ -71,6 +97,15 @@ export default function MenuItemsList() {
   const [isCreating, setIsCreating] = useState(false)
   const [isEditing, setIsEditing] = useState<string | null>(null)
   const [isDeleting, setIsDeleting] = useState<string | null>(null)
+  const [editFormData, setEditFormData] = useState<EditFormData>({})
+  const [isSaving, setIsSaving] = useState(false)
+  const [saveError, setSaveError] = useState<string | null>(null)
+  
+  // Helper function to get localized value from multilingual object
+  const getLocalizedValue = (obj: string | Record<string, string>, locale = 'es'): string => {
+    if (typeof obj === 'string') return obj;
+    return obj[locale] || obj['en'] || '';
+  };
 
   // Function to fetch menu data
   const fetchMenuData = useCallback(async () => {
@@ -90,7 +125,7 @@ export default function MenuItemsList() {
       setItems(data.items)
     } catch (err) {
       console.error("Failed to fetch menu data:", err)
-      setError("No se pudieron cargar los platos. Por favor, inténtalo de nuevo.")
+      setError("No se pudieron cargar los platos del menú. Por favor, inténtalo de nuevo.")
     } finally {
       setIsLoading(false)
     }
@@ -104,36 +139,91 @@ export default function MenuItemsList() {
   // Get filtered items based on selected category
   const filteredItems = selectedCategoryId === "all" 
     ? items
-    : items.filter(item => item.category?.sys?.id === selectedCategoryId)
+    : items.filter(item => item.category_id === selectedCategoryId)
 
   // Find category name from id
   const getCategoryName = (categoryId: string): string => {
     const category = categories.find(cat => cat.id === categoryId)
-    return category ? category.name : "Sin categoría"
+    return category ? getLocalizedValue(category.name) : "Sin categoría"
   }
 
-  // Functions for handling item actions (to be implemented fully later)
+  const handleEditItem = (itemId: string) => {
+    const item = items.find(i => i.id === itemId);
+    if (item) {
+      setEditFormData({
+        id: item.id,
+        name: getLocalizedValue(item.name),
+        description: item.description ? getLocalizedValue(item.description) : '',
+        price: item.price,
+        category_id: item.category_id,
+      });
+      setIsEditing(itemId);
+    }
+  }
+
+  const handleSaveEdit = async () => {
+    if (!editFormData.id) return;
+    
+    setIsSaving(true);
+    setSaveError(null);
+    
+    try {
+      // Transform data for API
+      const apiData = {
+        id: editFormData.id,
+        type: 'item',
+        name: editFormData.name,
+        description: editFormData.description,
+        price: editFormData.price,
+        categoryId: editFormData.category_id,
+        locale: 'es' // Using Spanish as default locale
+      };
+      
+      // Call API to update item
+      const response = await fetch('/api/admin/menu', {
+        method: 'PUT',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(apiData),
+      });
+      
+      if (!response.ok) {
+        throw new Error(`Failed to update: ${response.status}`);
+      }
+      
+      // Refresh data
+      fetchMenuData();
+      setIsEditing(null);
+      setEditFormData({});
+      
+    } catch (error) {
+      console.error('Error updating menu item:', error);
+      setSaveError('Error al guardar los cambios. Inténtalo de nuevo.');
+    } finally {
+      setIsSaving(false);
+    }
+  };
+
+  // Functions for handling item actions
   const handleCreateItem = () => {
     setIsCreating(true);
     // In a real implementation, this would open a form dialog
   }
 
-  const handleEditItem = (itemId: string) => {
-    setIsEditing(itemId);
-    // In a real implementation, this would open a form dialog with item data
-  }
-
   const confirmDeleteItem = async (itemId: string) => {
     try {
-      // This would make an actual DELETE request to the API
-      console.log(`Deleting item: ${itemId}`);
+      // Call the delete function
+      const success = await deleteMenuItemFromSupabase(itemId);
       
+      if(!success) {
+        throw new Error(`Failed to delete menu item with id: ${itemId}`);
+      }
       // After deletion, refresh the list
       fetchMenuData();
     } catch (error) {
-      console.error("Failed to delete item:", error);
+      console.error("Failed to delete menu item:", error);
     } finally {
       setIsDeleting(null);
+      fetchMenuData();
     }
   }
 
@@ -141,7 +231,7 @@ export default function MenuItemsList() {
     return (
       <div className="flex flex-col items-center justify-center h-40">
         <Loader2 className="h-8 w-8 animate-spin text-primary mb-2" />
-        <p className="text-muted-foreground">Cargando platos...</p>
+        <p className="text-muted-foreground">Cargando platos del menú...</p>
       </div>
     )
   }
@@ -163,53 +253,134 @@ export default function MenuItemsList() {
   }
 
   return (
-    <Card>
+    <>
+      {/* Edit Item Dialog */}
+      <Dialog open={isEditing !== null} onOpenChange={(open) => !open && setIsEditing(null)}>
+        <DialogContent className="sm:max-w-[500px]">
+          <DialogHeader>
+            <DialogTitle>Editar Plato</DialogTitle>
+            <DialogDescription>
+              Actualiza la información del plato. Haz clic en guardar cuando hayas terminado.
+            </DialogDescription>
+          </DialogHeader>
+          <div className="grid gap-4 py-4">
+            {/* Name input */}
+            <div className="grid gap-2">
+              <Label htmlFor="name">Nombre</Label>
+              <Input 
+                id="name" 
+                value={editFormData.name || ''} 
+                onChange={(e) => setEditFormData({...editFormData, name: e.target.value})}
+              />
+            </div>
+            {/* Description input */}
+            <div className="grid gap-2">
+              <Label htmlFor="description">Descripción</Label>
+              <Textarea 
+                id="description" 
+                value={editFormData.description || ''} 
+                onChange={(e) => setEditFormData({...editFormData, description: e.target.value})}
+              />
+            </div>
+            {/* Price input */}
+            <div className="grid gap-2">
+              <Label htmlFor="price">Precio (€)</Label>
+              <Input 
+                id="price" 
+                value={editFormData.price || ''} 
+                onChange={(e) => setEditFormData({...editFormData, price: e.target.value})}
+              />
+            </div>
+            {/* Category select */}
+            <div className="grid gap-2">
+              <Label htmlFor="category">Categoría</Label>
+              <Select 
+                value={editFormData.category_id || ''} 
+                onValueChange={(value) => setEditFormData({...editFormData, category_id: value})}
+              >
+                <SelectTrigger>
+                  <SelectValue placeholder="Seleccionar categoría" />
+                </SelectTrigger>
+                <SelectContent>
+                  {categories.map(category => (
+                    <SelectItem key={category.id} value={category.id}>
+                      {getLocalizedValue(category.name)}
+                    </SelectItem>
+                  ))}
+                </SelectContent>
+              </Select>
+            </div>
+            
+            {saveError && (
+              <div className="bg-destructive/10 text-destructive p-3 rounded-md text-sm">
+                {saveError}
+              </div>
+            )}
+          </div>
+          <DialogFooter>
+            <Button variant="outline" className="text-black" onClick={() => setIsEditing(null)} disabled={isSaving}>
+              Cancelar
+            </Button>
+            <Button className="text-black" onClick={handleSaveEdit} disabled={isSaving}>
+              {isSaving ? (
+                <>
+                  <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                  Guardando...
+                </>
+              ) : (
+                'Guardar Cambios'
+              )}
+            </Button>
+          </DialogFooter>
+        </DialogContent>
+      </Dialog>
+
+      <Card>
       <CardHeader>
-        <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+        <div className="flex flex-col sm:flex-row justify-between sm:items-center gap-4">
           <div>
             <CardTitle className="flex items-center gap-2">
               <UtensilsCrossed className="h-5 w-5 text-primary" />
               <span>Platos del Menú</span>
             </CardTitle>
             <CardDescription>
-              Gestiona los platos disponibles en el restaurante
+              Gestiona los platos del restaurante
             </CardDescription>
           </div>
-          <Button onClick={handleCreateItem} className="gap-1">
-            <Plus className="h-4 w-4" />
-            <span>Nuevo Plato</span>
-          </Button>
+          <div className="flex flex-col sm:flex-row gap-2">
+            <div className="flex items-center gap-2">
+              <Filter className="h-4 w-4 text-muted-foreground" />
+              <Select 
+                value={selectedCategoryId} 
+                onValueChange={setSelectedCategoryId}
+              >
+                <SelectTrigger className="w-[180px]">
+                  <SelectValue placeholder="Filtrar por categoría" />
+                </SelectTrigger>
+                <SelectContent>
+                  <SelectItem value="all">Todas las categorías</SelectItem>
+                  {categories.map(category => (
+                <SelectItem key={category.id} value={category.id}>
+                  {getLocalizedValue(category.name)}
+                </SelectItem>
+                  ))}
+                </SelectContent>
+              </Select>
+            </div>
+            <Button onClick={handleCreateItem} className="gap-1">
+              <Plus className="h-4 w-4" />
+              <span>Nuevo Plato</span>
+            </Button>
+          </div>
         </div>
       </CardHeader>
       <CardContent>
-        <div className="flex items-center gap-2 mb-6">
-          <Filter className="h-4 w-4 text-muted-foreground" />
-          <p className="text-sm text-muted-foreground mr-2">Filtrar por categoría:</p>
-          <Select
-            value={selectedCategoryId}
-            onValueChange={setSelectedCategoryId}
-          >
-            <SelectTrigger className="w-[180px]">
-              <SelectValue placeholder="Todas las categorías" />
-            </SelectTrigger>
-            <SelectContent>
-              <SelectItem value="all">Todas las categorías</SelectItem>
-              {categories.map((category) => (
-                <SelectItem key={category.id} value={category.id}>
-                  {category.name}
-                </SelectItem>
-              ))}
-            </SelectContent>
-          </Select>
-        </div>
-
         {filteredItems.length === 0 ? (
           <div className="text-center py-10 border rounded-md">
             <p className="text-muted-foreground mb-4">
-              {selectedCategoryId 
-                ? "No hay platos en esta categoría." 
-                : "No hay platos creados aún."
-              }
+              {selectedCategoryId === "all" 
+                ? "No hay platos creados aún."
+                : "No hay platos en esta categoría."}
             </p>
             <Button className="gap-1" onClick={handleCreateItem}>
               <Plus className="h-4 w-4" />
@@ -221,8 +392,8 @@ export default function MenuItemsList() {
             <TableHeader>
               <TableRow>
                 <TableHead>Nombre</TableHead>
-                <TableHead>Precio</TableHead>
                 <TableHead>Categoría</TableHead>
+                <TableHead>Precio</TableHead>
                 <TableHead>Imagen</TableHead>
                 <TableHead className="text-right">Acciones</TableHead>
               </TableRow>
@@ -230,35 +401,33 @@ export default function MenuItemsList() {
             <TableBody>
               {filteredItems.map((item) => (
                 <TableRow key={item.id}>
-                  <TableCell>
+                  <TableCell className="font-medium">
                     <div>
-                      <div className="font-medium">{item.name}</div>
-                      <div className="text-xs text-muted-foreground line-clamp-1">
-                        {item.description || "—"}
-                      </div>
+                      <div>{getLocalizedValue(item.name)}</div>
+                      {item.description && (
+                        <div className="text-muted-foreground text-sm line-clamp-1">
+                          {getLocalizedValue(item.description)}
+                        </div>
+                      )}
                     </div>
                   </TableCell>
                   <TableCell>
                     <Badge variant="secondary">
-                      {item.price}€
+                      {item.category_id ? getCategoryName(item.category_id) : "Sin categoría"}
                     </Badge>
                   </TableCell>
                   <TableCell>
-                    {item.category?.sys?.id ? (
-                      <Badge variant="outline">
-                        {getCategoryName(item.category.sys.id)}
-                      </Badge>
-                    ) : (
-                      <span className="text-muted-foreground text-sm">Sin categoría</span>
-                    )}
+                    <Badge variant="outline">
+                      {item.price} €
+                    </Badge>
                   </TableCell>
                   <TableCell>
-                    {item.image ? (
-                      <div className="h-10 w-10 bg-muted rounded flex items-center justify-center">
-                        <ImageIcon className="h-4 w-4 text-muted-foreground" />
-                      </div>
+                    {item.image_url ? (
+                      <Badge variant="outline" className="bg-primary/10 gap-1">
+                        <ImageIcon className="h-3 w-3" />
+                      </Badge>
                     ) : (
-                      <span className="text-muted-foreground text-sm">—</span>
+                     ""
                     )}
                   </TableCell>
                   <TableCell className="text-right">
@@ -287,7 +456,7 @@ export default function MenuItemsList() {
                           <AlertDialogHeader>
                             <AlertDialogTitle>¿Eliminar plato?</AlertDialogTitle>
                             <AlertDialogDescription>
-                              Esta acción no se puede deshacer. El plato será eliminado permanentemente.
+                              Esta acción no se puede deshacer. ¿Seguro que quieres eliminar este plato?
                             </AlertDialogDescription>
                           </AlertDialogHeader>
                           <AlertDialogFooter>
@@ -310,6 +479,6 @@ export default function MenuItemsList() {
         )}
       </CardContent>
     </Card>
+    </>
   )
 }
-

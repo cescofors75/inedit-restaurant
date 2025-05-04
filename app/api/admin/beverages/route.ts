@@ -1,16 +1,16 @@
 import { NextRequest, NextResponse } from "next/server"
 import { isAuthenticated } from "@/lib/auth"
 import { 
-  getBeverageCategories, 
-  getBeverageItems, 
-  getBeverageItemsByCategory,
-  createBeverageCategory,
-  updateBeverageCategory,
-  deleteBeverageCategory,
-  createBeverageItem,
-  updateBeverageItem,
-  deleteBeverageItem
-} from "@/lib/api" // Using our JSON API
+  getBeverageCategoriesFromSupabase, 
+  getBeverageItemsFromSupabase, 
+  getBeverageItemsByCategoryFromSupabase,
+  createBeverageCategoryInSupabase,
+  updateBeverageCategoryInSupabase,
+  deleteBeverageCategoryFromSupabase,
+  createBeverageItemInSupabase,
+  updateBeverageItemInSupabase,
+  deleteBeverageItemFromSupabase
+} from "@/lib/supabase-beverages" // Using Supabase
 import { z } from "zod"
 
 // Schema for validating beverage category requests
@@ -53,24 +53,24 @@ export async function GET(request: NextRequest) {
     // Fetch based on type parameter
     if (type === 'categories') {
       // Get all beverage categories
-      const categories = await getBeverageCategories(locale as string)
+      const categories = await getBeverageCategoriesFromSupabase(locale as string)
       return NextResponse.json(categories)
     } else if (type === 'items') {
       // Get beverage items, optionally filtered by category
       if (categoryId) {
         // Get items for a specific category using our API function
-        const items = await getBeverageItemsByCategory(categoryId, locale as string)
+        const items = await getBeverageItemsByCategoryFromSupabase(categoryId, locale as string)
         return NextResponse.json(items)
       } else {
         // Get all items
-        const items = await getBeverageItems(locale as string)
+        const items = await getBeverageItemsFromSupabase(locale as string)
         return NextResponse.json(items)
       }
     } else {
       // Get both categories and items
       const [categories, items] = await Promise.all([
-        getBeverageCategories(locale as string),
-        getBeverageItems(locale as string)
+        getBeverageCategoriesFromSupabase(locale as string),
+        getBeverageItemsFromSupabase(locale as string)
       ])
       
       return NextResponse.json({
@@ -119,10 +119,10 @@ export async function POST(request: NextRequest) {
         const localizedDescriptions: Record<string, string> = description ? { [locale || 'es']: description } : {};
         
         // Create the category
-        const newCategory = await createBeverageCategory({
+        const newCategory = await createBeverageCategoryInSupabase({
           slug,
-          localizedNames,
-          localizedDescriptions
+          name: localizedNames,
+          description: localizedDescriptions
         });
 
         if (!newCategory) {
@@ -153,12 +153,12 @@ export async function POST(request: NextRequest) {
         const localizedDescriptions: Record<string, string> = { [locale || 'es']: description || '' };
         
         // Create the item
-        const newItem = await createBeverageItem({
+        const newItem = await createBeverageItemInSupabase({
+          name: localizedNames,
+          description: localizedDescriptions,
           price,
-          categoryId,
-          image,
-          localizedNames,
-          localizedDescriptions
+          category_id: categoryId,
+          image_url: image
         });
 
         if (!newItem) {
@@ -229,15 +229,15 @@ export async function PUT(request: NextRequest) {
         if (slug) updateData.slug = slug;
         
         if (name) {
-          updateData.localizedNames = { [locale || 'es']: name };
+          updateData.name = { [locale || 'es']: name };
         }
         
-        if (description) {
-          updateData.localizedDescriptions = { [locale || 'es']: description };
+        if (description !== undefined) {
+          updateData.description = description ? { [locale || 'es']: description } : null;
         }
         
         // Update the category
-        const updatedCategory = await updateBeverageCategory(id, updateData);
+        const updatedCategory = await updateBeverageCategoryInSupabase(id, updateData);
 
         if (!updatedCategory) {
           return NextResponse.json(
@@ -266,19 +266,19 @@ export async function PUT(request: NextRequest) {
         const updateData: any = {};
         
         if (price) updateData.price = price;
-        if (categoryId) updateData.categoryId = categoryId;
-        if (image) updateData.image = image;
+        if (categoryId) updateData.category_id = categoryId;
+        if (image !== undefined) updateData.image_url = image || null;
         
         if (name) {
-          updateData.localizedNames = { [locale || 'es']: name };
+          updateData.name = { [locale || 'es']: name };
         }
         
-        if (description) {
-          updateData.localizedDescriptions = { [locale || 'es']: description };
+        if (description !== undefined) {
+          updateData.description = description ? { [locale || 'es']: description } : null;
         }
         
         // Update the item
-        const updatedItem = await updateBeverageItem(id, updateData);
+        const updatedItem = await updateBeverageItemInSupabase(id, updateData);
 
         if (!updatedItem) {
           return NextResponse.json(
@@ -342,10 +342,10 @@ export async function DELETE(request: NextRequest) {
 
     if (type === 'category') {
       // Delete the category
-      success = await deleteBeverageCategory(id);
+      success = await deleteBeverageCategoryFromSupabase(id);
     } else {
       // Delete the item
-      success = await deleteBeverageItem(id);
+      success = await deleteBeverageItemFromSupabase(id);
     }
 
     if (!success) {

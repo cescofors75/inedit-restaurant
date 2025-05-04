@@ -1,23 +1,52 @@
 import { NextRequest, NextResponse } from "next/server"
 import { isAuthenticated } from "@/lib/auth"
-import { getAllPages, getPageBySlug, updatePage } from "@/lib/api" // Using our JSON API
 import { z } from "zod"
+import { 
+  getPagesFromSupabase, 
+  getPageBySlugFromSupabase,
+  createPageInSupabase,
+  updatePageInSupabase,
+  deletePageFromSupabase 
+} from "@/lib/supabase-pages"
+
+// Custom HTTPError class
+class HTTPError extends Error {
+  status: number;
+  constructor(message: string, status: number) {
+    super(message);
+    this.status = status;
+    this.name = "HTTPError";
+  }
+}
 
 // Schema for validating page update requests
 const pageUpdateSchema = z.object({
   id: z.string().min(1, "Page ID is required"),
-  title: z.string().min(1, "Title is required").optional(),
+  title: z.record(z.string()).optional(),
   slug: z.string().min(1, "Slug is required").optional(),
-  content: z.any().optional(),
+  content: z.record(z.any()).optional(),
   seo: z.object({
-    title: z.string().optional(),
-    description: z.string().optional(),
+    title: z.record(z.string()).optional(),
+    description: z.record(z.string()).optional(),
+    keywords: z.array(z.string()).optional()
+  }).optional().nullable(),
+  locale: z.string().default("es").optional()
+});
+
+// Schema for validating page creation requests
+const pageCreateSchema = z.object({
+  title: z.record(z.string()),
+  slug: z.string().min(1, "Slug is required"),
+  content: z.record(z.any()),
+  seo: z.object({
+    title: z.record(z.string()).optional(),
+    description: z.record(z.string()).optional(),
     keywords: z.array(z.string()).optional()
   }).optional(),
   locale: z.string().default("es").optional()
 });
 
-// GET handler to fetch all pages
+// GET handler to fetch all pages or a specific page by slug
 export async function GET(request: NextRequest) {
   try {
     // Check authentication
@@ -34,7 +63,7 @@ export async function GET(request: NextRequest) {
 
     // If slug is provided, return a specific page
     if (slug) {
-      const page = await getPageBySlug(slug, locale as string)
+      const page = await getPageBySlugFromSupabase(slug, locale as string)
       
       if (!page) {
         return NextResponse.json(
@@ -47,15 +76,75 @@ export async function GET(request: NextRequest) {
     }
     
     // Otherwise return all pages
-    const pages = await getAllPages(locale as string)
+    const pages = await getPagesFromSupabase(locale as string)
     return NextResponse.json(pages)
     
-  } catch (error) {
+  } catch (error: any) {
     console.error("Error fetching pages:", error)
+    const message = error instanceof HTTPError ? error.message : "An unexpected error occurred";
+    const status = error instanceof HTTPError ? error.status : 500;
     return NextResponse.json(
-      { message: "An unexpected error occurred" },
-      { status: 500 }
-    )
+      { message: message },
+      { status: status }
+    );
+  }
+}
+
+// POST handler to create a new page
+export async function POST(request: NextRequest) {
+  try {
+    // Check authentication
+    if (!(await isAuthenticated())) {
+      return NextResponse.json(
+        { message: "Unauthorized" },
+        { status: 401 }
+      )
+    }
+
+    // Parse request body
+    const body = await request.json();
+    
+    // Validate request data with zod
+    const result = pageCreateSchema.safeParse(body);
+    
+    if (!result.success) {
+      return NextResponse.json(
+        { 
+          message: "Validation error", 
+          errors: result.error.format() 
+        },
+        { status: 400 }
+      );
+    }
+    
+    const { title, slug, content, seo } = result.data;
+    
+    // Create the page in Supabase
+    const newPage = await createPageInSupabase({
+      title,
+      slug,
+      content,
+      seo
+    });
+    
+    if (!newPage) {
+      return NextResponse.json(
+        { message: "Failed to create page. The slug may already be in use." },
+        { status: 500 }
+      );
+    }
+    
+    // Return the newly created page
+    return NextResponse.json(newPage, { status: 201 });
+    
+  } catch (error: any) {
+    console.error("Error creating page:", error);
+    const message = error instanceof HTTPError ? error.message : "An unexpected error occurred";
+    const status = error instanceof HTTPError ? error.status : 500;
+    return NextResponse.json(
+      { message: message },
+      { status: status }
+    );
   }
 }
 
@@ -86,50 +175,43 @@ export async function PUT(request: NextRequest) {
       );
     }
     
-    const { id, title, slug, content, seo, locale = "es" } = result.data;
+    const { id, title, slug, content, seo } = result.data;
     
     // Prepare update data
-    const updateData: any = {}; // Changed from PageUpdateData
+    const updateData: any = {};
     
     if (title) updateData.title = title;
     if (slug) updateData.slug = slug;
     if (content) updateData.content = content;
-    if (seo) updateData.seo = seo;
+    // Handle seo field which can be null to remove it
+    if (seo !== undefined) updateData.seo = seo;
     
-    // Update the page in JSON file
-    try {
-      const updatedPage = await updatePage(id, updateData);
-      
-      if (!updatedPage) {
-        return NextResponse.json(
-          { message: "Failed to update page" },
-          { status: 500 }
-        );
-      }
-      
-      // Return the updated page
-      return NextResponse.json(updatedPage);
-    } catch (error) {
-      console.log("Page update operation not fully implemented in this version");
-      
-      // For now, return success even though we're not actually updating the file
-      return NextResponse.json({ 
-        success: true,
-        message: "This is a mock update. Actual saving to JSON files will be implemented in phase 2."
-      });
+    // Update the page in Supabase
+    const updatedPage = await updatePageInSupabase(id, updateData);
+    
+    if (!updatedPage) {
+      return NextResponse.json(
+        { message: "Failed to update page. The page may not exist or the slug is already in use." },
+        { status: 500 }
+      );
     }
     
-  } catch (error) {
+    // Return the updated page
+      return NextResponse.json(updatedPage);
+    
+  } catch (error: any) {
     console.error("Error updating page:", error);
+    const message = error instanceof HTTPError ? error.message : "An unexpected error occurred";
+    const status = error instanceof HTTPError ? error.status : 500;
     return NextResponse.json(
-      { message: "An unexpected error occurred" },
-      { status: 500 }
+      { message: message },
+      { status: status }
     );
   }
 }
 
-// POST handler to create a new page
-export async function POST(request: NextRequest) {
+// DELETE handler to delete a page
+export async function DELETE(request: NextRequest) {
   try {
     // Check authentication
     if (!(await isAuthenticated())) {
@@ -139,20 +221,39 @@ export async function POST(request: NextRequest) {
       )
     }
 
-    // We'll implement page creation in the next iteration
-    return NextResponse.json(
-      { 
-        success: true,
-        message: "This is a mock endpoint. Actual page creation with JSON files will be implemented in phase 2." 
-      },
-      { status: 200 }
-    );
+    const { searchParams } = new URL(request.url)
+    const id = searchParams.get('id')
+
+    if (!id) {
+      return NextResponse.json(
+        { message: "Page ID is required" },
+        { status: 400 }
+      )
+    }
     
-  } catch (error) {
-    console.error("Error creating page:", error);
+    // Delete the page from Supabase
+    const success = await deletePageFromSupabase(id);
+    
+    if (!success) {
+      return NextResponse.json(
+        { message: "Failed to delete page" },
+        { status: 500 }
+      );
+    }
+    
+    // Return success response
+    return NextResponse.json({ 
+      success: true,
+      message: "Page deleted successfully" 
+    });
+    
+  } catch (error: any) {
+    console.error("Error deleting page:", error);
+    const message = error instanceof HTTPError ? error.message : "An unexpected error occurred";
+    const status = error instanceof HTTPError ? error.status : 500;
     return NextResponse.json(
-      { message: "An unexpected error occurred" },
-      { status: 500 }
+      { message: message },
+      { status: status }
     );
   }
 }

@@ -123,13 +123,23 @@ export default function TranslationsManager() {
     setSaveSuccess(false)
     
     try {
-      // In a real implementation, this would send updates to the API
-      console.log("Saving translations:", editedTranslations)
+      // Send the updated translations to the API
+      const response = await fetch('/api/admin/translations', {
+        method: 'PUT',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          locale: currentLocale,
+          translations: editedTranslations
+        }),
+      })
       
-      // Simulate API call delay
-      await new Promise(resolve => setTimeout(resolve, 1000))
+      if (!response.ok) {
+        throw new Error(`Error: ${response.status}`)
+      }
       
-      // For now, just update the local state
+      // Update local state only after successful API response
       setTranslations(editedTranslations)
       setSaveSuccess(true)
       
@@ -169,13 +179,27 @@ export default function TranslationsManager() {
   }
 
   // Handle deleting a translation key
-  const handleDeleteTranslationKey = (key: string) => {
-    // Remove the key from both translations and editedTranslations
-    const { [key]: _, ...restTranslations } = translations
-    const { [key]: __, ...restEditedTranslations } = editedTranslations
-    
-    setTranslations(restTranslations)
-    setEditedTranslations(restEditedTranslations)
+  const handleDeleteTranslationKey = async (key: string) => {
+    try {
+      // Delete the translation key via API
+      const response = await fetch(`/api/admin/translations?key=${encodeURIComponent(key)}`, {
+        method: 'DELETE',
+      })
+      
+      if (!response.ok) {
+        throw new Error(`Error: ${response.status}`)
+      }
+      
+      // Only update local state after successful API response
+      const { [key]: _, ...restTranslations } = translations
+      const { [key]: __, ...restEditedTranslations } = editedTranslations
+      
+      setTranslations(restTranslations)
+      setEditedTranslations(restEditedTranslations)
+    } catch (err) {
+      console.error("Failed to delete translation key:", err)
+      setError("No se pudo eliminar la clave de traducción. Por favor, inténtalo de nuevo.")
+    }
   }
 
   // Filter translations based on search query

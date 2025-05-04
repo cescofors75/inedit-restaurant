@@ -23,7 +23,7 @@ export default function AdminHeader({ title, description }: AdminHeaderProps) {
           <div className="flex items-center">
             <Link href="/admin" className="mr-4">
               <Image 
-                src="/placeholder-logo.svg" 
+                src="http://localhost:3000/images/INeDIT_LOGO_Color.png" 
                 alt="INÈDIT Restaurant" 
                 width={120} 
                 height={30} 

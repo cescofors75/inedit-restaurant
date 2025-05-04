@@ -12,9 +12,9 @@ interface AdminLayoutProps {
   children: React.ReactNode
 }
 
-export default function AdminLayout({ children }: AdminLayoutProps) {
+export default async function AdminLayout({ children }: AdminLayoutProps) {
   // Get theme setting from cookie
-  const cookieStore = cookies()
+  const cookieStore = await cookies()
   const theme = cookieStore.get("theme")
 
   return (
