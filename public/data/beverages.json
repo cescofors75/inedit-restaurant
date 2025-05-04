@@ -239,6 +239,106 @@
       "grapes": "Pinot Meunier, Pinot Noir, Chardonnay"
     },
     {
+      "id": "p-mignon-rose-brut",
+      "name": {
+        "en": "Champagne P. Mignon Rose Brut",
+        "es": "Champagne P. Mignon Rose Brut",
+        "ca": "Champagne P. Mignon Rose Brut",
+        "fr": "Champagne P. Mignon Rose Brut",
+        "it": "Champagne P. Mignon Rose Brut",
+        "de": "Champagne P. Mignon Rose Brut",
+        "ru": "Шампанское П. Миньон Розе Брют"
+      },
+      "description": {
+        "en": "Elegant rosé champagne from France",
+        "es": "Elegante champán rosado de Francia",
+        "ca": "Elegant xampany rosat de França",
+        "fr": "Élégant champagne rosé de France",
+        "it": "Elegante champagne rosato dalla Francia",
+        "de": "Eleganter Rosé-Champagner aus Frankreich",
+        "ru": "Элегантное розовое шампанское из Франции"
+      },
+      "price": "59",
+      "categoryId": "escumosos",
+      "region": "AOC CHAMPAGNE (FRANÇA)",
+      "grapes": "Pinot Meunier, Pinot Noir, Chardonnay"
+    },
+    {
+      "id": "bollinger-sp-cuvee-brut",
+      "name": {
+        "en": "Bollinger SP Cuvee Brut",
+        "es": "Bollinger SP Cuvee Brut",
+        "ca": "Bollinger SP Cuvee Brut",
+        "fr": "Bollinger SP Cuvee Brut",
+        "it": "Bollinger SP Cuvee Brut",
+        "de": "Bollinger SP Cuvee Brut",
+        "ru": "Боллинджер СП Кюве Брют"
+      },
+      "description": {
+        "en": "Prestigious champagne with complex flavors",
+        "es": "Prestigioso champán con sabores complejos",
+        "ca": "Prestigiós xampany amb sabors complexos",
+        "fr": "Champagne prestigieux aux saveurs complexes",
+        "it": "Prestigioso champagne con sapori complessi",
+        "de": "Prestigeträchtiger Champagner mit komplexen Aromen",
+        "ru": "Престижное шампанское с комплексными вкусами"
+      },
+      "price": "86",
+      "categoryId": "escumosos",
+      "region": "AOC CHAMPAGNE (FRANÇA)",
+      "grapes": "Chardonnay, Pinot Meunier, Pinot Noir"
+    },
+    {
+      "id": "treviso-glera-prosecco",
+      "name": {
+        "en": "Treviso Glera Seco Prosecco",
+        "es": "Treviso Glera Seco Prosecco",
+        "ca": "Treviso Glera Seco Prosecco",
+        "fr": "Treviso Glera Seco Prosecco",
+        "it": "Treviso Glera Seco Prosecco",
+        "de": "Treviso Glera Seco Prosecco",
+        "ru": "Тревизо Глера Секо Просекко"
+      },
+      "description": {
+        "en": "Refreshing Italian prosecco with delicate bubbles",
+        "es": "Refrescante prosecco italiano con burbujas delicadas",
+        "ca": "Refrescant prosecco italià amb bombolles delicades",
+        "fr": "Prosecco italien rafraîchissant avec des bulles délicates",
+        "it": "Rinfrescante prosecco italiano con bollicine delicate",
+        "de": "Erfrischender italienischer Prosecco mit zarten Perlen",
+        "ru": "Освежающее итальянское просекко с нежными пузырьками"
+      },
+      "price": "0",
+      "categoryId": "escumosos",
+      "region": "D.O.C. PROSECCO (ITALIA)",
+      "grapes": "Glera"
+    },
+    {
+      "id": "moscato-dasti",
+      "name": {
+        "en": "Moscato d'Asti La Cacciatora",
+        "es": "Moscato d'Asti La Cacciatora",
+        "ca": "Moscato d'Asti La Cacciatora",
+        "fr": "Moscato d'Asti La Cacciatora",
+        "it": "Moscato d'Asti La Cacciatora",
+        "de": "Moscato d'Asti La Cacciatora",
+        "ru": "Москато д'Асти Ла Каччатора"
+      },
+      "description": {
+        "en": "Sweet aromatic sparkling wine from Italy",
+        "es": "Vino espumoso dulce y aromático de Italia",
+        "ca": "Vi escumós dolç i aromàtic d'Itàlia",
+        "fr": "Vin mousseux doux et aromatique d'Italie",
+        "it": "Vino spumante dolce e aromatico dall'Italia",
+        "de": "Süßer aromatischer Schaumwein aus Italien",
+        "ru": "Сладкое ароматное игристое вино из Италии"
+      },
+      "price": "23",
+      "categoryId": "escumosos",
+      "region": "D.O.C.G. ASTI (ITALIA)",
+      "grapes": "Moscato"
+    },
+    {
       "id": "espelt-mosaic-blanc",
       "name": {
         "en": "Espelt Mosaic White for Inèdit",
@@ -265,30 +365,254 @@
       "grapes": "Garnatxa blanca i moscatell"
     },
     {
-      "id": "palomo-cojo",
+      "id": "gessami-blanc",
       "name": {
-        "en": "Palomo Cojo",
-        "es": "Palomo Cojo",
-        "ca": "Palomo Cojo",
-        "fr": "Palomo Cojo",
-        "it": "Palomo Cojo",
-        "de": "Palomo Cojo",
-        "ru": "Паломо Кохо"
+        "en": "Gessamí Blanc",
+        "es": "Gessamí Blanc",
+        "ca": "Gessamí Blanc",
+        "fr": "Gessamí Blanc",
+        "it": "Gessamí Blanc",
+        "de": "Gessamí Blanc",
+        "ru": "Жессами Блан"
       },
       "description": {
-        "en": "Fresh Verdejo from Rueda",
-        "es": "Verdejo fresco de Rueda",
-        "ca": "Verdejo fresc de Rueda",
-        "fr": "Verdejo frais de Rueda",
-        "it": "Verdejo fresco di Rueda",
-        "de": "Frischer Verdejo aus Rueda",
-        "ru": "Свежий Вердехо из Руэды"
+        "en": "Aromatic white blend from Penedès",
+        "es": "Mezcla blanca aromática del Penedès",
+        "ca": "Barreja blanca aromàtica del Penedès",
+        "fr": "Assemblage blanc aromatique du Penedès",
+        "it": "Blend bianco aromatico del Penedès",
+        "de": "Aromatische Weißweincuvée aus dem Penedès",
+        "ru": "Ароматный белый бленд из Пенедес"
       },
-      "price": "23",
-      "priceGlass": "5",
+      "price": "25",
       "categoryId": "blancs",
-      "region": "D.O. RUEDA",
-      "grapes": "Verdejo"
+      "region": "D.O. PENEDÈS",
+      "grapes": "Sauvignon blanc, Gewustraminer, Moscatell"
+    },
+    {
+      "id": "reventos-lanec-mut",
+      "name": {
+        "en": "Reventós L'Ànec Mut",
+        "es": "Reventós L'Ànec Mut",
+        "ca": "Reventós L'Ànec Mut",
+        "fr": "Reventós L'Ànec Mut",
+        "it": "Reventós L'Ànec Mut",
+        "de": "Reventós L'Ànec Mut",
+        "ru": "Ревентос Л'Анек Мут"
+      },
+      "description": {
+        "en": "Elegant white blend from Penedès",
+        "es": "Elegante mezcla blanca del Penedès",
+        "ca": "Elegant barreja blanca del Penedès",
+        "fr": "Élégant assemblage blanc du Penedès",
+        "it": "Elegante blend bianco del Penedès",
+        "de": "Elegante Weißweincuvée aus dem Penedès",
+        "ru": "Элегантный белый бленд из Пенедес"
+      },
+      "price": "21",
+      "categoryId": "blancs",
+      "region": "D.O. PENEDÈS",
+      "grapes": "Macabeu, Xarel·lo i Malvasia"
+    },
+    {
+      "id": "augustus-blanc-chardonnay",
+      "name": {
+        "en": "Augustus Blanc Chardonnay",
+        "es": "Augustus Blanc Chardonnay",
+        "ca": "Augustus Blanc Chardonnay",
+        "fr": "Augustus Blanc Chardonnay",
+        "it": "Augustus Blanc Chardonnay",
+        "de": "Augustus Blanc Chardonnay",
+        "ru": "Августус Блан Шардоне"
+      },
+      "description": {
+        "en": "Premium Chardonnay from Penedès",
+        "es": "Chardonnay premium del Penedès",
+        "ca": "Chardonnay premium del Penedès",
+        "fr": "Chardonnay premium du Penedès",
+        "it": "Chardonnay premium del Penedès",
+        "de": "Premium-Chardonnay aus dem Penedès",
+        "ru": "Премиальный Шардоне из Пенедес"
+      },
+      "price": "34",
+      "categoryId": "blancs",
+      "region": "D.O. PENEDÈS",
+      "grapes": "Chardonnay"
+    },
+    {
+      "id": "can-matons-pansa-blanca",
+      "name": {
+        "en": "Can Matons Pansa Blanca",
+        "es": "Can Matons Pansa Blanca",
+        "ca": "Can Matons Pansa Blanca",
+        "fr": "Can Matons Pansa Blanca",
+        "it": "Can Matons Pansa Blanca",
+        "de": "Can Matons Pansa Blanca",
+        "ru": "Кан Матонс Панса Бланка"
+      },
+      "description": {
+        "en": "Authentic white wine from Alella",
+        "es": "Vino blanco auténtico de Alella",
+        "ca": "Vi blanc autèntic d'Alella",
+        "fr": "Vin blanc authentique d'Alella",
+        "it": "Vino bianco autentico di Alella",
+        "de": "Authentischer Weißwein aus Alella",
+        "ru": "Аутентичное белое вино из Алельи"
+      },
+      "price": "24",
+      "categoryId": "blancs",
+      "region": "D.O. ALELLA",
+      "grapes": "Pansa Blanca"
+    },
+    {
+      "id": "els-amelers-lafou-blanc",
+      "name": {
+        "en": "Els Amelers Lafou Blanc",
+        "es": "Els Amelers Lafou Blanc",
+        "ca": "Els Amelers Lafou Blanc",
+        "fr": "Els Amelers Lafou Blanc",
+        "it": "Els Amelers Lafou Blanc",
+        "de": "Els Amelers Lafou Blanc",
+        "ru": "Эльс Амелерс Лафу Блан"
+      },
+      "description": {
+        "en": "Elegant Garnatxa Blanca from Terra Alta",
+        "es": "Elegante Garnacha Blanca de Terra Alta",
+        "ca": "Elegant Garnatxa Blanca de Terra Alta",
+        "fr": "Élégante Grenache Blanc de Terra Alta",
+        "it": "Elegante Grenache Bianco da Terra Alta",
+        "de": "Eleganter Garnacha Blanca aus Terra Alta",
+        "ru": "Элегантная Гарнача Бланка из Терра Альта"
+      },
+      "price": "31",
+      "categoryId": "blancs",
+      "region": "D.O. TERRA ALTA",
+      "grapes": "Garnatxa blanca"
+    },
+    {
+      "id": "quinze-roures-blanc",
+      "name": {
+        "en": "Quinze Roures Blanc",
+        "es": "Quinze Roures Blanc",
+        "ca": "Quinze Roures Blanc",
+        "fr": "Quinze Roures Blanc",
+        "it": "Quinze Roures Blanc",
+        "de": "Quinze Roures Blanc",
+        "ru": "Кинзе Роурес Блан"
+      },
+      "description": {
+        "en": "Complex Garnatxa blend from Empordà",
+        "es": "Compleja mezcla de Garnacha del Empordà",
+        "ca": "Complexa barreja de Garnatxa de l'Empordà",
+        "fr": "Assemblage complexe de Grenache de l'Empordà",
+        "it": "Complesso blend di Grenache dell'Empordà",
+        "de": "Komplexe Garnacha-Cuvée aus dem Empordà",
+        "ru": "Комплексный бленд Гарначи из Эмпорды"
+      },
+      "price": "27",
+      "categoryId": "blancs",
+      "region": "D.O. EMPORDÀ",
+      "grapes": "Garnatxa blanca i garnatxa gris"
+    },
+    {
+      "id": "abadal-picapoll-blanc",
+      "name": {
+        "en": "Abadal Picapoll Blanc",
+        "es": "Abadal Picapoll Blanc",
+        "ca": "Abadal Picapoll Blanc",
+        "fr": "Abadal Picapoll Blanc",
+        "it": "Abadal Picapoll Blanc",
+        "de": "Abadal Picapoll Blanc",
+        "ru": "Абадаль Пикаполь Блан"
+      },
+      "description": {
+        "en": "Distinctive Picapoll from Pla de Bages",
+        "es": "Distintivo Picapoll del Pla de Bages",
+        "ca": "Distintiu Picapoll del Pla de Bages",
+        "fr": "Picapoll distinctif du Pla de Bages",
+        "it": "Distintivo Picapoll del Pla de Bages",
+        "de": "Unverwechselbarer Picapoll aus dem Pla de Bages",
+        "ru": "Характерный Пикаполь из Пла-де-Бажес"
+      },
+      "price": "26",
+      "categoryId": "blancs",
+      "region": "D.O. PLA DE BAGES",
+      "grapes": "Picapoll"
+    },
+    {
+      "id": "abadia-de-poblet-blanc",
+      "name": {
+        "en": "Abadia de Poblet Blanc",
+        "es": "Abadia de Poblet Blanc",
+        "ca": "Abadia de Poblet Blanc",
+        "fr": "Abadia de Poblet Blanc",
+        "it": "Abadia de Poblet Blanc",
+        "de": "Abadia de Poblet Blanc",
+        "ru": "Абадия де Поблет Блан"
+      },
+      "description": {
+        "en": "Traditional white blend from Conca de Barberà",
+        "es": "Mezcla blanca tradicional de Conca de Barberà",
+        "ca": "Barreja blanca tradicional de Conca de Barberà",
+        "fr": "Assemblage blanc traditionnel de Conca de Barberà",
+        "it": "Blend bianco tradizionale di Conca de Barberà",
+        "de": "Traditionelle Weißweincuvée aus Conca de Barberà",
+        "ru": "Традиционный белый бленд из Конка-де-Барбера"
+      },
+      "price": "34",
+      "categoryId": "blancs",
+      "region": "D.O. CONCA DE BARBERÀ",
+      "grapes": "Macabeu i Parellada"
+    },
+    {
+      "id": "masis-de-lalbera-blanc",
+      "name": {
+        "en": "Masis de l'Albera Blanc Les Tortugues",
+        "es": "Masis de l'Albera Blanc Les Tortugues",
+        "ca": "Masis de l'Albera Blanc Les Tortugues",
+        "fr": "Masis de l'Albera Blanc Les Tortugues",
+        "it": "Masis de l'Albera Blanc Les Tortugues",
+        "de": "Masis de l'Albera Blanc Les Tortugues",
+        "ru": "Масис де л'Альбера Блан Лес Тортугес"
+      },
+      "description": {
+        "en": "Distinctive red Garnatxa from Empordà",
+        "es": "Distintiva Garnacha roja del Empordà",
+        "ca": "Distintiva Garnatxa roja de l'Empordà",
+        "fr": "Grenache rouge distinctif de l'Empordà",
+        "it": "Grenache rosso distintivo dell'Empordà",
+        "de": "Unverwechselbarer roter Garnacha aus dem Empordà",
+        "ru": "Характерная красная Гарнача из Эмпорды"
+      },
+      "price": "28",
+      "categoryId": "blancs",
+      "region": "D.O. EMPORDÀ",
+      "grapes": "Garnatxa roja"
+    },
+    {
+      "id": "albarino-pazo-san-mauro",
+      "name": {
+        "en": "Albariño Pazo San Mauro",
+        "es": "Albariño Pazo San Mauro",
+        "ca": "Albariño Pazo San Mauro",
+        "fr": "Albariño Pazo San Mauro",
+        "it": "Albariño Pazo San Mauro",
+        "de": "Albariño Pazo San Mauro",
+        "ru": "Альбариньо Пасо Сан Мауро"
+      },
+      "description": {
+        "en": "Premium Albariño from Rias Baixas",
+        "es": "Albariño premium de Rías Baixas",
+        "ca": "Albariño premium de Rías Baixas",
+        "fr": "Albariño premium de Rías Baixas",
+        "it": "Albariño premium di Rías Baixas",
+        "de": "Premium-Albariño aus Rías Baixas",
+        "ru": "Премиальный Альбариньо из Риас Байшас"
+      },
+      "price": "29",
+      "categoryId": "blancs",
+      "region": "D.O. RIAS BAIXAS",
+      "grapes": "Albariño"
     },
     {
       "id": "bruxas-albarino",
@@ -317,6 +641,207 @@
       "grapes": "Albariño"
     },
     {
+      "id": "azpilicueta-blanco",
+      "name": {
+        "en": "Azpilicueta Blanco",
+        "es": "Azpilicueta Blanco",
+        "ca": "Azpilicueta Blanco",
+        "fr": "Azpilicueta Blanco",
+        "it": "Azpilicueta Blanco",
+        "de": "Azpilicueta Blanco",
+        "ru": "Аспиликуэта Бланко"
+      },
+      "description": {
+        "en": "Classic white Rioja with Viura grapes",
+        "es": "Clásico Rioja blanco con uvas Viura",
+        "ca": "Clàssic Rioja blanc amb raïm Viura",
+        "fr": "Classique Rioja blanc avec raisins Viura",
+        "it": "Classico Rioja bianco con uve Viura",
+        "de": "Klassischer weißer Rioja aus Viura-Trauben",
+        "ru": "Классическое белое Риоха из винограда Виура"
+      },
+      "price": "23",
+      "categoryId": "blancs",
+      "region": "D.O. RIOJA",
+      "grapes": "Viura"
+    },
+    {
+      "id": "la-duda-godello",
+      "name": {
+        "en": "La Duda Godello",
+        "es": "La Duda Godello",
+        "ca": "La Duda Godello",
+        "fr": "La Duda Godello",
+        "it": "La Duda Godello",
+        "de": "La Duda Godello",
+        "ru": "Ла Дуда Годельо"
+      },
+      "description": {
+        "en": "Elegant Godello from Monterrei",
+        "es": "Elegante Godello de Monterrei",
+        "ca": "Elegant Godello de Monterrei",
+        "fr": "Élégant Godello de Monterrei",
+        "it": "Elegante Godello di Monterrei",
+        "de": "Eleganter Godello aus Monterrei",
+        "ru": "Элегантный Годельо из Монтеррей"
+      },
+      "price": "24",
+      "categoryId": "blancs",
+      "region": "D.O. MONTERREI",
+      "grapes": "Godello"
+    },
+    {
+      "id": "palomo-cojo",
+      "name": {
+        "en": "Palomo Cojo",
+        "es": "Palomo Cojo",
+        "ca": "Palomo Cojo",
+        "fr": "Palomo Cojo",
+        "it": "Palomo Cojo",
+        "de": "Palomo Cojo",
+        "ru": "Паломо Кохо"
+      },
+      "description": {
+        "en": "Fresh Verdejo from Rueda",
+        "es": "Verdejo fresco de Rueda",
+        "ca": "Verdejo fresc de Rueda",
+        "fr": "Verdejo frais de Rueda",
+        "it": "Verdejo fresco di Rueda",
+        "de": "Frischer Verdejo aus Rueda",
+        "ru": "Свежий Вердехо из Руэды"
+      },
+      "price": "23",
+      "priceGlass": "5",
+      "categoryId": "blancs",
+      "region": "D.O. RUEDA",
+      "grapes": "Verdejo"
+    },
+    {
+      "id": "m-grivot-chardonnay",
+      "name": {
+        "en": "M-Grivot Chardonnay",
+        "es": "M-Grivot Chardonnay",
+        "ca": "M-Grivot Chardonnay",
+        "fr": "M-Grivot Chardonnay",
+        "it": "M-Grivot Chardonnay",
+        "de": "M-Grivot Chardonnay",
+        "ru": "М-Гриво Шардоне"
+      },
+      "description": {
+        "en": "Elegant Burgundy Chardonnay",
+        "es": "Elegante Chardonnay de Borgoña",
+        "ca": "Elegant Chardonnay de Borgonya",
+        "fr": "Élégant Chardonnay de Bourgogne",
+        "it": "Elegante Chardonnay della Borgogna",
+        "de": "Eleganter Chardonnay aus dem Burgund",
+        "ru": "Элегантный Шардоне из Бургундии"
+      },
+      "price": "29",
+      "categoryId": "blancs",
+      "region": "D.O. BOURGOGNE",
+      "grapes": "Chardonnay"
+    },
+    {
+      "id": "defaix-chablis-vv",
+      "name": {
+        "en": "Defaix Chablis VV",
+        "es": "Defaix Chablis VV",
+        "ca": "Defaix Chablis VV",
+        "fr": "Defaix Chablis VV",
+        "it": "Defaix Chablis VV",
+        "de": "Defaix Chablis VV",
+        "ru": "Дефе Шабли VV"
+      },
+      "description": {
+        "en": "Premium Chablis from Burgundy",
+        "es": "Chablis premium de Borgoña",
+        "ca": "Chablis premium de Borgonya",
+        "fr": "Chablis premium de Bourgogne",
+        "it": "Chablis premium della Borgogna",
+        "de": "Premium-Chablis aus dem Burgund",
+        "ru": "Премиальный Шабли из Бургундии"
+      },
+      "price": "38",
+      "categoryId": "blancs",
+      "region": "D.O. BOURGOGNE",
+      "grapes": "Chardonnay"
+    },
+    {
+      "id": "savagny-blanc-savagnin",
+      "name": {
+        "en": "Savagny Blanc Savagnin",
+        "es": "Savagny Blanc Savagnin",
+        "ca": "Savagny Blanc Savagnin",
+        "fr": "Savagny Blanc Savagnin",
+        "it": "Savagny Blanc Savagnin",
+        "de": "Savagny Blanc Savagnin",
+        "ru": "Саваньи Блан Саваньин"
+      },
+      "description": {
+        "en": "Traditional Jura white wine",
+        "es": "Vino blanco tradicional del Jura",
+        "ca": "Vi blanc tradicional del Jura",
+        "fr": "Vin blanc traditionnel du Jura",
+        "it": "Vino bianco tradizionale dello Jura",
+        "de": "Traditioneller Weißwein aus dem Jura",
+        "ru": "Традиционное белое вино из Юры"
+      },
+      "price": "38",
+      "categoryId": "blancs",
+      "region": "D.O. JURA-FRANÇA",
+      "grapes": "Savagnin"
+    },
+    {
+      "id": "groebe-riesling-troken",
+      "name": {
+        "en": "Groebe Riesling Troken",
+        "es": "Groebe Riesling Troken",
+        "ca": "Groebe Riesling Troken",
+        "fr": "Groebe Riesling Troken",
+        "it": "Groebe Riesling Troken",
+        "de": "Groebe Riesling Troken",
+        "ru": "Грёбе Рислинг Трокен"
+      },
+      "description": {
+        "en": "Dry Riesling from Germany",
+        "es": "Riesling seco de Alemania",
+        "ca": "Riesling sec d'Alemanya",
+        "fr": "Riesling sec d'Allemagne",
+        "it": "Riesling secco dalla Germania",
+        "de": "Trockener Riesling aus Deutschland",
+        "ru": "Сухой Рислинг из Германии"
+      },
+      "price": "29",
+      "categoryId": "blancs",
+      "region": "D.O. ALEMANIA",
+      "grapes": "Riesling"
+    },
+    {
+      "id": "horner-riesling-gewustraminer",
+      "name": {
+        "en": "Horner Riesling-Gewustraminer",
+        "es": "Horner Riesling-Gewustraminer",
+        "ca": "Horner Riesling-Gewustraminer",
+        "fr": "Horner Riesling-Gewustraminer",
+        "it": "Horner Riesling-Gewustraminer",
+        "de": "Horner Riesling-Gewustraminer",
+        "ru": "Хорнер Рислинг-Гевюрцтраминер"
+      },
+      "description": {
+        "en": "Aromatic blend from Germany",
+        "es": "Mezcla aromática de Alemania",
+        "ca": "Barreja aromàtica d'Alemanya",
+        "fr": "Assemblage aromatique d'Allemagne",
+        "it": "Blend aromatico dalla Germania",
+        "de": "Aromatische Cuvée aus Deutschland",
+        "ru": "Ароматный бленд из Германии"
+      },
+      "price": "23",
+      "categoryId": "blancs",
+      "region": "D.O. ALEMANIA",
+      "grapes": "Riesling"
+    },
+    {
       "id": "espelt-mosaic-negre",
       "name": {
         "en": "Espelt Mosaic Red for Inèdit",
@@ -341,6 +866,156 @@
       "categoryId": "negres",
       "region": "D.O. EMPORDÀ",
       "grapes": "Cabernet Sauvignon, Garnatxa negre i Syrah"
+    },
+    {
+      "id": "scala-dei-prior",
+      "name": {
+        "en": "Scala Dei Prior Criança",
+        "es": "Scala Dei Prior Crianza",
+        "ca": "Scala Dei Prior Criança",
+        "fr": "Scala Dei Prior Criança",
+        "it": "Scala Dei Prior Criança",
+        "de": "Scala Dei Prior Criança",
+        "ru": "Скала Деи Приор Крианса"
+      },
+      "description": {
+        "en": "Premium aged Priorat wine",
+        "es": "Vino Priorat premium envejecido",
+        "ca": "Vi Priorat premium envellit",
+        "fr": "Vin Priorat premium vieilli",
+        "it": "Vino Priorat premium invecchiato",
+        "de": "Hochwertiger gereifter Priorat-Wein",
+        "ru": "Премиальное выдержанное вино Приорат"
+      },
+      "price": "39",
+      "categoryId": "negres",
+      "region": "D.O. PRIORAT",
+      "grapes": "Carinyena, Garnatxa negre"
+    },
+    {
+      "id": "cims-de-porrera",
+      "name": {
+        "en": "Cims de Porrera Vi de Vila",
+        "es": "Cims de Porrera Vi de Vila",
+        "ca": "Cims de Porrera Vi de Vila",
+        "fr": "Cims de Porrera Vi de Vila",
+        "it": "Cims de Porrera Vi de Vila",
+        "de": "Cims de Porrera Vi de Vila",
+        "ru": "Симс де Поррера Ви де Вила"
+      },
+      "description": {
+        "en": "Village wine from Porrera, Priorat",
+        "es": "Vino de pueblo de Porrera, Priorat",
+        "ca": "Vi de vila de Porrera, Priorat",
+        "fr": "Vin de village de Porrera, Priorat",
+        "it": "Vino di villaggio di Porrera, Priorat",
+        "de": "Dorfwein aus Porrera, Priorat",
+        "ru": "Деревенское вино из Поррера, Приорат"
+      },
+      "price": "32",
+      "categoryId": "negres",
+      "region": "D.O. PRIORAT",
+      "grapes": "Carinyena, Garnatxa negre"
+    },
+    {
+      "id": "bancal-del-bosc-negre",
+      "name": {
+        "en": "Bancal del Bosc Negre",
+        "es": "Bancal del Bosc Negre",
+        "ca": "Bancal del Bosc Negre",
+        "fr": "Bancal del Bosc Negre",
+        "it": "Bancal del Bosc Negre",
+        "de": "Bancal del Bosc Negre",
+        "ru": "Банкаль дель Боск Негре"
+      },
+      "description": {
+        "en": "Full-bodied red blend from Montsant",
+        "es": "Mezcla tinta con cuerpo de Montsant",
+        "ca": "Barreja negra amb cos de Montsant",
+        "fr": "Assemblage rouge corsé de Montsant",
+        "it": "Blend rosso corposo di Montsant",
+        "de": "Vollmundige Rotwein-Cuvée aus Montsant",
+        "ru": "Полнотелый красный бленд из Монтсант"
+      },
+      "price": "26",
+      "categoryId": "negres",
+      "region": "D.O. MONTSANT",
+      "grapes": "Cabernet Sauvignon, Garnatxa negre i Syrah"
+    },
+    {
+      "id": "el-senat-del-montsant",
+      "name": {
+        "en": "El Senat del Montsant",
+        "es": "El Senat del Montsant",
+        "ca": "El Senat del Montsant",
+        "fr": "El Senat del Montsant",
+        "it": "El Senat del Montsant",
+        "de": "El Senat del Montsant",
+        "ru": "Эль Сенат дель Монтсант"
+      },
+      "description": {
+        "en": "Complex red blend from Montsant",
+        "es": "Compleja mezcla tinta de Montsant",
+        "ca": "Complexa barreja negra de Montsant",
+        "fr": "Assemblage rouge complexe de Montsant",
+        "it": "Blend rosso complesso di Montsant",
+        "de": "Komplexe Rotwein-Cuvée aus Montsant",
+        "ru": "Комплексный красный бленд из Монтсант"
+      },
+      "price": "29",
+      "categoryId": "negres",
+      "region": "D.O. MONTSANT",
+      "grapes": "Carinyena, Garnatxa negre i Syrah"
+    },
+    {
+      "id": "abadia-de-poblet-negre",
+      "name": {
+        "en": "Abadia de Poblet Negre",
+        "es": "Abadia de Poblet Negre",
+        "ca": "Abadia de Poblet Negre",
+        "fr": "Abadia de Poblet Negre",
+        "it": "Abadia de Poblet Negre",
+        "de": "Abadia de Poblet Negre",
+        "ru": "Абадия де Поблет Негре"
+      },
+      "description": {
+        "en": "Complex red blend from Conca de Barberà",
+        "es": "Compleja mezcla tinta de Conca de Barberà",
+        "ca": "Complexa barreja negra de Conca de Barberà",
+        "fr": "Assemblage rouge complexe de Conca de Barberà",
+        "it": "Blend rosso complesso di Conca de Barberà",
+        "de": "Komplexe Rotwein-Cuvée aus Conca de Barberà",
+        "ru": "Комплексный красный бленд из Конка-де-Барбера"
+      },
+      "price": "35",
+      "categoryId": "negres",
+      "region": "D.O. CONCA DE BARBERÀ",
+      "grapes": "Trepat, Garrut, Garnatxa i Tempranillo"
+    },
+    {
+      "id": "gresa-expressio",
+      "name": {
+        "en": "Gresa Expressió",
+        "es": "Gresa Expressió",
+        "ca": "Gresa Expressió",
+        "fr": "Gresa Expressió",
+        "it": "Gresa Expressió",
+        "de": "Gresa Expressió",
+        "ru": "Греса Экспрессио"
+      },
+      "description": {
+        "en": "Expressive red blend from Empordà",
+        "es": "Expresiva mezcla tinta del Empordà",
+        "ca": "Expressiva barreja negra de l'Empordà",
+        "fr": "Assemblage rouge expressif de l'Empordà",
+        "it": "Blend rosso espressivo dell'Empordà",
+        "de": "Ausdrucksstarke Rotwein-Cuvée aus dem Empordà",
+        "ru": "Выразительный красный бленд из Эмпорды"
+      },
+      "price": "35",
+      "categoryId": "negres",
+      "region": "D.O. EMPORDÀ",
+      "grapes": "Garnatxa negre, Cabernet Sauvignon, Syrah"
     },
     {
       "id": "vallobera-crianza",
@@ -369,32 +1044,6 @@
       "grapes": "Tempranillo"
     },
     {
-      "id": "palomo-cazador",
-      "name": {
-        "en": "Palomo Cazador",
-        "es": "Palomo Cazador",
-        "ca": "Palomo Cazador",
-        "fr": "Palomo Cazador",
-        "it": "Palomo Cazador",
-        "de": "Palomo Cazador",
-        "ru": "Паломо Казадор"
-      },
-      "description": {
-        "en": "Full-bodied red from Ribera del Duero",
-        "es": "Tinto con cuerpo de Ribera del Duero",
-        "ca": "Negre amb cos de Ribera del Duero",
-        "fr": "Rouge corsé de Ribera del Duero",
-        "it": "Rosso corposo di Ribera del Duero",
-        "de": "Vollmundiger Rotwein aus Ribera del Duero",
-        "ru": "Полнотелое красное из Рибера дель Дуэро"
-      },
-      "price": "24",
-      "priceGlass": "5",
-      "categoryId": "negres",
-      "region": "D.O. RIBERA DEL DUERO",
-      "grapes": "Tinto Fino (Tempranillo)"
-    },
-    {
       "id": "espelt-mosaic-rosat",
       "name": {
         "en": "Espelt Mosaic Rosé for Inèdit",
@@ -419,6 +1068,106 @@
       "categoryId": "rosats",
       "region": "D.O. EMPORDÀ",
       "grapes": "Garnatxa Negre"
+    },
+    {
+      "id": "abadia-de-poblet-rosat",
+      "name": {
+        "en": "Abadia de Poblet Rosé",
+        "es": "Abadia de Poblet Rosado",
+        "ca": "Abadia de Poblet",
+        "fr": "Abadia de Poblet Rosé",
+        "it": "Abadia de Poblet Rosato",
+        "de": "Abadia de Poblet Rosé",
+        "ru": "Абадия де Поблет Розе"
+      },
+      "description": {
+        "en": "Elegant rosé from Conca de Barberà",
+        "es": "Elegante rosado de Conca de Barberà",
+        "ca": "Elegant rosat de Conca de Barberà",
+        "fr": "Élégant rosé de Conca de Barberà",
+        "it": "Elegante rosato di Conca de Barberà",
+        "de": "Eleganter Rosé aus Conca de Barberà",
+        "ru": "Элегантное розовое вино из Конка-де-Барбера"
+      },
+      "price": "31",
+      "categoryId": "rosats",
+      "region": "D.O. CONCA DE BARBERÀ",
+      "grapes": "Trepat i Garnatxa Negre"
+    },
+    {
+      "id": "masis-de-lalbera-visionari",
+      "name": {
+        "en": "Masis de l'Albera El Visionari",
+        "es": "Masis de l'Albera El Visionari",
+        "ca": "Masis de l'Albera El Visionari",
+        "fr": "Masis de l'Albera El Visionari",
+        "it": "Masis de l'Albera El Visionari",
+        "de": "Masis de l'Albera El Visionari",
+        "ru": "Масис де л'Альбера Эль Висионари"
+      },
+      "description": {
+        "en": "Complex rosé from Empordà",
+        "es": "Rosado complejo del Empordà",
+        "ca": "Rosat complex de l'Empordà",
+        "fr": "Rosé complexe de l'Empordà",
+        "it": "Rosato complesso dell'Empordà",
+        "de": "Komplexer Rosé aus dem Empordà",
+        "ru": "Комплексное розовое вино из Эмпорды"
+      },
+      "price": "28",
+      "categoryId": "rosats",
+      "region": "D.O. EMPORDÀ",
+      "grapes": "Garnatxa Negre"
+    },
+    {
+      "id": "abadal-nurva",
+      "name": {
+        "en": "Abadal Nurva",
+        "es": "Abadal Nurva",
+        "ca": "Abadal Nurva",
+        "fr": "Abadal Nurva",
+        "it": "Abadal Nurva",
+        "de": "Abadal Nurva",
+        "ru": "Абадаль Нурва"
+      },
+      "description": {
+        "en": "Fresh rosé from Pla de Bages",
+        "es": "Rosado fresco del Pla de Bages",
+        "ca": "Rosat fresc del Pla de Bages",
+        "fr": "Rosé frais du Pla de Bages",
+        "it": "Rosato fresco del Pla de Bages",
+        "de": "Frischer Rosé aus dem Pla de Bages",
+        "ru": "Свежее розовое вино из Пла-де-Бажес"
+      },
+      "price": "23",
+      "categoryId": "rosats",
+      "region": "D.O. PLA DE BAGES",
+      "grapes": "Sumoll, Cabernet Sauvignon"
+    },
+    {
+      "id": "miraflors-rose",
+      "name": {
+        "en": "Miraflors Rosé",
+        "es": "Miraflors Rosado",
+        "ca": "Miraflors Rosé",
+        "fr": "Miraflors Rosé",
+        "it": "Miraflors Rosato",
+        "de": "Miraflors Rosé",
+        "ru": "Мирафлорс Розе"
+      },
+      "description": {
+        "en": "Elegant rosé from France",
+        "es": "Elegante rosado de Francia",
+        "ca": "Elegant rosat de França",
+        "fr": "Élégant rosé de France",
+        "it": "Elegante rosato dalla Francia",
+        "de": "Eleganter Rosé aus Frankreich",
+        "ru": "Элегантное розовое вино из Франции"
+      },
+      "price": "27",
+      "categoryId": "rosats",
+      "region": "D.O. FRANÇA",
+      "grapes": "Garnatxa gris i Monastrell"
     },
     {
       "id": "don-px-toro-albala",
@@ -471,6 +1220,234 @@
       "categoryId": "dolcos",
       "region": "D.O. EMPORDÀ",
       "grapes": "Moscatell"
+    },
+    {
+      "id": "pajzos-tokaji",
+      "name": {
+        "en": "Pajzos Tokaji Late Harvest",
+        "es": "Pajzos Tokaji Late Harvest",
+        "ca": "Pajzos Tokaji Late Harvest",
+        "fr": "Pajzos Tokaji Late Harvest",
+        "it": "Pajzos Tokaji Late Harvest",
+        "de": "Pajzos Tokaji Late Harvest",
+        "ru": "Пайжош Токай Позднего Урожая"
+      },
+      "description": {
+        "en": "Sweet late harvest wine from Hungary",
+        "es": "Vino dulce de vendimia tardía de Hungría",
+        "ca": "Vi dolç de verema tardana d'Hongria",
+        "fr": "Vin doux de vendange tardive de Hongrie",
+        "it": "Vino dolce da vendemmia tardiva dall'Ungheria",
+        "de": "Süßer Spätlesewein aus Ungarn",
+        "ru": "Сладкое вино позднего сбора из Венгрии"
+      },
+      "price": "25",
+      "priceGlass": "6",
+      "categoryId": "dolcos",
+      "region": "D.O. HUNGRIA",
+      "grapes": "Furmint"
+    },
+    {
+      "id": "groebe-riesling-kabbinett",
+      "name": {
+        "en": "Groebe Riesling Kabbinett",
+        "es": "Groebe Riesling Kabbinett",
+        "ca": "Groebe Riesling Kabbinett",
+        "fr": "Groebe Riesling Kabbinett",
+        "it": "Groebe Riesling Kabbinett",
+        "de": "Groebe Riesling Kabbinett",
+        "ru": "Грёбе Рислинг Кабинет"
+      },
+      "description": {
+        "en": "Sweet Riesling from Germany",
+        "es": "Riesling dulce de Alemania",
+        "ca": "Riesling dolç d'Alemanya",
+        "fr": "Riesling doux d'Allemagne",
+        "it": "Riesling dolce dalla Germania",
+        "de": "Süßer Riesling aus Deutschland",
+        "ru": "Сладкий Рислинг из Германии"
+      },
+      "price": "30",
+      "priceGlass": "6.5",
+      "categoryId": "dolcos",
+      "region": "D.O. ALEMANIA",
+      "grapes": "Riesling"
+    },
+    {
+      "id": "calados-del-puntido",
+      "name": {
+        "en": "Calados del Puntido",
+        "es": "Calados del Puntido",
+        "ca": "Calados del Puntido",
+        "fr": "Calados del Puntido",
+        "it": "Calados del Puntido",
+        "de": "Calados del Puntido",
+        "ru": "Каладос дель Пунтидо"
+      },
+      "description": {
+        "en": "Premium Rioja with depth and complexity",
+        "es": "Rioja premium con profundidad y complejidad",
+        "ca": "Rioja premium amb profunditat i complexitat",
+        "fr": "Rioja premium avec profondeur et complexité",
+        "it": "Rioja premium con profondità e complessità",
+        "de": "Premium-Rioja mit Tiefe und Komplexität",
+        "ru": "Премиальная Риоха с глубиной и сложностью"
+      },
+      "price": "38",
+      "categoryId": "negres",
+      "region": "D.O. RIOJA",
+      "grapes": "Tempranillo"
+    },
+    {
+      "id": "palomo-cazador",
+      "name": {
+        "en": "Palomo Cazador",
+        "es": "Palomo Cazador",
+        "ca": "Palomo Cazador",
+        "fr": "Palomo Cazador",
+        "it": "Palomo Cazador",
+        "de": "Palomo Cazador",
+        "ru": "Паломо Казадор"
+      },
+      "description": {
+        "en": "Full-bodied red from Ribera del Duero",
+        "es": "Tinto con cuerpo de Ribera del Duero",
+        "ca": "Negre amb cos de Ribera del Duero",
+        "fr": "Rouge corsé de Ribera del Duero",
+        "it": "Rosso corposo di Ribera del Duero",
+        "de": "Vollmundiger Rotwein aus Ribera del Duero",
+        "ru": "Полнотелое красное из Рибера дель Дуэро"
+      },
+      "price": "24",
+      "priceGlass": "5",
+      "categoryId": "negres",
+      "region": "D.O. RIBERA DEL DUERO",
+      "grapes": "Tinto Fino (Tempranillo)"
+    },
+    {
+      "id": "figuero-vinas-viejas",
+      "name": {
+        "en": "Figuero Viñas Viejas",
+        "es": "Figuero Viñas Viejas",
+        "ca": "Figuero Viñas Viejas",
+        "fr": "Figuero Viñas Viejas",
+        "it": "Figuero Viñas Viejas",
+        "de": "Figuero Viñas Viejas",
+        "ru": "Фигеро Виньяс Вьехас"
+      },
+      "description": {
+        "en": "Premium old vines red from Ribera del Duero",
+        "es": "Tinto premium de viñas viejas de Ribera del Duero",
+        "ca": "Negre premium de vinyes velles de Ribera del Duero",
+        "fr": "Rouge premium de vieilles vignes de Ribera del Duero",
+        "it": "Rosso premium da vigne vecchie di Ribera del Duero",
+        "de": "Premium-Rotwein aus alten Reben aus Ribera del Duero",
+        "ru": "Премиальное красное вино из старых лоз из Рибера дель Дуэро"
+      },
+      "price": "38",
+      "categoryId": "negres",
+      "region": "D.O. RIBERA DEL DUERO",
+      "grapes": "Tinto Fino (Tempranillo)"
+    },
+    {
+      "id": "casa-castillo-monastrell",
+      "name": {
+        "en": "Casa Castillo Monastrell",
+        "es": "Casa Castillo Monastrell",
+        "ca": "Casa Castillo Monastrell",
+        "fr": "Casa Castillo Monastrell",
+        "it": "Casa Castillo Monastrell",
+        "de": "Casa Castillo Monastrell",
+        "ru": "Каса Кастильо Монастрель"
+      },
+      "description": {
+        "en": "Bold Monastrell from Jumilla",
+        "es": "Monastrell intenso de Jumilla",
+        "ca": "Monastrell intens de Jumilla",
+        "fr": "Monastrell audacieux de Jumilla",
+        "it": "Monastrell intenso di Jumilla",
+        "de": "Kräftiger Monastrell aus Jumilla",
+        "ru": "Насыщенный Монастрель из Хумильи"
+      },
+      "price": "24",
+      "categoryId": "negres",
+      "region": "D.O. JUMILLA",
+      "grapes": "Monastrell"
+    },
+    {
+      "id": "teso-la-monja-romanico",
+      "name": {
+        "en": "Teso La Monja Romanico",
+        "es": "Teso La Monja Romanico",
+        "ca": "Teso La Monja Romanico",
+        "fr": "Teso La Monja Romanico",
+        "it": "Teso La Monja Romanico",
+        "de": "Teso La Monja Romanico",
+        "ru": "Тесо Ла Монха Романико"
+      },
+      "description": {
+        "en": "Powerful Tinta de Toro from Toro",
+        "es": "Potente Tinta de Toro de Toro",
+        "ca": "Potent Tinta de Toro de Toro",
+        "fr": "Puissant Tinta de Toro de Toro",
+        "it": "Potente Tinta de Toro di Toro",
+        "de": "Kraftvoller Tinta de Toro aus Toro",
+        "ru": "Мощная Тинта де Торо из Торо"
+      },
+      "price": "25",
+      "categoryId": "negres",
+      "region": "D.O. TORO",
+      "grapes": "Tinta de Toro (Tempranillo)"
+    },
+    {
+      "id": "chanson-pinot-noir",
+      "name": {
+        "en": "Chanson Pinot Noir",
+        "es": "Chanson Pinot Noir",
+        "ca": "Chanson Pinot Noir",
+        "fr": "Chanson Pinot Noir",
+        "it": "Chanson Pinot Noir",
+        "de": "Chanson Pinot Noir",
+        "ru": "Шансон Пино Нуар"
+      },
+      "description": {
+        "en": "Elegant Pinot Noir from France",
+        "es": "Elegante Pinot Noir de Francia",
+        "ca": "Elegant Pinot Noir de França",
+        "fr": "Élégant Pinot Noir de France",
+        "it": "Elegante Pinot Noir dalla Francia",
+        "de": "Eleganter Pinot Noir aus Frankreich",
+        "ru": "Элегантный Пино Нуар из Франции"
+      },
+      "price": "38",
+      "categoryId": "negres",
+      "region": "D.O. FRANÇA",
+      "grapes": "Pinot Noir"
+    },
+    {
+      "id": "m-grivot-pinot-noir",
+      "name": {
+        "en": "M Grivot Pinot Noir",
+        "es": "M Grivot Pinot Noir",
+        "ca": "M Grivot Pinot Noir",
+        "fr": "M Grivot Pinot Noir",
+        "it": "M Grivot Pinot Noir",
+        "de": "M Grivot Pinot Noir",
+        "ru": "М Гриво Пино Нуар"
+      },
+      "description": {
+        "en": "Premium Pinot Noir from France",
+        "es": "Pinot Noir premium de Francia",
+        "ca": "Pinot Noir premium de França",
+        "fr": "Pinot Noir premium de France",
+        "it": "Pinot Noir premium dalla Francia",
+        "de": "Premium-Pinot Noir aus Frankreich",
+        "ru": "Премиальный Пино Нуар из Франции"
+      },
+      "price": "42",
+      "categoryId": "negres",
+      "region": "D.O. FRANÇA",
+      "grapes": "Pinot Noir"
     }
   ]
 }
