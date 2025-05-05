@@ -423,7 +423,8 @@
       "price": "21",
       "categoryId": "blancs",
       "region": "D.O. PENEDÈS",
-      "grapes": "Macabeu, Xarel·lo i Malvasia"
+      "grapes": "Macabeu, Xarel·lo i Malvasia",
+       "image": "/images/drinks/image16.jpg"
     },
     {
       "id": "augustus-blanc-chardonnay",
