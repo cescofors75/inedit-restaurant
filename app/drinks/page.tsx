@@ -37,6 +37,8 @@ interface BeverageItem {
   categoryId: string;
   subcategoryId?: string;
   image?: string;
+  region?: string;
+  grapes?: string;
 }
 
 export default function DrinksPage() {
@@ -275,9 +277,14 @@ export default function DrinksPage() {
                       <h3 className="text-lg font-serif font-medium break-words hyphens-auto">
                         {item.name[language] || item.name.en}
                       </h3>
-                      <p className="text-sm text-muted-foreground mt-2">
+                      <p className="text-sm text-muted-foreground mt-1">
                         {item.description[language] || item.description.en}
                       </p>
+                   
+                    <div className="text-sm text-muted-foreground mt-2">
+                      {item.region && `${item.region} - `}{item.grapes}
+                    </div>
+
                     </div>
                     <div className="text-right">
                       <div className="text-brand font-medium">{item.price}€</div>
