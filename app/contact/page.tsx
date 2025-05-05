@@ -70,7 +70,7 @@ export default function ContactPage() {
                 </li>
               </ul>
             </div>
-
+            </div>
             <div className="bg-white p-8 rounded-lg shadow-sm">
               <h2 className="text-2xl font-serif font-medium mb-6">Private Events</h2>
               <p className="text-muted-foreground mb-4">
@@ -85,10 +85,10 @@ export default function ContactPage() {
                 </a>
               </p>
             </div>
-          </div>
+         
 
           <div className="bg-white p-8 rounded-lg shadow-sm">
-            {formSubmitted ? (
+            {/*formSubmitted ? (
               <div className="text-center py-12">
                 <h2 className="text-2xl font-serif font-bold mb-4">Thank You!</h2>
                 <p className="text-lg mb-6">
@@ -129,7 +129,7 @@ export default function ContactPage() {
                   </Button>
                 </form>
               </>
-            )}
+            )*/}
           </div>
         </div>
       </div>

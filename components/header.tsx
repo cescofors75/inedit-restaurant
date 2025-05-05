@@ -89,12 +89,12 @@ export default function Header() {
             >
               {t("nav.gallery")}
             </Link>
-            <Link
+            {/*<Link
               href="/contact"
               className={`text-sm font-medium transition-colors hover:text-brand ${pathname === "/contact" ? "text-brand" : "text-primary"}`}
             >
               {t("nav.contact")}
-            </Link>
+            </Link>*/}
           </nav>
 
           <div className="hidden md:flex items-center space-x-4">
@@ -178,13 +178,13 @@ export default function Header() {
             >
               {t("nav.gallery")}
             </Link>
-            <Link
+           {/*<Link
               href="/contact"
               className="block px-3 py-2 rounded-md text-base font-medium text-primary hover:text-brand hover:bg-muted"
               onClick={() => setIsMenuOpen(false)}
             >
               {t("nav.contact")}
-            </Link>
+            </Link>*/}
           </div>
 
           <div className="pt-4 pb-3 border-t border-muted">
