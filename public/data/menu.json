@@ -209,6 +209,54 @@
       "image": "/images/menu/ensalada-berenjena.jpg"
     },
     {
+      "id": "aguacate-salmon",
+      "name": {
+        "en": "Emulsified Avocado with Salmon",
+        "es": "Aguacate emulsionado, salmón y sésamo",
+        "ca": "Alvocat emulsionat, salmó i sèsam",
+        "fr": "Avocat émulsionné, saumon et sésame",
+        "it": "Avocado emulsionato, salmone e sesamo",
+        "de": "Emulgierte Avocado mit Lachs und Sesam",
+        "ru": "Эмульгированный авокадо с лососем и кунжутом"
+      },
+      "description": {
+        "en": "Emulsified avocado with salmon and sesame seeds",
+        "es": "Aguacate emulsionado, salmón y sésamo",
+        "ca": "Alvocat emulsionat, salmó i sèsam",
+        "fr": "Avocat émulsionné, saumon et graines de sésame",
+        "it": "Avocado emulsionato con salmone e semi di sesamo",
+        "de": "Emulgierte Avocado mit Lachs und Sesamsamen",
+        "ru": "Эмульгированный авокадо с лососем и семенами кунжута"
+      },
+      "price": "7.50",
+      "categoryId": "entrantes",
+      "image": "/images/menu/aguacate-salmon.jpg"
+    },
+    {
+      "id": "fritos-calaf",
+      "name": {
+        "en": "Calaf Fritters with Crystal Shrimp",
+        "es": "Los fritos de calaf, gamba cristal y cítricos",
+        "ca": "Els fregits de calaf, gamba cristall i cítrics",
+        "fr": "Frits de calaf, crevette cristal et agrumes",
+        "it": "Fritti di calaf, gambero cristallo e agrumi",
+        "de": "Calaf-Fritters mit Glasgarnelen und Zitrusfrüchten",
+        "ru": "Жареные кусочки калаф с прозрачными креветками и цитрусовыми"
+      },
+      "description": {
+        "en": "Calaf fritters with crystal shrimp and citrus",
+        "es": "Los fritos de calaf, gamba cristal y cítricos",
+        "ca": "Els fregits de calaf, gamba cristall i cítrics",
+        "fr": "Frits de calaf, crevette cristal et agrumes",
+        "it": "Fritti di calaf, gambero cristallo e agrumi",
+        "de": "Calaf-Fritters mit Glasgarnelen und Zitrusfrüchten",
+        "ru": "Жареные кусочки калаф с прозрачными креветками и цитрусовыми"
+      },
+      "price": "11",
+      "categoryId": "entrantes",
+      "image": "/images/menu/fritos-calaf.jpg"
+    },
+    {
       "id": "ensalada-cesar",
       "name": {
         "en": "Caesar Salad",
@@ -255,6 +303,78 @@
       "price": "17.5",
       "categoryId": "entrantes",
       "image": "/images/menu/raviolis.jpg"
+    },
+    {
+      "id": "ensalada-tomate",
+      "name": {
+        "en": "Seasonal Tomato Salad",
+        "es": "Ensalada de tomates de temporada",
+        "ca": "Amanida de tomàquets de temporada",
+        "fr": "Salade de tomates de saison",
+        "it": "Insalata di pomodori di stagione",
+        "de": "Salat mit Tomaten der Saison",
+        "ru": "Салат из сезонных помидоров"
+      },
+      "description": {
+        "en": "Seasonal tomato salad with Kalamata olives and homemade confited tuna",
+        "es": "Ensalada de tomates de temporada, aceitunas kalamata y bonito confitado casero",
+        "ca": "Amanida de tomàquets de temporada, olives kalamata i bonítol confitat casolà",
+        "fr": "Salade de tomates de saison, olives kalamata et thon confit maison",
+        "it": "Insalata di pomodori di stagione, olive kalamata e tonno confit fatto in casa",
+        "de": "Salat mit Tomaten der Saison, Kalamata-Oliven und hausgemachtem konfiertem Thunfisch",
+        "ru": "Салат из сезонных помидоров с оливками каламата и домашним конфи из тунца"
+      },
+      "price": "12.5",
+      "categoryId": "entrantes",
+      "image": "/images/menu/ensalada-tomate.jpg"
+    },
+    {
+      "id": "mejillones",
+      "name": {
+        "en": "Steamed Mussels",
+        "es": "Mejillones al vapor de cítricos y hierbas",
+        "ca": "Musclos al vapor de cítrics i herbes",
+        "fr": "Moules à la vapeur d'agrumes et d'herbes",
+        "it": "Cozze al vapore di agrumi ed erbe",
+        "de": "Gedämpfte Muscheln mit Zitrusfrüchten und Kräutern",
+        "ru": "Мидии на пару с цитрусовыми и травами"
+      },
+      "description": {
+        "en": "Mussels steamed with citrus and herbs",
+        "es": "Mejillones al vapor de cítricos y hierbas",
+        "ca": "Musclos al vapor de cítrics i herbes",
+        "fr": "Moules à la vapeur d'agrumes et d'herbes",
+        "it": "Cozze al vapore di agrumi ed erbe",
+        "de": "Gedämpfte Muscheln mit Zitrusfrüchten und Kräutern",
+        "ru": "Мидии на пару с цитрусовыми и травами"
+      },
+      "price": "9",
+      "categoryId": "entrantes",
+      "image": "/images/menu/mejillones.jpg"
+    },
+    {
+      "id": "hummus",
+      "name": {
+        "en": "Eggplant Hummus",
+        "es": "Hummus de berenjena y crudités",
+        "ca": "Hummus d'albergínia i crudités",
+        "fr": "Houmous d'aubergine et crudités",
+        "it": "Hummus di melanzane e crudité",
+        "de": "Auberginen-Hummus mit Gemüsesticks",
+        "ru": "Хумус из баклажанов с овощными палочками"
+      },
+      "description": {
+        "en": "Eggplant hummus served with raw vegetables",
+        "es": "Hummus de berenjena y crudités",
+        "ca": "Hummus d'albergínia i crudités",
+        "fr": "Houmous d'aubergine servi avec des légumes crus",
+        "it": "Hummus di melanzane servito con verdure crude",
+        "de": "Auberginen-Hummus serviert mit rohem Gemüse",
+        "ru": "Хумус из баклажанов, подаваемый с сырыми овощами"
+      },
+      "price": "9.50",
+      "categoryId": "entrantes",
+      "image": "/images/menu/hummus.jpg"
     },
     {
       "id": "arrabiata",
@@ -327,6 +447,150 @@
       "price": "9",
       "categoryId": "pastas",
       "image": "/images/menu/bolognesa.jpg"
+    },
+    {
+      "id": "pizza-picante",
+      "name": {
+        "en": "Spicy Pizza",
+        "es": "Picante",
+        "ca": "Picant",
+        "fr": "Pizza Épicée",
+        "it": "Pizza Piccante",
+        "de": "Scharfe Pizza",
+        "ru": "Острая Пицца"
+      },
+      "description": {
+        "en": "Pizza with organic tomato, spicy pepperoni and black olives",
+        "es": "Tomate ecológico, pepperoni picante y aceitunas negras",
+        "ca": "Tomàquet ecològic, pepperoni picant i olives negres",
+        "fr": "Tomate bio, pepperoni épicé et olives noires",
+        "it": "Pomodoro biologico, pepperoni piccante e olive nere",
+        "de": "Bio-Tomaten, scharfe Pepperoni und schwarze Oliven",
+        "ru": "Органические помидоры, острая пепперони и черные оливки"
+      },
+      "price": "14.50",
+      "categoryId": "pizzas",
+      "image": "/images/menu/pizza-picante.jpg"
+    },
+    {
+      "id": "pizza-formaggi",
+      "name": {
+        "en": "Four Cheese Pizza",
+        "es": "Formaggi",
+        "ca": "Formaggi",
+        "fr": "Pizza Quatre Fromages",
+        "it": "Pizza Formaggi",
+        "de": "Vier-Käse-Pizza",
+        "ru": "Пицца Четыре Сыра"
+      },
+      "description": {
+        "en": "Pizza with a selection of four melted cheeses, tomato and mozzarella",
+        "es": "Selección de cuatro quesos fundidos, tomate y mozzarella",
+        "ca": "Selecció de quatre formatges fosos, tomàquet i mozzarella",
+        "fr": "Sélection de quatre fromages fondus, tomate et mozzarella",
+        "it": "Selezione di quattro formaggi fusi, pomodoro e mozzarella",
+        "de": "Auswahl von vier geschmolzenen Käsesorten, Tomaten und Mozzarella",
+        "ru": "Выбор из четырех плавленых сыров, помидоров и моцареллы"
+      },
+      "price": "15.50",
+      "categoryId": "pizzas",
+      "image": "/images/menu/pizza-formaggi.jpg"
+    },
+    {
+      "id": "pizza-napolitana",
+      "name": {
+        "en": "Napolitana Pizza",
+        "es": "Napolitana",
+        "ca": "Napolitana",
+        "fr": "Pizza Napolitaine",
+        "it": "Pizza Napoletana",
+        "de": "Napolitanische Pizza",
+        "ru": "Пицца Наполитана"
+      },
+      "description": {
+        "en": "Pizza with prosciutto, anchovy and fresh arugula",
+        "es": "Prosciutto, anchoa y rúcula fresca",
+        "ca": "Prosciutto, anxova i ruca fresca",
+        "fr": "Prosciutto, anchois et roquette fraîche",
+        "it": "Prosciutto, acciuga e rucola fresca",
+        "de": "Prosciutto, Sardelle und frischer Rucola",
+        "ru": "Прошутто, анчоусы и свежая руккола"
+      },
+      "price": "14.20",
+      "categoryId": "pizzas",
+      "image": "/images/menu/pizza-napolitana.jpg"
+    },
+    {
+      "id": "pizza-bbq",
+      "name": {
+        "en": "NY BBQ Pizza",
+        "es": "NY BBQ",
+        "ca": "NY BBQ",
+        "fr": "Pizza NY BBQ",
+        "it": "Pizza NY BBQ",
+        "de": "NY BBQ Pizza",
+        "ru": "Пицца Нью-Йорк Барбекю"
+      },
+      "description": {
+        "en": "Pizza with slow-cooked chicken, homemade barbecue sauce and mozzarella",
+        "es": "Pollo a baja temperatura, salsa barbacoa casera y mozzarella",
+        "ca": "Pollastre a baixa temperatura, salsa barbacoa casolana i mozzarella",
+        "fr": "Poulet à basse température, sauce barbecue maison et mozzarella",
+        "it": "Pollo a bassa temperatura, salsa barbecue fatta in casa e mozzarella",
+        "de": "Hähnchen bei niedriger Temperatur, hausgemachte Barbecue-Sauce und Mozzarella",
+        "ru": "Курица, приготовленная при низкой температуре, домашний соус барбекю и моцарелла"
+      },
+      "price": "15.20",
+      "categoryId": "pizzas",
+      "image": "/images/menu/pizza-bbq.jpg"
+    },
+    {
+      "id": "lomo-bajo",
+      "name": {
+        "en": "Girona Beef Loin",
+        "es": "Lomo bajo de ternera de Girona",
+        "ca": "Llom baix de vedella de Girona",
+        "fr": "Longe de bœuf de Girona",
+        "it": "Lombata di manzo di Girona",
+        "de": "Rinderlende aus Girona",
+        "ru": "Говяжья вырезка из Жироны"
+      },
+      "description": {
+        "en": "Girona beef loin with creamy celeriac and its jus",
+        "es": "Lomo bajo de ternera de Girona, cremoso de apionabo y su jugo",
+        "ca": "Llom baix de vedella de Girona, cremós d'api-rave i el seu suc",
+        "fr": "Longe de bœuf de Girona, crémeux de céleri-rave et son jus",
+        "it": "Lombata di manzo di Girona, cremoso di sedano rapa e il suo sugo",
+        "de": "Rinderlende aus Girona mit cremiger Sellerieknolle und ihrem Saft",
+        "ru": "Говяжья вырезка из Жироны с кремовым сельдереем и соком"
+      },
+      "price": "19.50",
+      "categoryId": "carnes-pescados",
+      "image": "/images/menu/lomo-bajo.jpg"
+    },
+    {
+      "id": "pollo-picanton",
+      "name": {
+        "en": "Young Chicken",
+        "es": "Pollo picantón",
+        "ca": "Pollastre picantó",
+        "fr": "Jeune poulet",
+        "it": "Pollo piccante",
+        "de": "Junges Hähnchen",
+        "ru": "Молодой цыпленок"
+      },
+      "description": {
+        "en": "Young chicken in its own juice, accompanied by mini carrots marinated with citrus",
+        "es": "Pollo picantón en su jugo, acompañado de mini zanahorias escabechadas con cítricos",
+        "ca": "Pollastre picantó en el seu suc, acompanyat de mini pastanagues escabetxades amb cítrics",
+        "fr": "Jeune poulet dans son jus, accompagné de mini carottes marinées aux agrumes",
+        "it": "Pollo piccante nel suo sugo, accompagnato da mini carote marinate agli agrumi",
+        "de": "Junges Hähnchen in seinem Saft, begleitet von Mini-Karotten mariniert mit Zitrusfrüchten",
+        "ru": "Молодой цыпленок в собственном соку с мини-морковью, маринованной с цитрусовыми"
+      },
+      "price": "16.50",
+      "categoryId": "carnes-pescados",
+      "image": "/images/menu/pollo-picanton.jpg"
     },
     {
       "id": "cordero",
@@ -521,4 +785,4 @@
       "image": "/images/menu/chocolate.jpg"
     }
   ]
-}
+} 
