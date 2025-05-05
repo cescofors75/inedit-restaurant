@@ -68,7 +68,7 @@ export default function DrinksPage() {
         const response = await fetch('/data/beverages.json');
         const data = await response.json();
         
-        console.log('Loaded beverage data:', data);
+        //console.log('Loaded beverage data:', data);
         
         if (data && data.categories && data.items) {
           setCategories(data.categories);
