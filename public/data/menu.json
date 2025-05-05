@@ -783,20 +783,7 @@
       "price": "7",
       "categoryId": "postres",
       "image": "/images/menu/chocolate.jpg"
-    },
-    {
-      "id": "6705d7a8-707d-4c0a-b36f-2dc3d59ddfd1",
-      "name": {
-        "es": "Nuevo Plato",
-        "en": "New Item"
-      },
-      "description": {
-        "es": "",
-        "en": ""
-      },
-      "price": "0",
-      "categoryId": "entrantes",
-      "image": null
     }
+    
   ]
 }
