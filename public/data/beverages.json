@@ -371,7 +371,8 @@
       "priceGlass": "4",
       "categoryId": "blancs",
       "region": "D.O. EMPORDÀ",
-      "grapes": "Garnatxa blanca i moscatell"
+      "grapes": "Garnatxa blanca i moscatell",
+       "image": "/images/drinks/image32.jpg"
     },
     {
       "id": "gessami-blanc",
@@ -892,7 +893,8 @@
       "priceGlass": "4",
       "categoryId": "negres",
       "region": "D.O. EMPORDÀ",
-      "grapes": "Cabernet Sauvignon, Garnatxa negre i Syrah"
+      "grapes": "Cabernet Sauvignon, Garnatxa negre i Syrah",
+       "image": "/images/drinks/image32.jpg"
     },
     {
       "id": "scala-dei-prior",
@@ -1101,7 +1103,9 @@
       "priceGlass": "4",
       "categoryId": "rosats",
       "region": "D.O. EMPORDÀ",
-      "grapes": "Garnatxa Negre"
+      "grapes": "Garnatxa Negre",
+       "image": "/images/drinks/image7.jpg"
+
     },
     {
       "id": "abadia-de-poblet-rosat",
@@ -1204,7 +1208,8 @@
       "price": "27",
       "categoryId": "rosats",
       "region": "D.O. FRANÇA",
-      "grapes": "Garnatxa gris i Monastrell"
+      "grapes": "Garnatxa gris i Monastrell",
+       "image": "/images/drinks/image38.jpg"
     },
     {
       "id": "don-px-toro-albala",
@@ -1284,7 +1289,8 @@
       "priceGlass": "6",
       "categoryId": "dolcos",
       "region": "D.O. HUNGRIA",
-      "grapes": "Furmint"
+      "grapes": "Furmint",
+       "image": "/images/drinks/image10.jpg"
     },
     {
       "id": "groebe-riesling-kabbinett",
@@ -1493,7 +1499,8 @@
       "price": "42",
       "categoryId": "negres",
       "region": "D.O. FRANÇA",
-      "grapes": "Pinot Noir"
+      "grapes": "Pinot Noir",
+       "image": "/images/drinks/image45.jpg"
     }
   ]
 }
