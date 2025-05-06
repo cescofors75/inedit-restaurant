@@ -31,7 +31,7 @@ export default function Header() {
     setIsLanguageOpen(!isLanguageOpen)
   }
 
-  const changeLanguage = (lang: "en" | "es" | "ca" | "fr" | "it" | "de" | "ru") => {
+  const changeLanguage = (lang: "en" | "es" | "ca" | "fr" | "it" | "de" ) => {
     setLanguage(lang)
     setIsLanguageOpen(false)
   }
@@ -42,8 +42,8 @@ export default function Header() {
     ca: "Català",
     fr: "Français",
     it: "Italiano", 
-    de: "Deutsch",
-    ru: "Русский",
+    de: "Deutsch"
+    
   }
 
   return (
@@ -116,7 +116,7 @@ export default function Header() {
                   {Object.entries(languageNames).map(([code, name]) => (
                     <button
                       key={code}
-                      onClick={() => changeLanguage(code as "en" | "es" | "ca" | "fr" | "it" | "de" | "ru")}
+                      onClick={() => changeLanguage(code as "en" | "es" | "ca" | "fr" | "it" | "de" )}
                       className={`block w-full text-left px-4 py-2 text-sm ${language === code ? "text-brand font-medium" : "text-primary hover:bg-muted"}`}
                     >
                       {name}
@@ -204,7 +204,7 @@ export default function Header() {
                     <button
                       key={code}
                       onClick={() => {
-                        changeLanguage(code as "en" | "es" | "ca" | "fr" | "it" | "de" | "ru")
+                        changeLanguage(code as "en" | "es" | "ca" | "fr" | "it" | "de")
                         setIsMenuOpen(false)
                       }}
                       className={`text-left px-3 py-2 rounded-md text-sm ${language === code ? "bg-brand text-white font-medium" : "text-primary hover:bg-muted"}`}
