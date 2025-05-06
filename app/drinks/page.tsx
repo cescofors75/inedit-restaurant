@@ -292,14 +292,14 @@ export default function DrinksPage() {
                   </div>
                   
                   {item.image && (
-                    <div className="mt-3 rounded-md overflow-hidden h-32 bg-gray-100">
-                      <img 
-                        src={item.image} 
-                        alt={item.name[language]} 
-                        className="w-full h-full object-cover"
-                      />
-                    </div>
-                  )}
+  <div className="mt-3 rounded-md overflow-hidden bg-gray-100" style={{height: "200px"}}>
+    <img
+      src={item.image}
+      alt={item.name[language]}
+      className="w-full h-full object-contain"
+    />
+  </div>
+)}
                 </div>
               ))}
             </div>
