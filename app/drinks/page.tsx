@@ -245,7 +245,7 @@ export default function DrinksPage() {
           </div>
         )}
 
-        {/* Search input */}
+        {/* Search input 
         <div className="max-w-md mx-auto mb-8">
           <input
             type="text"
@@ -254,7 +254,7 @@ export default function DrinksPage() {
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
           />
-        </div>
+        </div>*/}
 
         {/* Separator */}
         <div className="w-full h-px bg-border mb-6 mt-2"></div>
@@ -277,9 +277,9 @@ export default function DrinksPage() {
                       <h3 className="text-lg font-serif font-medium break-words hyphens-auto">
                         {item.name[language] || item.name.en}
                       </h3>
-                      <p className="text-sm text-muted-foreground mt-1">
+                     {/*} <p className="text-sm text-muted-foreground mt-1">
                         {item.description[language] || item.description.en}
-                      </p>
+                      </p>*/}
                    
                     <div className="text-sm text-muted-foreground mt-2">
                       {item.region && `${item.region} - `}{item.grapes}

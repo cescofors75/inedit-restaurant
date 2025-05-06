@@ -52,7 +52,7 @@ export default function MenuPreview() {
       
       try {
         // Fetch the JSON data 
-        const response = await fetch('/data/menu.json');
+        const response = await fetch('/data/menuPreview.json');
         const data: MenuData = await response.json();
         
         if (data && data.categories && data.items) {
@@ -188,7 +188,11 @@ export default function MenuPreview() {
               <p className="text-center text-muted-foreground">{t("menu.no_items_in_category")}</p>
             )}
           </div>
-
+          <div className="mt-8 text-center">
+  <Link href="/menu" className="bg-gray-200 rounded-md p-4 text-brand font-medium inline-block">
+    {t("menu.view_full_menu")}
+  </Link>
+</div>
           
         </div>
       </div>
