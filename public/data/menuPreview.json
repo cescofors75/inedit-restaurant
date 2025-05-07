@@ -22,50 +22,8 @@
         "ru": "Начните свое кулинарное путешествие"
       }
     },
-    {
-      "id": "pastas",
-      "name": {
-        "en": "Pasta",
-        "es": "Pastas",
-        "ca": "Pastes",
-        "fr": "Pâtes",
-        "it": "Paste",
-        "de": "Nudeln",
-        "ru": "Паста"
-      },
-      "slug": "pastas",
-      "description": {
-        "en": "Italian tradition",
-        "es": "Tradición italiana",
-        "ca": "Tradició italiana",
-        "fr": "Tradition italienne",
-        "it": "Tradizione italiana",
-        "de": "Italienische Tradition",
-        "ru": "Итальянская традиция"
-      }
-    },
-    {
-      "id": "pizzas",
-      "name": {
-        "en": "Pizzas",
-        "es": "Pizzas",
-        "ca": "Pizzes",
-        "fr": "Pizzas",
-        "it": "Pizze",
-        "de": "Pizzas",
-        "ru": "Пиццы"
-      },
-      "slug": "pizzas",
-      "description": {
-        "en": "Authentic Italian flavors",
-        "es": "Auténticos sabores italianos",
-        "ca": "Autèntics sabors italians",
-        "fr": "Authentiques saveurs italiennes",
-        "it": "Autentici sapori italiani",
-        "de": "Authentische italienische Aromen",
-        "ru": "Аутентичные итальянские вкусы"
-      }
-    },
+    
+   
     {
       "id": "carnes-pescados",
       "name": {
@@ -87,7 +45,30 @@
         "de": "Unsere Hauptspezialitäten",
         "ru": "Наши основные фирменные блюда"
       }
+    },
+    {
+      "id": "pastas-pizzas",
+      "name": {
+        "en": "Pasta & Pizza",
+        "es": "Pastas y Pizzas",
+        "ca": "Pastes i Pizzes",
+        "fr": "Pâtes et Pizzas",
+        "it": "Paste e Pizze",
+        "de": "Nudeln und Pizzen",
+        "ru": "Паста и Пицца"
+      },
+      "slug": "pastas-pizzas",
+      "description": {
+        "en": "Italian tradition",
+        "es": "Tradición italiana",
+        "ca": "Tradició italiana",
+        "fr": "Tradition italienne",
+        "it": "Tradizione italiana",
+        "de": "Italienische Tradition",
+        "ru": "Итальянская традиция"
+      }
     }
+
     
   ],
   "items": [
@@ -185,7 +166,7 @@
         "ru": "Пенне с острым соусом на основе томатов, чеснока, перца чили и оливкового масла"
       },
       "price": "12",
-      "categoryId": "pastas",
+      "categoryId": "pastas-pizzas",
       "image": "/images/menu/arrabiata.jpg"
     },
     {
@@ -209,87 +190,18 @@
         "ru": "Ригатони с соусом карбонара из гуанчале и пармезана"
       },
       "price": "14",
-      "categoryId": "pastas",
+      "categoryId": "pastas-pizzas",
       "image": "/images/menu/carbonara.jpg"
     },
-    {
-      "id": "bolognesa",
-      "name": {
-        "en": "Spaghetti Bolognese",
-        "es": "Alla Bolognesa",
-        "ca": "Alla Bolognesa",
-        "fr": "Spaghetti à la Bolognaise",
-        "it": "Spaghetti alla Bolognese",
-        "de": "Spaghetti Bolognese",
-        "ru": "Спагетти Болоньезе"
-      },
-      "description": {
-        "en": "Spaghetti with Bolognese sauce, organic tomato and fresh basil",
-        "es": "Spaghetti con salsa boloñesa, tomate ecológico y albahaca fresca",
-        "ca": "Spaghetti amb salsa bolonyesa, tomàquet ecològic i alfàbrega fresca",
-        "fr": "Spaghetti avec sauce bolognaise, tomate bio et basilic frais",
-        "it": "Spaghetti con ragù alla bolognese, pomodoro biologico e basilico fresco",
-        "de": "Spaghetti mit Bolognese-Sauce, Bio-Tomaten und frischem Basilikum",
-        "ru": "Спагетти с соусом болоньезе, органическими томатами и свежим базиликом"
-      },
-      "price": "9",
-      "categoryId": "pastas",
-      "image": "/images/menu/bolognesa.jpg"
-    },
-    {
-      "id": "pizza-picante",
-      "name": {
-        "en": "Spicy Pizza",
-        "es": "Picante",
-        "ca": "Picant",
-        "fr": "Pizza Épicée",
-        "it": "Pizza Piccante",
-        "de": "Scharfe Pizza",
-        "ru": "Острая Пицца"
-      },
-      "description": {
-        "en": "Pizza with organic tomato, spicy pepperoni and black olives",
-        "es": "Tomate ecológico, pepperoni picante y aceitunas negras",
-        "ca": "Tomàquet ecològic, pepperoni picant i olives negres",
-        "fr": "Tomate bio, pepperoni épicé et olives noires",
-        "it": "Pomodoro biologico, pepperoni piccante e olive nere",
-        "de": "Bio-Tomaten, scharfe Pepperoni und schwarze Oliven",
-        "ru": "Органические помидоры, острая пепперони и черные оливки"
-      },
-      "price": "14.50",
-      "categoryId": "pizzas",
-      "image": "/images/menu/pizza-picante.jpg"
-    },
-    {
-      "id": "pizza-formaggi",
-      "name": {
-        "en": "Four Cheese Pizza",
-        "es": "Formaggi",
-        "ca": "Formaggi",
-        "fr": "Pizza Quatre Fromages",
-        "it": "Pizza Formaggi",
-        "de": "Vier-Käse-Pizza",
-        "ru": "Пицца Четыре Сыра"
-      },
-      "description": {
-        "en": "Pizza with a selection of four melted cheeses, tomato and mozzarella",
-        "es": "Selección de cuatro quesos fundidos, tomate y mozzarella",
-        "ca": "Selecció de quatre formatges fosos, tomàquet i mozzarella",
-        "fr": "Sélection de quatre fromages fondus, tomate et mozzarella",
-        "it": "Selezione di quattro formaggi fusi, pomodoro e mozzarella",
-        "de": "Auswahl von vier geschmolzenen Käsesorten, Tomaten und Mozzarella",
-        "ru": "Выбор из четырех плавленых сыров, помидоров и моцареллы"
-      },
-      "price": "15.50",
-      "categoryId": "pizzas",
-      "image": "/images/menu/pizza-formaggi.jpg"
-    },
+   
+    
+    
     {
       "id": "pizza-napolitana",
       "name": {
         "en": "Napolitana Pizza",
-        "es": "Napolitana",
-        "ca": "Napolitana",
+        "es": "Pizza Napolitana",
+        "ca": "Pizza Napolitana",
         "fr": "Pizza Napolitaine",
         "it": "Pizza Napoletana",
         "de": "Napolitanische Pizza",
@@ -305,7 +217,7 @@
         "ru": "Прошутто, анчоусы и свежая руккола"
       },
       "price": "14.20",
-      "categoryId": "pizzas",
+      "categoryId": "pastas-pizzas",
       "image": "/images/menu/pizza-napolitana.jpg"
     },
     
