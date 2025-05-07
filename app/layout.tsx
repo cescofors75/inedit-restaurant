@@ -4,7 +4,7 @@ import { Inter, Playfair_Display } from "next/font/google"
 import "./globals.css"
 import { LanguageProvider } from "@/context/language-context"
 import LayoutWrapper from "@/components/layout-wrapper"
-import { ThemeProvider } from "@/components/providers/theme-provider"
+import { ThemeProvider } from "next-themes"
 import { getPageBySlug } from "@/lib/api" // Using our JSON API
 
 const inter = Inter({
