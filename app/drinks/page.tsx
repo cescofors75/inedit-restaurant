@@ -314,11 +314,7 @@ export default function DrinksPage() {
                     </div>
                     
                     {/* Only show image for wine categories */}
-                    {item.image && (item.categoryId === "escumosos" || 
-                               item.categoryId === "blancs" || 
-                               item.categoryId === "negres" || 
-                               item.categoryId === "rosats" || 
-                               item.categoryId === "dolcos") && (
+                    {item.image && (item.categoryId === "vinos" ) && (
                       <div className="mt-3 rounded-md overflow-hidden bg-gray-100" style={{height: "200px"}}>
                         <img
                           src={item.image}
