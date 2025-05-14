@@ -83,6 +83,9 @@ export default function Gallery({ preview = false }: GalleryProps) {
                 src={image.src || "/placeholder.svg"}
                 alt={image.alt}
                 fill
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                quality={75}
+                loading={index < 4 ? "eager" : "lazy"}
                 className="object-cover transition-transform duration-500 group-hover:scale-110"
               />
               <div className="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
@@ -95,7 +98,7 @@ export default function Gallery({ preview = false }: GalleryProps) {
         {preview && (
           <div className="text-center mt-12">
             <Link href="/gallery" className="btn-secondary">
-              View Full Gallery
+            {t("gallery.button")}
             </Link>
           </div>
         )}
@@ -124,6 +127,9 @@ export default function Gallery({ preview = false }: GalleryProps) {
                 src={displayImages[selectedImage].src || "/placeholder.svg"}
                 alt={displayImages[selectedImage].alt}
                 fill
+                sizes="100vw"
+                quality={85}
+                priority
                 className="object-contain"
               />
             </div>

@@ -57,6 +57,9 @@ export default function FeaturedDishes() {
                   src={dish.image || "/placeholder.svg"}
                   alt={dish.name}
                   fill
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  quality={80}
+                  loading={index === 0 ? "eager" : "lazy"}
                   className="object-cover rounded-lg"
                 />
               </div>

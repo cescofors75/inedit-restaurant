@@ -6,17 +6,24 @@ import { LanguageProvider } from "@/context/language-context"
 import LayoutWrapper from "@/components/layout-wrapper"
 import { ThemeProvider } from "next-themes"
 import { getPageBySlug } from "@/lib/api" // Using our JSON API
+import CriticalPreload from "./critical-preload"
+import { Analytics } from '@vercel/analytics/next';
 
+// Optimize font loading
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
   display: "swap",
+  preload: true,
+  fallback: ['system-ui', 'arial', 'sans-serif'],
 })
 
 const playfair = Playfair_Display({
   subsets: ["latin"],
   variable: "--font-playfair",
   display: "swap",
+  preload: true,
+  fallback: ['Georgia', 'serif'],
 })
 
 export async function generateMetadata(): Promise<Metadata> {
@@ -89,11 +96,20 @@ interface RootLayoutProps {
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en" className={`${inter.variable} ${playfair.variable}`} suppressHydrationWarning>
+      <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+        <meta name="color-scheme" content="light" />
+        <meta name="theme-color" content="#ffffff" />
+        <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+        <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
+        <CriticalPreload />
+      </head>
       <body className="font-sans bg-background text-primary">
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+        <ThemeProvider attribute="class" defaultTheme="light" enableSystem={false}>
           <LanguageProvider>
             <LayoutWrapper>
               {children}
+              <Analytics />
             </LayoutWrapper>
           </LanguageProvider>
         </ThemeProvider>

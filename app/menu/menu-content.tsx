@@ -135,6 +135,16 @@ export default function MenuContent() {
               </button>
             ))}
           </div>
+       
+         <div className="text-center mb-8">
+            {categories.map((category) => (
+              activeCategory === category.id && (
+                <p key={category.id} className="text-lg text-muted-foreground max-w-2xl mx-auto">
+                  {category.description[language] || category.description.en}
+                </p>
+              )
+            ))}
+          </div>
 
           {/* Divider */}
           <div className="w-full h-px bg-border mb-8 mt-2"></div>

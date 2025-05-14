@@ -26,13 +26,13 @@ export default function Footer() {
             {t("footer.description")}
             </p>
             <div className="flex space-x-4 mt-6">
-              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+              <a href="https://www.instagram.com/ineditlloret/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
                 <Instagram className="h-5 w-5 text-gray-300 hover:text-white transition-colors" />
               </a>
-              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+              <a href="https://www.facebook.com/profile.php?id=61575522437304" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
                 <Facebook className="h-5 w-5 text-gray-300 hover:text-white transition-colors" />
               </a>
-              <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+              <a href="https://www.tiktok.com/@ineditlloret" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   className="h-5 w-5 text-gray-300 hover:text-white transition-colors"
@@ -126,10 +126,10 @@ export default function Footer() {
           </p>
           <div className="flex space-x-4 mt-4 md:mt-0">
             <Link href="/privacy" className="text-xs text-gray-400 hover:text-white transition-colors">
-              Privacy Policy
+              Politica de Privacidad
             </Link>
-            <Link href="/terms" className="text-xs text-gray-400 hover:text-white transition-colors">
-              Terms of Service
+            <Link href="/legal" className="text-xs text-gray-400 hover:text-white transition-colors">
+              Aviso Legal
             </Link>
           </div>
         </div>

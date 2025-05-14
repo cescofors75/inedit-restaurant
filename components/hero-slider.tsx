@@ -20,14 +20,14 @@ export default function HeroSlider() {
     {
       type: "image",
       image: "/images/slider2.jpg",
-      title: "Exquisite Flavors",
-      subtitle: "Discover our seasonal menu crafted with passion",
+      title: t("hero.title2"),
+      subtitle: t("hero.subtitle2"),
     },
     {
       type: "image",
       image: "/images/slider3.jpg",
-      title: "Elegant Atmosphere",
-      subtitle: "The perfect setting for memorable dining experiences",
+      title: t("hero.title3"),
+      subtitle: t("hero.subtitle3"),
     },
   ]
 
@@ -60,6 +60,8 @@ export default function HeroSlider() {
               src={slide.image || "/placeholder.svg"}
               alt={`INÈDIT - ${slide.title}`}
               fill
+              sizes="100vw"
+              quality={index === 0 ? 85 : 75}
               className="object-cover"
               priority={index === 0}
             />

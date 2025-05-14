@@ -1,0 +1,33 @@
+{
+  "nav.home": "Inicio",
+  "nav.menu": "Carta",
+  "nav.gallery": "Galería",
+  "nav.contact": "Contacto",
+  "hero.title": "Cocina de Autor",
+  "hero.subtitle": "Una experiencia gastronómica inolvidable",
+  "hero.cta": "Reservar Mesa",
+  "menu.title": "Nuestra Carta",
+  "menu.subtitle": "Elaborada con pasión",
+  "menu.view_full_menu": "Ver Carta Completa",
+  "menu.description": "En INÈDIT, cada plato es una obra maestra, creada con los mejores ingredientes y técnicas culinarias. Explora nuestra carta y descubre la magia de la cocina de autor.",
+  "contact.description": "Nos encantaría saber de ti. Contáctanos con cualquier pregunta, comentario o para consultar sobre eventos privados.",
+  "contact.address": "Dirección",
+  "contact.phone": "Teléfono",
+  "contact.email": "Correo",
+  "footer.copyright": "Todos los derechos reservados",
+  "footer.description": "INÈDIT ofrece una experiencia gastronómica única que combina técnicas tradicionales con enfoques innovadores.",
+  "location.title": "Ubicación",
+  "location.description": "Visítanos para experimentar la atmósfera única y la excepcional cocina de INÈDIT.",
+  "location.hours": "Horario",
+  "gallery.title": "Galería",
+  "gallery.description": "Explora la atmósfera, las creaciones culinarias y las experiencias que definen INÈDIT.",
+  "cuisine.title": "Cocina de Autor",
+  "cuisine.description": "   En INÈDIT, combinamos técnicas tradicionales con enfoques innovadores para crear experiencias gastronómicas inolvidables. Nuestra carta cambia con las estaciones, siempre presentando los mejores ingredientes locales de productores de confianza en toda Cataluña y la costa mediterránea.",
+  "cuisine.description2": "Cada plato es un reflejo de nuestra pasión por la excelencia culinaria, combinando respeto por la tradición con un toque creativo. Te invitamos a embarcarte en un viaje gastronómico que celebra los ricos sabores y el patrimonio cultural de nuestra región, reinterpretados a través de nuestra perspectiva única.",
+  "beverages.title": "Bebidas",
+  "beverages.description": "Una selección de vinos, cócteles y bebidas no alcohólicas para complementar tu comida.",
+  "reservation.title": "¿Listo para experimentar INÈDIT?",
+  "reservation.description": "Reserva tu mesa ahora y emprende un viaje culinario como ningún otro. ¡Esperamos darte la bienvenida!"
+  
+}
+

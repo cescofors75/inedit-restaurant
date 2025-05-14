@@ -75,15 +75,15 @@
             "ru": "Вода 1/2 Л"
           },
           "description": {
-            "en": "Still water, 1/2 liter bottle",
-            "es": "Agua sin gas, botella de 1/2 litro",
-            "ca": "Aigua sense gas, ampolla de 1/2 litre",
-            "fr": "Eau plate, bouteille de 1/2 litre",
-            "it": "Acqua naturale, bottiglia da 1/2 litro",
-            "de": "Stilles Wasser, 1/2 Liter Flasche",
-            "ru": "Негазированная вода, бутылка 1/2 литра"
+            "en": "Mineral water, 1/2 liter bottle",
+            "es": "Agua mineral, botella de 1/2 litro",
+            "ca": "Aigua mineral, ampolla de 1/2 litre",
+            "fr": "Eau minérale, bouteille de 1/2 litre",
+            "it": "Acqua minerale, bottiglia da 1/2 litro",
+            "de": "Mineralwasser, 1/2 Liter Flasche",
+            "ru": "Минеральная вода, бутылка 1/2 литра"
           },
-          "price": "2.70",
+          "price": "2,70",
           "categoryId": "bebidas",
           "subcategoryId": "refrescos",
           "image": "/images/drinks/beverages/agua.jpg"
@@ -108,7 +108,7 @@
             "de": "Sprudelwasser, 1/4 Liter Flasche",
             "ru": "Газированная вода, бутылка 1/4 литра"
           },
-          "price": "2.70",
+          "price": "2,70",
           "categoryId": "bebidas",
           "subcategoryId": "refrescos",
           "image": "/images/drinks/beverages/agua-gas.jpg"
@@ -133,7 +133,7 @@
             "de": "Klassische Coca-Cola",
             "ru": "Классическая Кока-Кола"
           },
-          "price": "4",
+          "price": "2,80",
           "categoryId": "bebidas",
           "subcategoryId": "refrescos",
           "image": "/images/drinks/beverages/coca-cola.jpg"
@@ -158,7 +158,7 @@
             "de": "Zuckerfreie Coca-Cola",
             "ru": "Кока-Кола без сахара"
           },
-          "price": "4",
+          "price": "2,80",
           "categoryId": "bebidas",
           "subcategoryId": "refrescos",
           "image": "/images/drinks/beverages/coca-cola-zero.jpg"
@@ -183,7 +183,7 @@
             "de": "Orangengeschmack Limonade",
             "ru": "Газированный напиток со вкусом апельсина"
           },
-          "price": "4",
+          "price": "2,80",
           "categoryId": "bebidas",
           "subcategoryId": "refrescos",
           "image": "/images/drinks/beverages/fanta-naranja.jpg"
@@ -208,7 +208,7 @@
             "de": "Zitronengeschmack Limonade",
             "ru": "Газированный напиток со вкусом лимона"
           },
-          "price": "4",
+          "price": "2,80",
           "categoryId": "bebidas",
           "subcategoryId": "refrescos",
           "image": "/images/drinks/beverages/fanta-limon.jpg"
@@ -233,7 +233,7 @@
             "de": "Zitronen-Limetten Limonade",
             "ru": "Газированный напиток со вкусом лимона и лайма"
           },
-          "price": "4",
+          "price": "2,80",
           "categoryId": "bebidas",
           "subcategoryId": "refrescos",
           "image": "/images/drinks/beverages/sprite.jpg"
@@ -258,7 +258,32 @@
             "de": "Eistee-Getränk",
             "ru": "Холодный чай"
           },
-          "price": "4.20",
+          "price": "3,20",
+          "categoryId": "bebidas",
+          "subcategoryId": "refrescos",
+          "image": "/images/drinks/beverages/fuzetea.jpg"
+        },
+{
+          "id": "aquarius",
+          "name": {
+            "en": "Aquarius",
+            "es": "Aquarius",
+            "ca": "Aquarius",
+            "fr": "Aquarius",
+            "it": "Aquarius",
+            "de": "Aquarius",
+            "ru": "Аквариус"
+          },
+          "description": {
+            "en": "Aquarius",
+            "es": "Aquarius",
+            "ca": "Aquarius",
+            "fr": "Aquarius",
+            "it": "Aquarius",
+            "de": "Aquarius",
+            "ru": "Aquarius"
+          },
+          "price": "3,20",
           "categoryId": "bebidas",
           "subcategoryId": "refrescos",
           "image": "/images/drinks/beverages/fuzetea.jpg"
@@ -275,15 +300,15 @@
             "ru": "Биттер Кас"
           },
           "description": {
-            "en": "Bitter citrus soft drink",
-            "es": "Refresco amargo de cítricos",
-            "ca": "Refresc amarg de cítrics",
-            "fr": "Boisson gazeuse amère aux agrumes",
-            "it": "Bibita amara agli agrumi",
-            "de": "Bitteres Zitrusgetränk",
-            "ru": "Горький цитрусовый газированный напиток"
+            "en": "Bitter soft drink made from plant extracts",
+            "es": "Bebida refrescante amarga de extractos de plantas",
+            "ca": "Beguda refrescant amarga d’extractes de plantes",
+            "fr": "Boisson rafraîchissante amère aux extraits de plantes",
+            "it": "Bevanda amara rinfrescante a base di estratti vegetali",
+            "de": "Bitteres Erfrischungsgetränk aus Pflanzenauszügen",
+            "ru": "Горький освежающий напиток на растительных экстрактах"
           },
-          "price": "4",
+          "price": "2,90",
           "categoryId": "bebidas",
           "subcategoryId": "refrescos",
           "image": "/images/drinks/beverages/bitter-kas.jpg"
@@ -300,43 +325,18 @@
             "ru": "Тоник"
           },
           "description": {
-            "en": "Carbonated quinine water",
-            "es": "Agua carbonatada con quinina",
-            "ca": "Aigua carbonatada amb quinina",
-            "fr": "Eau gazéifiée à la quinine",
-            "it": "Acqua gassata con chinino",
-            "de": "Kohlensäurehaltiges Chininwasser",
-            "ru": "Газированная вода с хинином"
+            "en": "Tonic water",
+            "es": "Tónica",
+            "ca": "Tònica",
+            "fr": "Eau Tonique",
+            "it": "Acqua Tonica",
+            "de": "Tonic Water",
+            "ru": "Тоник"
           },
-          "price": "4",
+          "price": "2,80",
           "categoryId": "bebidas",
           "subcategoryId": "refrescos",
           "image": "/images/drinks/beverages/tonica.jpg"
-        },
-        {
-          "id": "tonica-selection",
-          "name": {
-            "en": "Premium Tonic Water",
-            "es": "Tónica Selection",
-            "ca": "Tònica Selection",
-            "fr": "Eau Tonique Premium",
-            "it": "Acqua Tonica Premium",
-            "de": "Premium Tonic Water",
-            "ru": "Премиум Тоник"
-          },
-          "description": {
-            "en": "Premium tonic water with enhanced botanicals",
-            "es": "Tónica premium con botánicos seleccionados",
-            "ca": "Tònica premium amb botànics seleccionats",
-            "fr": "Eau tonique premium avec plantes sélectionnées",
-            "it": "Acqua tonica premium con botaniche selezionate",
-            "de": "Premium Tonic Water mit ausgewählten Botanicals",
-            "ru": "Премиальный тоник с отборными ботаническими добавками"
-          },
-          "price": "4.20",
-          "categoryId": "bebidas",
-          "subcategoryId": "refrescos",
-          "image": "/images/drinks/beverages/tonica-selection.jpg"
         },
         {
           "id": "zumo-pina",
@@ -350,15 +350,15 @@
             "ru": "Ананасовый сок"
           },
           "description": {
-            "en": "Natural pineapple juice",
-            "es": "Zumo natural de piña",
-            "ca": "Suc natural de pinya",
-            "fr": "Jus d'ananas naturel",
-            "it": "Succo naturale di ananas",
-            "de": "Natürlicher Ananassaft",
-            "ru": "Натуральный ананасовый сок"
+            "en": "Pineapple juice",
+            "es": "Zumo de piña",
+            "ca": "Suc de pinya",
+            "fr": "Jus d'ananas",
+            "it": "Succo di ananas",
+            "de": "Ananassaft",
+            "ru": "Ананасовый сок"
           },
-          "price": "4",
+          "price": "2,90",
           "categoryId": "bebidas",
           "subcategoryId": "refrescos",
           "image": "/images/drinks/beverages/zumo-pina.jpg"
@@ -375,15 +375,40 @@
             "ru": "Персиковый сок"
           },
           "description": {
-            "en": "Natural peach juice",
-            "es": "Zumo natural de melocotón",
-            "ca": "Suc natural de préssec",
-            "fr": "Jus de pêche naturel",
-            "it": "Succo naturale di pesca",
-            "de": "Natürlicher Pfirsichsaft",
-            "ru": "Натуральный персиковый сок"
+            "en": "Peach juice",
+            "es": "Zumo de melocotón",
+            "ca": "Suc de préssec",
+            "fr": "Jus de pêche",
+            "it": "Succo di pesca",
+            "de": "Pfirsichsaft",
+            "ru": "Персиковый сок"
           },
-          "price": "4",
+          "price": "2,90",
+          "categoryId": "bebidas",
+          "subcategoryId": "refrescos",
+          "image": "/images/drinks/beverages/zumo-melocoton.jpg"
+        },
+{
+          "id": "zumo-manzana",
+          "name": {
+            "en": "Apple Juice",
+            "es": "Zumo de manzana",
+            "ca": "Suc de poma",
+            "fr": "Jus de pomme",
+            "it": "Succo di mela",
+            "de": "Apfelsaft",
+            "ru": "Яблочный сок"
+          },
+          "description": {
+            "en": "Apple Juice",
+            "es": "Zumo de manzanan",
+            "ca": "Suc de poma",
+            "fr": "Jus de pomme",
+            "it": "Succo di mela",
+            "de": "Apfelsaft",
+            "ru": "Яблочный сок"
+          },
+          "price": "2,90",
           "categoryId": "bebidas",
           "subcategoryId": "refrescos",
           "image": "/images/drinks/beverages/zumo-melocoton.jpg"
@@ -408,7 +433,7 @@
             "de": "Kleines Glas Fassbier",
             "ru": "Маленький бокал разливного пива"
           },
-          "price": "3.50",
+          "price": "3,50",
           "categoryId": "bebidas",
           "subcategoryId": "cervezas",
           "image": "/images/drinks/beverages/cana.jpg"
@@ -433,7 +458,7 @@
             "de": "Fassbier mit Zitrone",
             "ru": "Разливное пиво с лимоном"
           },
-          "price": "3.60",
+          "price": "3,60",
           "categoryId": "bebidas",
           "subcategoryId": "cervezas",
           "image": "/images/drinks/beverages/cana-sandy.jpg"
@@ -458,7 +483,7 @@
             "de": "India Pale Ale mit Zitrusgeschmack",
             "ru": "Индийский светлый эль с цитрусовым вкусом"
           },
-          "price": "4.50",
+          "price": "4,50",
           "categoryId": "bebidas",
           "subcategoryId": "cervezas",
           "image": "/images/drinks/beverages/alhambra-citrus-ipa.jpg"
@@ -483,7 +508,7 @@
             "de": "Premium Reserva Bier mit vollem Körper",
             "ru": "Премиальное резервное пиво с полным телом"
           },
-          "price": "4.50",
+          "price": "4,50",
           "categoryId": "bebidas",
           "subcategoryId": "cervezas",
           "image": "/images/drinks/beverages/alhambra-1925.jpg"
@@ -508,7 +533,7 @@
             "de": "Rotbier mit gerösteten Noten",
             "ru": "Красный эль с нотками обжарки"
           },
-          "price": "4.50",
+          "price": "4,50",
           "categoryId": "bebidas",
           "subcategoryId": "cervezas",
           "image": "/images/drinks/beverages/alhambra-reserva-roja.jpg"
@@ -533,7 +558,7 @@
             "de": "Bier gemischt mit Zitronenlimonade",
             "ru": "Пиво, смешанное с лимонным напитком"
           },
-          "price": "4",
+          "price": "4,00",
           "categoryId": "bebidas",
           "subcategoryId": "cervezas",
           "image": "/images/drinks/beverages/san-miguel-radler.jpg"
@@ -558,7 +583,7 @@
             "de": "Alkoholfreies Bier",
             "ru": "Безалкогольное пиво"
           },
-          "price": "4",
+          "price": "4,00",
           "categoryId": "bebidas",
           "subcategoryId": "cervezas",
           "image": "/images/drinks/beverages/san-miguel-00.jpg"
@@ -583,7 +608,7 @@
             "de": "Alkoholfreies Bier mit geröstetem Malzgeschmack",
             "ru": "Безалкогольное пиво со вкусом жареного солода"
           },
-          "price": "4",
+          "price": "4,00",
           "categoryId": "bebidas",
           "subcategoryId": "cervezas",
           "image": "/images/drinks/beverages/san-miguel-00-tostada.jpg"
@@ -608,7 +633,7 @@
             "de": "Glutenfreies Bier",
             "ru": "Пиво без глютена"
           },
-          "price": "4.20",
+          "price": "4,20",
           "categoryId": "bebidas",
           "subcategoryId": "cervezas",
           "image": "/images/drinks/beverages/san-miguel-sin-gluten.jpg"
@@ -633,7 +658,7 @@
             "de": "Mexikanisches Lagerbier, serviert mit Limette",
             "ru": "Мексиканское лагерное пиво, подается с лаймом"
           },
-          "price": "4.50",
+          "price": "4,50",
           "categoryId": "bebidas",
           "subcategoryId": "cervezas",
           "image": "/images/drinks/beverages/corona.jpg"
@@ -658,7 +683,7 @@
             "de": "Belgisches Premium-Lagerbier",
             "ru": "Бельгийское премиальное лагерное пиво"
           },
-          "price": "4.50",
+          "price": "4,50",
           "categoryId": "bebidas",
           "subcategoryId": "cervezas",
           "image": "/images/drinks/beverages/stella-artois.jpg"
@@ -683,7 +708,7 @@
             "de": "Belgisches Abteibier mit fruchtigen Noten",
             "ru": "Бельгийское аббатское пиво с фруктовыми нотками"
           },
-          "price": "4.80",
+          "price": "4,80",
           "categoryId": "bebidas",
           "subcategoryId": "cervezas",
           "image": "/images/drinks/beverages/leffe-blonde.jpg"
@@ -708,7 +733,7 @@
             "de": "Deutsches Weizenbier mit fruchtigem Geschmack",
             "ru": "Немецкое пшеничное пиво с фруктовым вкусом"
           },
-          "price": "4.60",
+          "price": "4,60",
           "categoryId": "bebidas",
           "subcategoryId": "cervezas",
           "image": "/images/drinks/beverages/franciscaner-trigo.jpg"
@@ -733,9 +758,9 @@
             "de": "Premium Wodka",
             "ru": "Премиальная водка"
           },
-          "price": "8.90",
+          "price": "8,90",
           "categoryId": "bebidas",
-          "subcategoryId": "destilados",
+          "subcategoryId": "combinados",
           "image": "/images/drinks/beverages/smirnoff.jpg"
         },
         {
@@ -758,9 +783,9 @@
             "de": "Super Premium französischer Wodka",
             "ru": "Супер премиальная французская водка"
           },
-          "price": "10",
+          "price": "10,00",
           "categoryId": "bebidas",
-          "subcategoryId": "destilados",
+          "subcategoryId": "combinados",
           "image": "/images/drinks/beverages/grey-goose.jpg"
         },
         {
@@ -783,9 +808,9 @@
             "de": "Premium London Dry Gin",
             "ru": "Премиальный лондонский сухой джин"
           },
-          "price": "8.90",
+          "price": "8,90",
           "categoryId": "bebidas",
-          "subcategoryId": "destilados",
+          "subcategoryId": "combinados",
           "image": "/images/drinks/beverages/tanqueray.jpg"
         },
         {
@@ -808,10 +833,35 @@
             "de": "Premium Gin mit 10 Botanicals",
             "ru": "Премиальный джин с 10 ботаническими добавками"
           },
-          "price": "8.90",
+          "price": "8,90",
           "categoryId": "bebidas",
-          "subcategoryId": "destilados",
+          "subcategoryId": "combinados",
           "image": "/images/drinks/beverages/bombay-sapphire.jpg"
+        },
+	{
+          "id": "puerto-indias-brockmans",
+          "name": {
+            "en": "Puerto de Indias or Brockmans",
+            "es": "Puerto de Indias o Brockmans",
+            "ca": "Puerto de Indias o Brockmans",
+            "fr": "Puerto de Indias ou Brockmans",
+            "it": "Puerto de Indias o Brockmans",
+            "de": "Puerto de Indias oder Brockmans",
+            "ru": "Пуэрто де Индиас или Брокманс"
+          },
+          "description": {
+            "en": "Fruity premium gins",
+            "es": "Ginebras premium afrutadas",
+            "ca": "Ginebres premium afruitades",
+            "fr": "Gins premium fruités",
+            "it": "Gin premium fruttati",
+            "de": "Fruchtige Premium-Gins",
+            "ru": "Фруктовые премиальные джины"
+          },
+          "price": "8,90",
+          "categoryId": "bebidas",
+          "subcategoryId": "combinados",
+          "image": "/images/drinks/beverages/puerto-indias-brockmans.jpg"
         },
         {
           "id": "hendricks",
@@ -833,9 +883,9 @@
             "de": "Premium Gin mit Gurken- und Rosennoten",
             "ru": "Премиальный джин с нотами огурца и розы"
           },
-          "price": "8.90",
+          "price": "12,00",
           "categoryId": "bebidas",
-          "subcategoryId": "destilados",
+          "subcategoryId": "combinados",
           "image": "/images/drinks/beverages/hendricks.jpg"
         },
         {
@@ -858,9 +908,9 @@
             "de": "Mediterraner Gin mit Oliven- und Rosmarinnoten",
             "ru": "Средиземноморский джин с нотами оливы и розмарина"
           },
-          "price": "8.90",
+          "price": "12,00",
           "categoryId": "bebidas",
-          "subcategoryId": "destilados",
+          "subcategoryId": "combinados",
           "image": "/images/drinks/beverages/gin-mare.jpg"
         },
         {
@@ -883,9 +933,9 @@
             "de": "Premium Gin hergestellt mit isländischem Wasser",
             "ru": "Премиальный джин, изготовленный с использованием исландской воды"
           },
-          "price": "8.90",
+          "price": "12,00",
           "categoryId": "bebidas",
-          "subcategoryId": "destilados",
+          "subcategoryId": "combinados",
           "image": "/images/drinks/beverages/martin-millers.jpg"
         },
         {
@@ -908,35 +958,10 @@
             "de": "Französischer Gin aus Traubengeist",
             "ru": "Французский джин, изготовленный из виноградного спирта"
           },
-          "price": "8.90",
+          "price": "12,00",
           "categoryId": "bebidas",
-          "subcategoryId": "destilados",
+          "subcategoryId": "combinados",
           "image": "/images/drinks/beverages/gvine.jpg"
-        },
-        {
-          "id": "puerto-indias-brockmans",
-          "name": {
-            "en": "Puerto de Indias or Brockmans",
-            "es": "Puerto de Indias o Brockmans",
-            "ca": "Puerto de Indias o Brockmans",
-            "fr": "Puerto de Indias ou Brockmans",
-            "it": "Puerto de Indias o Brockmans",
-            "de": "Puerto de Indias oder Brockmans",
-            "ru": "Пуэрто де Индиас или Брокманс"
-          },
-          "description": {
-            "en": "Fruity premium gins",
-            "es": "Ginebras premium afrutadas",
-            "ca": "Ginebres premium afruitades",
-            "fr": "Gins premium fruités",
-            "it": "Gin premium fruttati",
-            "de": "Fruchtige Premium-Gins",
-            "ru": "Фруктовые премиальные джины"
-          },
-          "price": "8.90",
-          "categoryId": "bebidas",
-          "subcategoryId": "destilados",
-          "image": "/images/drinks/beverages/puerto-indias-brockmans.jpg"
         },
         {
           "id": "bacardi",
@@ -958,9 +983,9 @@
             "de": "Premium weißer Rum",
             "ru": "Премиальный белый ром"
           },
-          "price": "8.90",
+          "price": "8,90",
           "categoryId": "bebidas",
-          "subcategoryId": "destilados",
+          "subcategoryId": "combinados",
           "image": "/images/drinks/beverages/bacardi.jpg"
         },
         {
@@ -983,9 +1008,9 @@
             "de": "Dominikanischer Premium-Rum",
             "ru": "Доминиканский премиальный ром"
           },
-          "price": "8.90",
+          "price": "8,90",
           "categoryId": "bebidas",
-          "subcategoryId": "destilados",
+          "subcategoryId": "combinados",
           "image": "/images/drinks/beverages/barcelo.jpg"
         },
         {
@@ -1008,9 +1033,9 @@
             "de": "Dominikanischer Premium-Rum",
             "ru": "Доминиканский премиальный ром"
           },
-          "price": "8.90",
+          "price": "8,90",
           "categoryId": "bebidas",
-          "subcategoryId": "destilados",
+          "subcategoryId": "combinados",
           "image": "/images/drinks/beverages/brugal.jpg"
         },
         {
@@ -1033,9 +1058,9 @@
             "de": "Tennessee Whiskey",
             "ru": "Теннессийский виски"
           },
-          "price": "8.90",
+          "price": "8,90",
           "categoryId": "bebidas",
-          "subcategoryId": "destilados",
+          "subcategoryId": "combinados",
           "image": "/images/drinks/beverages/jack-daniels.jpg"
         },
         {
@@ -1058,9 +1083,9 @@
             "de": "Blended Scotch Whisky",
             "ru": "Купажированный шотландский виски"
           },
-          "price": "8.50",
+          "price": "8,50",
           "categoryId": "bebidas",
-          "subcategoryId": "destilados",
+          "subcategoryId": "combinados",
           "image": "/images/drinks/beverages/ballantines.jpg"
         },
         {
@@ -1083,9 +1108,9 @@
             "de": "Premium Blended Scotch Whisky",
             "ru": "Премиальный купажированный шотландский виски"
           },
-          "price": "9.60",
+          "price": "9,60",
           "categoryId": "bebidas",
-          "subcategoryId": "destilados",
+          "subcategoryId": "combinados",
           "image": "/images/drinks/beverages/johnnie-walker-black.jpg"
         },
         {
@@ -1108,8 +1133,8 @@
             "de": "Traditioneller Kräuterlikör",
             "ru": "Традиционный травяной ликёр"
           },
-          "price": "5.90",
-          "priceShot": "3.50",
+          "price": "5,90",
+          "priceShot": "3,50",
           "categoryId": "bebidas",
           "subcategoryId": "licores",
           "image": "/images/drinks/beverages/licor-hierbas.jpg"
@@ -1134,8 +1159,8 @@
             "de": "Italienischer Zitronenlikör",
             "ru": "Итальянский лимонный ликёр"
           },
-          "price": "5.90",
-          "priceShot": "3.50",
+          "price": "5,90",
+          "priceShot": "3,50",
           "categoryId": "bebidas",
           "subcategoryId": "licores",
           "image": "/images/drinks/beverages/limoncello.jpg"
@@ -1159,8 +1184,8 @@
             "de": "Traditioneller katalanischer Kräuterlikör",
             "ru": "Традиционный каталонский травяной ликёр"
           },
-          "price": "5.50",
-          "priceShot": "3.50",
+          "price": "5,50",
+          "priceShot": "3,50",
           "categoryId": "bebidas",
           "subcategoryId": "licores",
           "image": "/images/drinks/beverages/ratafia.jpg"
@@ -1185,7 +1210,7 @@
             "de": "Erfrischender Minzlikör",
             "ru": "Освежающий мятный ликёр"
           },
-          "price": "5",
+          "price": "5,00",
           "categoryId": "bebidas",
           "subcategoryId": "licores",
           "image": "/images/drinks/beverages/peppermint.jpg"
@@ -1210,7 +1235,7 @@
             "de": "Französischer Anislikör Pastis",
             "ru": "Французский анисовый ликёр пастис"
           },
-          "price": "5.90",
+          "price": "5,90",
           "categoryId": "bebidas",
           "subcategoryId": "licores",
           "image": "/images/drinks/beverages/ricard.jpg"
@@ -1235,7 +1260,7 @@
             "de": "Irischer Whiskey und Sahnelikör",
             "ru": "Ликёр из ирландского виски и сливок"
           },
-          "price": "5.90",
+          "price": "5,90",
           "categoryId": "bebidas",
           "subcategoryId": "licores",
           "image": "/images/drinks/beverages/baileys.jpg"
@@ -1260,7 +1285,7 @@
             "de": "Italienischer Bitterlikör mit Kräuternoten",
             "ru": "Итальянский горький ликёр с травяными нотками"
           },
-          "price": "5.80",
+          "price": "5,80",
           "categoryId": "bebidas",
           "subcategoryId": "licores",
           "image": "/images/drinks/beverages/campari.jpg"
@@ -1285,7 +1310,7 @@
             "de": "Aromatisierter Likörwein mit Kräutern und Gewürzen",
             "ru": "Ароматное крепленое вино с травами и специями"
           },
-          "price": "4.60",
+          "price": "4,60",
           "categoryId": "bebidas",
           "subcategoryId": "licores",
           "image": "/images/drinks/beverages/vermut-blanco.jpg"
@@ -1310,7 +1335,7 @@
             "de": "Süßer aromatisierter Likörwein mit Kräutern und Gewürzen",
             "ru": "Сладкое ароматное крепленое вино с травами и специями"
           },
-          "price": "4.60",
+          "price": "4,60",
           "categoryId": "bebidas",
           "subcategoryId": "licores",
           "image": "/images/drinks/beverages/vermut-tinto.jpg"
@@ -1335,7 +1360,7 @@
             "de": "Spanischer Brandy",
             "ru": "Испанский бренди"
           },
-          "price": "5.50",
+          "price": "5,50",
           "categoryId": "bebidas",
           "subcategoryId": "brandy",
           "image": "/images/drinks/beverages/magno.jpg"
@@ -1360,9 +1385,9 @@
             "de": "Premium französischer Cognac",
             "ru": "Премиальный французский коньяк"
           },
-          "price": "9.50",
+          "price": "9,50",
           "categoryId": "bebidas",
-          "subcategoryId": "brandy",
+          "subcategoryId": "cognac",
           "image": "/images/drinks/beverages/remy-martin.jpg"
         },
         {
@@ -1385,7 +1410,7 @@
             "de": "Premium gereifter guatemaltekischer Rum",
             "ru": "Премиальный выдержанный гватемальский ром"
           },
-          "price": "15",
+          "price": "15,00",
           "categoryId": "bebidas",
           "subcategoryId": "premium",
           "image": "/images/drinks/beverages/zacapa-23.jpg"
@@ -1410,7 +1435,7 @@
             "de": "Premium 12-jähriger Single Malt Scotch Whisky",
             "ru": "Премиальный 12-летний односолодовый шотландский виски"
           },
-          "price": "17",
+          "price": "17,00",
           "categoryId": "bebidas",
           "subcategoryId": "premium",
           "image": "/images/drinks/beverages/macallan-12.jpg"
@@ -1435,7 +1460,7 @@
             "de": "12-jähriger Single Malt Scotch Whisky",
             "ru": "12-летний односолодовый шотландский виски"
           },
-          "price": "10",
+          "price": "10,00",
           "categoryId": "bebidas",
           "subcategoryId": "premium",
           "image": "/images/drinks/beverages/glenfiddich-12.jpg"
@@ -1460,7 +1485,7 @@
             "de": "Islay Single Malt Scotch Whisky mit rauchigen Noten",
             "ru": "Односолодовый шотландский виски Айлы с дымными нотками"
           },
-          "price": "13",
+          "price": "13,00",
           "categoryId": "bebidas",
           "subcategoryId": "premium",
           "image": "/images/drinks/beverages/caol-ila.jpg"
@@ -1485,7 +1510,7 @@
             "de": "Premium japanischer Blended Whisky",
             "ru": "Премиальный японский купажированный виски"
           },
-          "price": "20",
+          "price": "20,00",
           "categoryId": "bebidas",
           "subcategoryId": "premium",
           "image": "/images/drinks/beverages/hibiki.jpg"
