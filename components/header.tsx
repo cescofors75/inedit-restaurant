@@ -6,7 +6,7 @@ import Link from "next/link"
 import { useLanguage } from "@/context/language-context"
 import { Menu, X, Globe } from "lucide-react"
 import { usePathname } from "next/navigation"
-import { ThemeToggle } from "@/components/theme-toggle"
+//import { ThemeToggle } from "@/components/theme-toggle"
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -37,10 +37,11 @@ export default function Header() {
   }
 
   const languageNames = {
-    en: "English",
+    
     es: "Español",
     ca: "Català",
     fr: "Français",
+    en: "English",
     it: "Italiano", 
     de: "Deutsch"
     
@@ -50,8 +51,8 @@ export default function Header() {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? "bg-background/95 backdrop-blur-sm shadow-sm" : "bg-transparent"}`}
     >
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-24">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 ">
+        <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link href="/" className="flex-shrink-0">
             <Image
@@ -89,12 +90,12 @@ export default function Header() {
             >
               {t("nav.gallery")}
             </Link>
-            {/*<Link
+            {<Link
               href="/contact"
               className={`text-sm font-medium transition-colors hover:text-brand ${pathname === "/contact" ? "text-brand" : "text-primary"}`}
             >
               {t("nav.contact")}
-            </Link>*/}
+            </Link>}
           </nav>
 
           <div className="hidden md:flex items-center space-x-4">
@@ -178,13 +179,13 @@ export default function Header() {
             >
               {t("nav.gallery")}
             </Link>
-           {/*<Link
+           {<Link
               href="/contact"
               className="block px-3 py-2 rounded-md text-base font-medium text-primary hover:text-brand hover:bg-muted"
               onClick={() => setIsMenuOpen(false)}
             >
               {t("nav.contact")}
-            </Link>*/}
+            </Link>}
           </div>
 
           <div className="pt-4 pb-3 border-t border-muted">

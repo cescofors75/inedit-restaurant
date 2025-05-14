@@ -84,7 +84,7 @@ export default function MenuContent() {
 
   if (loading) {
     return (
-      <div className="pt-20 pb-16 bg-background">
+      <div className="pt-24 pb-16 bg-background">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <div className="h-10 bg-gray-200 animate-pulse rounded w-1/3 mx-auto mb-4"></div>
@@ -109,10 +109,10 @@ export default function MenuContent() {
   }
 
   return (
-    <div className="pt-20 pb-16 bg-background">
+    <div className="pt-24 pb-16 bg-background">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h1 className="text-4xl md:text-5xl font-serif font-bold mb-4">{t("menu.title")}</h1>
+          <h1 className="text-4xl md:text-4xl font-serif font-bold mb-4">{t("menu.title")}</h1>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             {t("menu.description")}
           </p>

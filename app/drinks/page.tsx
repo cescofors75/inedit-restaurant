@@ -196,10 +196,8 @@ export default function DrinksPage() {
     return (
       <div className="container mx-auto px-4 py-12">
         <div className="text-center mb-12">
-          <h1 className="text-4xl md:text-5xl font-serif font-bold mb-4">Bebidas</h1>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Cargando nuestra selección de bebidas...
-          </p>
+          <h1 className="text-4xl md:text-4xl font-serif font-bold mb-4">{t("beverages.title")}</h1>
+       
         </div>
         <div className="max-w-5xl mx-auto">
           <div className="flex justify-center">
@@ -215,34 +213,27 @@ export default function DrinksPage() {
     return (
       <div className="container mx-auto px-4 py-12">
         <div className="text-center mb-8">
-          <h1 className="text-4xl md:text-5xl font-serif font-bold mb-4">Bebidas</h1>
+          <h1 className="text-4xl md:text-4xl font-serif font-bold mb-4">{t("beverages.title")}</h1>
           <p className="text-lg text-red-500 max-w-2xl mx-auto">
-            Error al cargar las bebidas: {error}
+            {t("beverages.description")}
           </p>
         </div>
         <div className="max-w-5xl mx-auto text-center">
-          <button
-            onClick={() => window.location.reload()}
-            className="px-6 py-3 bg-brand text-white rounded-md font-medium"
-          >
-            Intentar de nuevo
-          </button>
+         
         </div>
       </div>
     );
   }
 
   return (
-    <div className="pt-20 pb-16 bg-background">
-      <div className="container mx-auto px-4 py-12">
+    <div className="pt-24 pb-16 bg-background">
+      <div className="container mx-auto px-4 pb-12">
         <div className="text-center mb-12">
-          <h1 className="text-4xl md:text-5xl font-serif font-bold mb-4">
-            {language === 'es' ? 'Bebidas' : 'Drinks'}
+          <h1 className="text-4xl md:text-4xl font-serif font-bold mb-4">
+            {t("beverages.title")}
           </h1>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-8">
-            {language === 'es' 
-              ? 'Nuestra selección de bebidas para complementar la experiencia gastronómica.'
-              : 'Our selection of drinks to complement your dining experience.'}
+            {t("beverages.description")}
           </p>
         </div>
 
@@ -329,9 +320,7 @@ export default function DrinksPage() {
             ) : (
               <div className="text-center py-8">
                 <p className="text-lg text-muted-foreground">
-                  {language === 'es' 
-                    ? 'No se encontraron bebidas que coincidan con su búsqueda.'
-                    : 'No drinks found matching your search.'}
+                  {t("beverages.no_results")}
                 </p>
               </div>
             )}

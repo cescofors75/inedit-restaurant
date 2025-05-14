@@ -4,9 +4,7 @@ import type React from "react"
 
 import { useLanguage } from "@/context/language-context"
 import { useState } from "react"
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { Label } from "@/components/ui/label"
+
 import { Phone, Mail, MapPin, Clock } from "lucide-react"
 
 export default function ContactPage() {
@@ -20,10 +18,10 @@ export default function ContactPage() {
   }
 
   return (
-    <div className="pt-20 pb-16 bg-background">
+    <div className="pt-24 pb-16 bg-background">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h1 className="text-4xl md:text-5xl font-serif font-bold mb-4">{t("nav.contact")}</h1>
+          <h1 className="text-4xl md:text-4xl font-serif font-bold mb-4">{t("nav.contact")}</h1>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
           {t("contact.description")}
           </p>
@@ -32,7 +30,7 @@ export default function ContactPage() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
           <div>
             <div className="bg-white p-8 rounded-lg shadow-sm mb-8">
-              <h2 className="text-2xl font-serif font-medium mb-6">Contact Information</h2>
+              <h2 className="text-2xl font-serif font-medium mb-6"></h2>
               <ul className="space-y-6">
                 <li className="flex items-start">
                   <MapPin className="h-6 w-6 text-brand mr-3 mt-0.5" />
@@ -64,15 +62,31 @@ export default function ContactPage() {
                   <Clock className="h-6 w-6 text-brand mr-3 mt-0.5" />
                   <div>
                     <p className="font-medium">{t("location.hours")}</p>
-                    <p className="text-muted-foreground">Monday - Sunday: 13:00 - 16:00</p>
-                    <p className="text-muted-foreground">Monday - Sunday: 19:00 - 23:00</p>
+                    <p className="text-muted-foreground">{t("location.days")}: 13:00 - 16:00</p>
+                    <p className="text-muted-foreground">{t("location.days")}: 19:00 - 23:00</p>
                   </div>
                 </li>
               </ul>
             </div>
             </div>
             <div className="bg-white p-8 rounded-lg shadow-sm">
-              <h2 className="text-2xl font-serif font-medium mb-6">Private Events</h2>
+            <div className="h-[400px] lg:h-full rounded-lg overflow-hidden">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2987.0458956441473!2d2.8435863!3d41.7006389!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12bb16e5a5262c45%3A0x44b0fb3a3c6c3a0!2sPasseig%20Jacint%20Verdaguer%2C%209%2C%2017310%20Lloret%20de%20Mar%2C%20Girona!5e0!3m2!1sen!2ses!4v1682500000000!5m2!1sen!2ses"
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="INÈDIT Restaurant Location"
+            ></iframe>
+          </div>
+            </div>
+         
+
+          <div className="bg-white p-8 rounded-lg shadow-sm">
+          <h2 className="text-2xl font-serif font-medium mb-6">Private Events</h2>
               <p className="text-muted-foreground mb-4">
                 INÈDIT offers elegant spaces for private dining and special events. Our team will work with you to
                 create a memorable experience.
@@ -84,10 +98,6 @@ export default function ContactPage() {
                   inedit@ineditrestaurant.com
                 </a>
               </p>
-            </div>
-         
-
-          <div className="bg-white p-8 rounded-lg shadow-sm">
             {/*formSubmitted ? (
               <div className="text-center py-12">
                 <h2 className="text-2xl font-serif font-bold mb-4">Thank You!</h2>

@@ -33,7 +33,7 @@ export default function LocationContact() {
           <div className="bg-white p-8 rounded-lg shadow-sm">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
-                <h3 className="text-xl font-serif font-medium mb-4">Contact Information</h3>
+                <h3 className="text-xl font-serif font-medium mb-4"></h3>
                 <ul className="space-y-4">
                   <li className="flex items-start">
                     <MapPin className="h-5 w-5 text-brand mr-2 mt-0.5" />
@@ -61,7 +61,7 @@ export default function LocationContact() {
                   <li className="flex items-start">
                     <Clock className="h-5 w-5 text-brand mr-2 mt-0.5" />
                     <div>
-                      <p className="font-medium">Monday - Sunday</p>
+                      <p className="font-medium">{t("location.days")}</p>
                       <p className="text-muted-foreground">13:00 - 16:00</p>
                       <p className="text-muted-foreground">19:00 - 23:00</p>
                     </div>

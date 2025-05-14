@@ -1,7 +1,7 @@
 import { Metadata } from "next"
 import { cookies } from "next/headers"
 import { Inter } from "next/font/google"
-import { ThemeProvider } from "@/components/theme-provider"
+//import { ThemeProvider } from "@/components/theme-provider"
 
 export const metadata: Metadata = {
   title: "Admin Dashboard | INÈDIT Restaurant",
@@ -18,17 +18,17 @@ export default async function AdminLayout({ children }: AdminLayoutProps) {
   const theme = cookieStore.get("theme")
 
   return (
-    <ThemeProvider
+    /*<ThemeProvider
       attribute="class"
       defaultTheme="system"
       enableSystem
       disableTransitionOnChange
       storageKey="theme"
-    >
+    >*/
       <div className="min-h-screen bg-background text-foreground">
         {children}
       </div>
-    </ThemeProvider>
+   // </ThemeProvider>
   )
 }
 

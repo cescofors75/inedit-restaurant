@@ -1010,7 +1010,7 @@
           },
           "price": "8,90",
           "categoryId": "bebidas",
-          "subcategoryId": "Combinados",
+          "subcategoryId": "combinados",
           "image": "/images/drinks/beverages/barcelo.jpg"
         },
         {
@@ -1035,7 +1035,7 @@
           },
           "price": "8,90",
           "categoryId": "bebidas",
-          "subcategoryId": "Combinados",
+          "subcategoryId": "combinados",
           "image": "/images/drinks/beverages/brugal.jpg"
         },
         {
@@ -1060,7 +1060,7 @@
           },
           "price": "8,90",
           "categoryId": "bebidas",
-          "subcategoryId": "Combinados",
+          "subcategoryId": "combinados",
           "image": "/images/drinks/beverages/jack-daniels.jpg"
         },
         {
@@ -1085,7 +1085,7 @@
           },
           "price": "8,50",
           "categoryId": "bebidas",
-          "subcategoryId": "Combinados",
+          "subcategoryId": "combinados",
           "image": "/images/drinks/beverages/ballantines.jpg"
         },
         {
@@ -1110,7 +1110,7 @@
           },
           "price": "9,60",
           "categoryId": "bebidas",
-          "subcategoryId": "Combinados",
+          "subcategoryId": "combinados",
           "image": "/images/drinks/beverages/johnnie-walker-black.jpg"
         },
         {
@@ -1136,7 +1136,7 @@
           "price": "5,90",
           "priceShot": "3,50",
           "categoryId": "bebidas",
-          "subcategoryId": "Licores",
+          "subcategoryId": "licores",
           "image": "/images/drinks/beverages/licor-hierbas.jpg"
         },
         {
@@ -1162,7 +1162,7 @@
           "price": "5,90",
           "priceShot": "3,50",
           "categoryId": "bebidas",
-          "subcategoryId": "Licores",
+          "subcategoryId": "licores",
           "image": "/images/drinks/beverages/limoncello.jpg"
         },{
           "id": "ratafia",
@@ -1187,7 +1187,7 @@
           "price": "5,50",
           "priceShot": "3,50",
           "categoryId": "bebidas",
-          "subcategoryId": "Licores",
+          "subcategoryId": "licores",
           "image": "/images/drinks/beverages/ratafia.jpg"
         },
         {
@@ -1212,7 +1212,7 @@
           },
           "price": "5,00",
           "categoryId": "bebidas",
-          "subcategoryId": "Licores",
+          "subcategoryId": "licores",
           "image": "/images/drinks/beverages/peppermint.jpg"
         },
         {
@@ -1237,7 +1237,7 @@
           },
           "price": "5,90",
           "categoryId": "bebidas",
-          "subcategoryId": "Licores",
+          "subcategoryId": "licores",
           "image": "/images/drinks/beverages/ricard.jpg"
         },
         {
@@ -1262,7 +1262,7 @@
           },
           "price": "5,90",
           "categoryId": "bebidas",
-          "subcategoryId": "Licores",
+          "subcategoryId": "licores",
           "image": "/images/drinks/beverages/baileys.jpg"
         },
         {
@@ -1287,7 +1287,7 @@
           },
           "price": "5,80",
           "categoryId": "bebidas",
-          "subcategoryId": "Licores",
+          "subcategoryId": "licores",
           "image": "/images/drinks/beverages/campari.jpg"
         },
         {
@@ -1312,7 +1312,7 @@
           },
           "price": "4,60",
           "categoryId": "bebidas",
-          "subcategoryId": "Licores",
+          "subcategoryId": "licores",
           "image": "/images/drinks/beverages/vermut-blanco.jpg"
         },
         {
@@ -1337,7 +1337,7 @@
           },
           "price": "4,60",
           "categoryId": "bebidas",
-          "subcategoryId": "Licores",
+          "subcategoryId": "licores",
           "image": "/images/drinks/beverages/vermut-tinto.jpg"
         },
         {
@@ -1362,7 +1362,7 @@
           },
           "price": "5,50",
           "categoryId": "bebidas",
-          "subcategoryId": "Brandy",
+          "subcategoryId": "brandy",
           "image": "/images/drinks/beverages/magno.jpg"
         },
         {
@@ -1387,7 +1387,7 @@
           },
           "price": "9,50",
           "categoryId": "bebidas",
-          "subcategoryId": "Cognac",
+          "subcategoryId": "cognac",
           "image": "/images/drinks/beverages/remy-martin.jpg"
         },
         {
@@ -1412,7 +1412,7 @@
           },
           "price": "15,00",
           "categoryId": "bebidas",
-          "subcategoryId": "Ron Premium",
+          "subcategoryId": "premium",
           "image": "/images/drinks/beverages/zacapa-23.jpg"
         },
         {
@@ -1437,7 +1437,7 @@
           },
           "price": "17,00",
           "categoryId": "bebidas",
-          "subcategoryId": "Whisky Premium",
+          "subcategoryId": "premium",
           "image": "/images/drinks/beverages/macallan-12.jpg"
         },
         {
@@ -1462,7 +1462,7 @@
           },
           "price": "10,00",
           "categoryId": "bebidas",
-          "subcategoryId": "Whisky Premium",
+          "subcategoryId": "premium",
           "image": "/images/drinks/beverages/glenfiddich-12.jpg"
         },
         {
@@ -1487,7 +1487,7 @@
           },
           "price": "13,00",
           "categoryId": "bebidas",
-          "subcategoryId": "Whisky Premium",
+          "subcategoryId": "premium",
           "image": "/images/drinks/beverages/caol-ila.jpg"
         },
         {
@@ -1512,7 +1512,7 @@
           },
           "price": "20,00",
           "categoryId": "bebidas",
-          "subcategoryId": "Whisky Premium",
+          "subcategoryId": "premium",
           "image": "/images/drinks/beverages/hibiki.jpg"
         },
 
@@ -1537,7 +1537,7 @@
       "de": "Klassischer Cocktail mit Rum, Limette und Zucker",
       "ru": "Классический коктейль с ромом, лаймом и сахаром"
     },
-    "price": "9,00",
+    "price": "9",
     "categoryId": "cocteles",
     "subcategoryId": "Clásicos",
     "image": "/images/drinks/cocktails/daiquiri.jpg"
@@ -1562,7 +1562,7 @@
       "de": "Daiquiri mit frischen Erdbeeren",
       "ru": "Дайкири со свежей клубникой"
     },
-    "price": "9,00",
+    "price": "9",
     "categoryId": "cocteles",
     "subcategoryId": "Clásicos",
     "image": "/images/drinks/cocktails/daiquiri-fresa.jpg"
@@ -1587,7 +1587,7 @@
       "de": "Daiquiri mit exotischer Maracuja",
       "ru": "Дайкири с экзотической маракуйей"
     },
-    "price": "9,00",
+    "price": "9",
     "categoryId": "cocteles",
     "subcategoryId": "Clásicos",
     "image": "/images/drinks/cocktails/daiquiri-maracuya.jpg"
@@ -1612,7 +1612,7 @@
       "de": "Tropischer Cocktail mit Rum, Kokosnuss und Ananas",
       "ru": "Тропический коктейль с ромом, кокосом и ананасом"
     },
-    "price": "9,00",
+    "price": "9",
     "categoryId": "cocteles",
     "subcategoryId": "Clásicos",
     "image": "/images/drinks/cocktails/pina-colada.jpg"
@@ -1637,7 +1637,7 @@
       "de": "Erfrischender Cocktail mit Rum, Limette, Minze und Soda",
       "ru": "Освежающий коктейль с ромом, лаймом, мятой и содой"
     },
-    "price": "9,00",
+    "price": "9",
     "categoryId": "cocteles",
     "subcategoryId": "Clásicos",
     "image": "/images/drinks/cocktails/mojito.jpg"
@@ -1662,7 +1662,7 @@
       "de": "Mojito mit frischen Erdbeeren",
       "ru": "Мохито со свежей клубникой"
     },
-    "price": "9,00",
+    "price": "9",
     "categoryId": "cocteles",
     "subcategoryId": "Clásicos",
     "image": "/images/drinks/cocktails/mojito-fresa.jpg"
@@ -1687,7 +1687,7 @@
       "de": "Mojito mit exotischer Maracuja",
       "ru": "Мохито с экзотической маракуйей"
     },
-    "price": "9,00",
+    "price": "9",
     "categoryId": "cocteles",
     "subcategoryId": "Clásicos",
     "image": "/images/drinks/cocktails/mojito-maracuya.jpg"
@@ -1712,7 +1712,7 @@
       "de": "Wodka-Cocktail mit Ingwerbier und Limette",
       "ru": "Водочный коктейль с имбирным пивом и лаймом"
     },
-    "price": "9.00",
+    "price": "9",
     "categoryId": "cocteles",
     "subcategoryId": "Clásicos",
     "image": "/images/drinks/cocktails/moscow-mule.jpg"
@@ -1737,7 +1737,7 @@
       "de": "Klassischer Cocktail mit Gin, Triple Sec und Zitronensaft",
       "ru": "Классический коктейль с джином, трипл-секом и лимонным соком"
     },
-    "price": "9,00",
+    "price": "9",
     "categoryId": "cocteles",
     "subcategoryId": "Clásicos",
     "image": "/images/drinks/cocktails/white-lady.jpg"
@@ -1762,7 +1762,7 @@
       "de": "Klassischer Whiskey-Cocktail mit Bitters und Zucker",
       "ru": "Классический коктейль с виски, биттером и сахаром"
     },
-    "price": "9,00",
+    "price": "9",
     "categoryId": "cocteles",
     "subcategoryId": "Clásicos",
     "image": "/images/drinks/cocktails/old-fashion.jpg"
@@ -1787,7 +1787,7 @@
       "de": "Klassischer Tequila-Cocktail mit Limette und Triple Sec",
       "ru": "Классический коктейль с текилой, лаймом и трипл-секом"
     },
-    "price": "9,00",
+    "price": "9",
     "categoryId": "cocteles",
     "subcategoryId": "Clásicos",
     "image": "/images/drinks/cocktails/margarita.jpg"
@@ -1812,7 +1812,7 @@
       "de": "Kaffee-Cocktail mit Wodka und Kaffeelikör",
       "ru": "Кофейный коктейль с водкой и кофейным ликёром"
     },
-    "price": "9,00",
+    "price": "9",
     "categoryId": "cocteles",
     "subcategoryId": "Clásicos",
     "image": "/images/drinks/cocktails/espresso-martini.jpg"
@@ -1839,7 +1839,7 @@
       "de": "Klassischer Aperitif mit Campari, süßem Wermut und Soda",
       "ru": "Классический аперитив с Кампари, сладким вермутом и содой"
     },
-    "price": "8,00",
+    "price": "8",
     "categoryId": "cocteles",
     "subcategoryId": "Aperitivo",
     "image": "/images/drinks/cocktails/americano.jpg"
@@ -1864,7 +1864,7 @@
       "de": "Klassischer Aperitif mit Gin, Campari und süßem Wermut",
       "ru": "Классический аперитив с джином, Кампари и сладким вермутом"
     },
-    "price": "8,00",
+    "price": "8",
     "categoryId": "cocteles",
     "subcategoryId": "Aperitivo",
     "image": "/images/drinks/cocktails/negroni.jpg"
@@ -1889,7 +1889,7 @@
       "de": "Erfrischender Aperitif mit weißem Wermut und Orange",
       "ru": "Освежающий аперитив с белым вермутом и апельсином"
     },
-    "price": "8,00",
+    "price": "8",
     "categoryId": "cocteles",
     "subcategoryId": "Aperitivo",
     "image": "/images/drinks/cocktails/mito.jpg"
@@ -1914,7 +1914,7 @@
       "de": "Beliebter italienischer Aperitif mit Aperol, Prosecco und Soda",
       "ru": "Популярный итальянский аперитив с Апероль, просекко и содой"
     },
-    "price": "8,00",
+    "price": "8",
     "categoryId": "cocteles",
     "subcategoryId": "Aperitivo",
     "image": "/images/drinks/cocktails/aperol-spritz.jpg"
@@ -1939,7 +1939,7 @@
       "de": "Mexikanischer Aperitif mit Tequila und Grapefruit-Soda",
       "ru": "Мексиканский аперитив с текилой и грейпфрутовой содой"
     },
-    "price": "9,00",
+    "price": "9",
     "categoryId": "cocteles",
     "subcategoryId": "Aperitivo",
     "image": "/images/drinks/cocktails/paloma.jpg"
@@ -1966,7 +1966,7 @@
       "de": "Hausspezialität mit Fino-Sherry und Zitrusfrüchten",
       "ru": "Фирменный коктейль с хересом Фино и цитрусовыми"
     },
-    "price": "10,00",
+    "price": "10",
     "categoryId": "cocteles",
     "subcategoryId": "De la Casa",
     "image": "/images/drinks/cocktails/fino-fizz.jpg"
@@ -1991,7 +1991,7 @@
       "de": "Hausspezialität mit Likörwein und Zitrusfrüchten",
       "ru": "Фирменный коктейль с крепленым вином и цитрусовыми"
     },
-    "price": "10,00",
+    "price": "10",
     "categoryId": "cocteles",
     "subcategoryId": "De la Casa",
     "image": "/images/drinks/cocktails/generoso-sour.jpg"
@@ -2016,7 +2016,7 @@
       "de": "Signature-Cocktail des Hauses mit saisonalen Zutaten",
       "ru": "Фирменный коктейль с сезонными ингредиентами"
     },
-    "price": "10,00",
+    "price": "10",
     "categoryId": "cocteles",
     "subcategoryId": "De la Casa",
     "image": "/images/drinks/cocktails/cocktail-inedit.jpg"
@@ -2043,7 +2043,7 @@
       "de": "Tropischer Mocktail mit Kokosnuss und Ananas",
       "ru": "Тропический безалкогольный коктейль с кокосом и ананасом"
     },
-    "price": "7,50",
+    "price": "7.50",
     "categoryId": "cocteles",
     "subcategoryId": "Sin Alcohol",
     "image": "/images/drinks/cocktails/pina-colada-sin.jpg"
@@ -2068,7 +2068,7 @@
       "de": "Erfrischender Mocktail mit gemischten Zitrusfrüchten",
       "ru": "Освежающий безалкогольный коктейль с цитрусовыми"
     },
-    "price": "7,50",
+    "price": "7.50",
     "categoryId": "cocteles",
     "subcategoryId": "Sin Alcohol",
     "image": "/images/drinks/cocktails/cocktail-citrico.jpg"
@@ -2093,7 +2093,7 @@
       "de": "Hausspezialität Eistee mit saisonalen Früchten",
       "ru": "Фирменный холодный чай с сезонными фруктами"
     },
-    "price": "7,50",
+    "price": "7.50",
     "categoryId": "cocteles",
     "subcategoryId": "Sin Alcohol",
     "image": "/images/drinks/cocktails/te-helado-inedit.jpg"
@@ -2119,8 +2119,8 @@
         "de": "Biologischer Schaumwein mit feinen Perlen",
         "ru": "Органическое игристое вино с мелкими пузырьками"
       },
-      "price": "21,00",
-      "priceGlass": "4,00",
+      "price": "21",
+      "priceGlass": "4",
       "categoryId": "vinos",
       "subcategoryId": "escumosos",
       "region": "D.O. CAVA",
@@ -2147,7 +2147,7 @@
         "de": "Premium-Schaumwein aus Corpinnat",
         "ru": "Премиальное игристое вино из Корпинната"
       },
-      "price": "29,00",
+      "price": "29",
       "categoryId": "vinos",
       "subcategoryId": "escumosos",
       "region": "D.O. CORPINNAT",
@@ -2174,7 +2174,7 @@
         "de": "Schaumwein nach traditioneller Methode",
         "ru": "Игристое вино традиционного метода"
       },
-      "price": "24,00",
+      "price": "24",
       "categoryId": "vinos",
       "subcategoryId": "escumosos",
       "region": "D.O. CAVA",
@@ -2201,7 +2201,7 @@
         "de": "Eleganter Rosé-Schaumwein aus Pinot Noir",
         "ru": "Элегантное розовое игристое вино из Пино Нуар"
       },
-      "price": "34,00",
+      "price": "34",
       "categoryId": "vinos",
       "subcategoryId": "escumosos",
       "region": "D.O. CAVA",
@@ -2228,7 +2228,7 @@
         "de": "Premium französischer Champagner mit feinen Perlen",
         "ru": "Премиальное французское шампанское с мелкими пузырьками"
       },
-      "price": "59,00",
+      "price": "59",
       "categoryId": "vinos",
       "subcategoryId": "escumosos",
       "region": "AOC CHAMPAGNE (FRANÇA)",
@@ -2255,7 +2255,7 @@
         "de": "Eleganter Rosé-Champagner aus Frankreich",
         "ru": "Элегантное розовое шампанское из Франции"
       },
-      "price": "59,00",
+      "price": "59",
       "categoryId": "vinos",
       "subcategoryId": "escumosos",
       "region": "AOC CHAMPAGNE (FRANÇA)",
@@ -2282,7 +2282,7 @@
         "de": "Prestigeträchtiger Champagner mit komplexen Aromen",
         "ru": "Престижное шампанское с комплексными вкусами"
       },
-      "price": "86,00",
+      "price": "86",
       "categoryId": "vinos",
       "subcategoryId": "escumosos",
       "region": "AOC CHAMPAGNE (FRANÇA)",
@@ -2309,7 +2309,7 @@
         "de": "Erfrischender italienischer Prosecco mit zarten Perlen",
         "ru": "Освежающее итальянское просекко с нежными пузырьками"
       },
-      "price": "24,00",
+      "price": "0",
       "categoryId": "vinos",
       "subcategoryId": "escumosos",
       "region": "D.O.C. PROSECCO (ITALIA)",
@@ -2336,7 +2336,7 @@
         "de": "Süßer aromatischer Schaumwein aus Italien",
         "ru": "Сладкое ароматное игристое вино из Италии"
       },
-      "price": "23,00",
+      "price": "23",
       "categoryId": "vinos",
       "subcategoryId": "escumosos",
       "region": "D.O.C.G. ASTI (ITALIA)",
@@ -2363,8 +2363,8 @@
         "de": "Frischer Weißwein aus dem Empordà",
         "ru": "Свежее белое вино из Эмпорды"
       },
-      "price": "19,00",
-      "priceGlass": "4,00",
+      "price": "19",
+      "priceGlass": "4",
       "categoryId": "vinos",
       "subcategoryId": "blancs",
       "region": "D.O. EMPORDÀ",
@@ -2391,7 +2391,7 @@
         "de": "Aromatische Weißweincuvée aus dem Penedès",
         "ru": "Ароматный белый бленд из Пенедес"
       },
-      "price": "25,00",
+      "price": "25",
       "categoryId": "vinos",
       "subcategoryId": "blancs",
       "region": "D.O. PENEDÈS",
@@ -2418,7 +2418,7 @@
         "de": "Elegante Weißweincuvée aus dem Penedès",
         "ru": "Элегантный белый бленд из Пенедес"
       },
-      "price": "21,00",
+      "price": "21",
       "categoryId": "vinos",
       "subcategoryId": "blancs",
       "region": "D.O. PENEDÈS",
@@ -2445,7 +2445,7 @@
         "de": "Premium-Chardonnay aus dem Penedès",
         "ru": "Премиальный Шардоне из Пенедес"
       },
-      "price": "34,00",
+      "price": "34",
       "categoryId": "vinos",
       "subcategoryId": "blancs",
       "region": "D.O. PENEDÈS",
@@ -2472,7 +2472,7 @@
         "de": "Authentischer Weißwein aus Alella",
         "ru": "Аутентичное белое вино из Алельи"
       },
-      "price": "24,00",
+      "price": "24",
       "categoryId": "vinos",
       "subcategoryId": "blancs",
       "region": "D.O. ALELLA",
@@ -2499,7 +2499,7 @@
         "de": "Eleganter Garnacha Blanca aus Terra Alta",
         "ru": "Элегантная Гарнача Бланка из Терра Альта"
       },
-      "price": "31,00",
+      "price": "31",
       "categoryId": "vinos",
       "subcategoryId": "blancs",
       "region": "D.O. TERRA ALTA",
@@ -2526,11 +2526,11 @@
         "de": "Komplexe Garnacha-Cuvée aus dem Empordà",
         "ru": "Комплексный бленд Гарначи из Эмпорды"
       },
-      "price": "27,00",
+      "price": "27",
       "categoryId": "vinos",
       "subcategoryId": "blancs",
       "region": "D.O. EMPORDÀ",
-      "grapes": "Garnatxa blanca i Garnatxa gris",
+      "grapes": "Garnatxa blanca i garnatxa gris",
       "image": "/images/drinks/image51.jpg"
     },
     {
@@ -2553,7 +2553,7 @@
         "de": "Unverwechselbarer Picapoll aus dem Pla de Bages",
         "ru": "Характерный Пикаполь из Пла-де-Бажес"
       },
-      "price": "26,00",
+      "price": "26",
       "categoryId": "vinos",
       "subcategoryId": "blancs",
       "region": "D.O. PLA DE BAGES",
@@ -2580,7 +2580,7 @@
         "de": "Traditionelle Weißweincuvée aus Conca de Barberà",
         "ru": "Традиционный белый бленд из Конка-де-Барбера"
       },
-      "price": "34,00",
+      "price": "34",
       "categoryId": "vinos",
       "subcategoryId": "blancs",
       "region": "D.O. CONCA DE BARBERÀ",
@@ -2607,7 +2607,7 @@
         "de": "Unverwechselbarer roter Garnacha aus dem Empordà",
         "ru": "Характерная красная Гарнача из Эмпорды"
       },
-      "price": "28,00",
+      "price": "28",
       "categoryId": "vinos",
       "subcategoryId": "blancs",
       "region": "D.O. EMPORDÀ",
@@ -2634,7 +2634,7 @@
         "de": "Premium-Albariño aus Rías Baixas",
         "ru": "Премиальный Альбариньо из Риас Байшас"
       },
-      "price": "29,00",
+      "price": "29",
       "categoryId": "vinos",
       "subcategoryId": "blancs",
       "region": "D.O. RIAS BAIXAS",
@@ -2661,13 +2661,40 @@
         "de": "Aromatischer Albariño aus Rías Baixas",
         "ru": "Ароматный Альбариньо из Риас Байшас"
       },
-      "price": "24,00",
-      "priceGlass": "5,00",
+      "price": "24",
+      "priceGlass": "5",
       "categoryId": "vinos",
       "subcategoryId": "blancs",
       "region": "D.O. RIAS BAIXAS",
       "grapes": "Albariño",
       "image": "/images/drinks/image42.jpg"
+    },
+    {
+      "id": "azpilicueta-blanco",
+      "name": {
+        "en": "Azpilicueta Blanco",
+        "es": "Azpilicueta Blanco",
+        "ca": "Azpilicueta Blanco",
+        "fr": "Azpilicueta Blanco",
+        "it": "Azpilicueta Blanco",
+        "de": "Azpilicueta Blanco",
+        "ru": "Аспиликуэта Бланко"
+      },
+      "description": {
+        "en": "Classic white Rioja with Viura grapes",
+        "es": "Clásico Rioja blanco con uvas Viura",
+        "ca": "Clàssic Rioja blanc amb raïm Viura",
+        "fr": "Classique Rioja blanc avec raisins Viura",
+        "it": "Classico Rioja bianco con uve Viura",
+        "de": "Klassischer weißer Rioja aus Viura-Trauben",
+        "ru": "Классическое белое Риоха из винограда Виура"
+      },
+      "price": "23",
+      "categoryId": "vinos",
+      "subcategoryId": "blancs",
+      "region": "D.O. RIOJA",
+      "grapes": "Viura",
+      "image": "/images/drinks/image22.jpg"
     },
     {
       "id": "la-duda-godello",
@@ -2689,7 +2716,7 @@
         "de": "Eleganter Godello aus Monterrei",
         "ru": "Элегантный Годельо из Монтеррей"
       },
-      "price": "24,00",
+      "price": "24",
       "categoryId": "vinos",
       "subcategoryId": "blancs",
       "region": "D.O. MONTERREI",
@@ -2716,8 +2743,8 @@
         "de": "Frischer Verdejo aus Rueda",
         "ru": "Свежий Вердехо из Руэды"
       },
-      "price": "23,00",
-      "priceGlass": "5,00",
+      "price": "23",
+      "priceGlass": "5",
       "categoryId": "vinos",
       "subcategoryId": "blancs",
       "region": "D.O. RUEDA",
@@ -2744,7 +2771,7 @@
         "de": "Eleganter Chardonnay aus dem Burgund",
         "ru": "Элегантный Шардоне из Бургундии"
       },
-      "price": "29,00",
+      "price": "29",
       "categoryId": "vinos",
       "subcategoryId": "blancs",
       "region": "D.O. BOURGOGNE",
@@ -2771,7 +2798,7 @@
         "de": "Premium-Chablis aus dem Burgund",
         "ru": "Премиальный Шабли из Бургундии"
       },
-      "price": "38,00",
+      "price": "38",
       "categoryId": "vinos",
       "subcategoryId": "blancs",
       "region": "D.O. BOURGOGNE",
@@ -2798,7 +2825,7 @@
         "de": "Traditioneller Weißwein aus dem Jura",
         "ru": "Традиционное белое вино из Юры"
       },
-      "price": "38,00",
+      "price": "38",
       "categoryId": "vinos",
       "subcategoryId": "blancs",
       "region": "D.O. JURA-FRANÇA",
@@ -2825,7 +2852,7 @@
         "de": "Trockener Riesling aus Deutschland",
         "ru": "Сухой Рислинг из Германии"
       },
-      "price": "29,00",
+      "price": "29",
       "categoryId": "vinos",
       "subcategoryId": "blancs",
       "region": "D.O. ALEMANIA",
@@ -2852,11 +2879,11 @@
         "de": "Aromatische Cuvée aus Deutschland",
         "ru": "Ароматный бленд из Германии"
       },
-      "price": "23,00",
+      "price": "23",
       "categoryId": "vinos",
       "subcategoryId": "blancs",
       "region": "D.O. ALEMANIA",
-      "grapes": "Riesling, Gewustraminer",
+      "grapes": "Riesling",
       "image": "/images/drinks/image41.jpg"
     },
     {
@@ -2879,12 +2906,12 @@
         "de": "Ausgewogener Rotwein aus dem Empordà",
         "ru": "Сбалансированное красное вино из Эмпорды"
       },
-      "price": "20,00",
-      "priceGlass": "4,00",
+      "price": "20",
+      "priceGlass": "4",
       "categoryId": "vinos",
       "subcategoryId": "negres",
       "region": "D.O. EMPORDÀ",
-      "grapes": "Garnatxa negre",
+      "grapes": "Cabernet Sauvignon, Garnatxa negre i Syrah",
        "image": "/images/drinks/image32.jpg"
     },
     {
@@ -2907,7 +2934,7 @@
         "de": "Hochwertiger gereifter Priorat-Wein",
         "ru": "Премиальное выдержанное вино Приорат"
       },
-      "price": "39,00",
+      "price": "39",
       "categoryId":"vinos",
       "subcategoryId": "negres",
       "region": "D.O. PRIORAT",
@@ -2934,7 +2961,7 @@
         "de": "Dorfwein aus Porrera, Priorat",
         "ru": "Деревенское вино из Поррера, Приорат"
       },
-      "price": "32,00",
+      "price": "32",
        "categoryId":"vinos",
       "subcategoryId": "negres",
       "region": "D.O. PRIORAT",
@@ -2961,7 +2988,7 @@
         "de": "Vollmundige Rotwein-Cuvée aus Montsant",
         "ru": "Полнотелый красный бленд из Монтсант"
       },
-      "price": "26,00",
+      "price": "26",
        "categoryId":"vinos",
       "subcategoryId": "negres",
       "region": "D.O. MONTSANT",
@@ -2988,7 +3015,7 @@
         "de": "Komplexe Rotwein-Cuvée aus Montsant",
         "ru": "Комплексный красный бленд из Монтсант"
       },
-      "price": "29,00",
+      "price": "29",
        "categoryId":"vinos",
       "subcategoryId": "negres",
       "region": "D.O. MONTSANT",
@@ -3015,7 +3042,7 @@
         "de": "Komplexe Rotwein-Cuvée aus Conca de Barberà",
         "ru": "Комплексный красный бленд из Конка-де-Барбера"
       },
-      "price": "35,00",
+      "price": "35",
        "categoryId":"vinos",
       "subcategoryId": "negres",
       "region": "D.O. CONCA DE BARBERÀ",
@@ -3042,7 +3069,7 @@
         "de": "Ausdrucksstarke Rotwein-Cuvée aus dem Empordà",
         "ru": "Выразительный красный бленд из Эмпорды"
       },
-      "price": "35,00",
+      "price": "35",
        "categoryId":"vinos",
       "subcategoryId": "negres",
       "region": "D.O. EMPORDÀ",
@@ -3069,8 +3096,8 @@
         "de": "Eleganter Rioja gereift in Eichenfässern",
         "ru": "Элегантная Риоха, выдержанная в дубовых бочках"
       },
-      "price": "22,00",
-      "priceGlass": "5,00",
+      "price": "22",
+      "priceGlass": "5",
        "categoryId":"vinos",
       "subcategoryId": "negres",
       "region": "D.O. RIOJA",
@@ -3346,7 +3373,7 @@
         "de": "Premium-Rioja mit Tiefe und Komplexität",
         "ru": "Премиальная Риоха с глубиной и сложностью"
       },
-      "price": "38,00",
+      "price": "38",
        "categoryId":"vinos",
       "subcategoryId": "negres",
       "region": "D.O. RIOJA",
@@ -3373,8 +3400,8 @@
         "de": "Vollmundiger Rotwein aus Ribera del Duero",
         "ru": "Полнотелое красное из Рибера дель Дуэро"
       },
-      "price": "24,00",
-      "priceGlass": "5,00",
+      "price": "24",
+      "priceGlass": "5",
        "categoryId":"vinos",
       "subcategoryId": "negres",
       "region": "D.O. RIBERA DEL DUERO",
@@ -3401,7 +3428,7 @@
         "de": "Premium-Rotwein aus alten Reben aus Ribera del Duero",
         "ru": "Премиальное красное вино из старых лоз из Рибера дель Дуэро"
       },
-      "price": "38,00",
+      "price": "38",
        "categoryId":"vinos",
       "subcategoryId": "negres",
       "region": "D.O. RIBERA DEL DUERO",
@@ -3428,7 +3455,7 @@
         "de": "Kräftiger Monastrell aus Jumilla",
         "ru": "Насыщенный Монастрель из Хумильи"
       },
-      "price": "24,00",
+      "price": "24",
        "categoryId":"vinos",
       "subcategoryId": "negres",
       "region": "D.O. JUMILLA",
@@ -3455,7 +3482,7 @@
         "de": "Kraftvoller Tinta de Toro aus Toro",
         "ru": "Мощная Тинта де Торо из Торо"
       },
-      "price": "25,00",
+      "price": "25",
        "categoryId":"vinos",
       "subcategoryId": "negres",
       "region": "D.O. TORO",
@@ -3482,7 +3509,7 @@
         "de": "Eleganter Pinot Noir aus Frankreich",
         "ru": "Элегантный Пино Нуар из Франции"
       },
-      "price": "38,00",
+      "price": "38",
        "categoryId":"vinos",
       "subcategoryId": "negres",
       "region": "D.O. FRANÇA",
@@ -3509,7 +3536,7 @@
         "de": "Premium-Pinot Noir aus Frankreich",
         "ru": "Премиальный Пино Нуар из Франции"
       },
-      "price": "42,00",
+      "price": "42",
        "categoryId":"vinos",
       "subcategoryId": "negres",
       "region": "D.O. FRANÇA",

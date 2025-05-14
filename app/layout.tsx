@@ -34,7 +34,7 @@ export async function generateMetadata(): Promise<Metadata> {
     // If we have homepage data with SEO metadata, use it
     if (homePage && homePage.seo) {
       return {
-        metadataBase: new URL("https://inedit-restaurant.com"),
+        metadataBase: new URL("https://ineditrestaurant.com"),
         title: homePage.seo.title,
         description: homePage.seo.description,
         keywords: homePage.seo.keywords,
@@ -50,6 +50,8 @@ export async function generateMetadata(): Promise<Metadata> {
           locale: "en_US",
           type: "website",
         },
+      
+        
         twitter: {
           card: "summary_large_image",
           title: homePage.seo.title,
@@ -64,7 +66,7 @@ export async function generateMetadata(): Promise<Metadata> {
 
   // Fallback metadata
   return {
-    metadataBase: new URL("https://inedit-restaurant.com"),
+    metadataBase: new URL("https://ineditrestaurant.com"),
     title: "INÈDIT | Signature Cuisine Restaurant",
     description: "Experience exclusive, creative, and modern fine dining at INÈDIT restaurant.",
     keywords: ["restaurant", "signature cuisine", "gourmet", "fine dining"],
@@ -79,6 +81,9 @@ export async function generateMetadata(): Promise<Metadata> {
       }],
       locale: "en_US",
       type: "website",
+    },
+    icons: {
+      icon: '/favicon.png', // Ruta desde public/ (sin incluir "public" en la ruta)
     },
     twitter: {
       card: "summary_large_image",
@@ -102,6 +107,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
         <meta name="theme-color" content="#ffffff" />
         <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
         <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
+        <link rel="icon" href="/favicon.png" type="image/png" />
         <CriticalPreload />
       </head>
       <body className="font-sans bg-background text-primary">

@@ -33,30 +33,14 @@ export default function Footer() {
                 <Facebook className="h-5 w-5 text-gray-300 hover:text-white transition-colors" />
               </a>
               <a href="https://www.tiktok.com/@ineditlloret" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-5 w-5 text-gray-300 hover:text-white transition-colors"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                >
-                  <path d="M9 12a4 4 0 1 0 0 8 4 4 0 0 0 0-8z"></path>
-                  <path d="M15 8h.01"></path>
-                  <path d="M20 12a8 8 0 1 0-8 8"></path>
-                  <path d="M9 15v-3"></path>
-                  <path d="M13 15v-1"></path>
-                  <path d="M17 15v-3a4 4 0 0 0-4-4h-2"></path>
-                </svg>
+               <img src="/images/tiktok.png" alt="TikTok" className="h-5 w-5 text-gray-300 hover:text-white transition-colors" />
               </a>
             </div>
           </div>
 
           {/* Contact Info */}
           <div>
-            <h3 className="text-lg font-serif font-medium mb-4">{t("location.title")}</h3>
+            <h3 className="text-lg font-serif font-medium mb-4"></h3>
             <ul className="space-y-3">
               <li className="flex items-start">
                 <MapPin className="h-5 w-5 text-brand mr-2 mt-0.5" />
@@ -78,7 +62,7 @@ export default function Footer() {
               <li className="flex items-start">
                 <Clock className="h-5 w-5 text-brand mr-2 mt-0.5" />
                 <div className="text-sm text-gray-300">
-                  <p>Monday - Sunday</p>
+                  <p>{t("location.days")}</p>
                   <p>13:00 - 16:00 / 19:00 - 23:00</p>
                 </div>
               </li>
@@ -87,7 +71,7 @@ export default function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-lg font-serif font-medium mb-4">Quick Links</h3>
+            <h3 className="text-lg font-serif font-medium mb-4"></h3>
             <ul className="space-y-2">
               <li>
                 <Link href="/" className="text-sm text-gray-300 hover:text-white transition-colors">
