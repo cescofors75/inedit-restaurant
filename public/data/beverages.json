@@ -85,7 +85,7 @@
           },
           "price": "2,70",
           "categoryId": "bebidas",
-          "subcategoryId": "refrescos",
+          "subcategoryId": "Refrescos",
           "image": "/images/drinks/beverages/agua.jpg"
         },
         {
@@ -110,7 +110,7 @@
           },
           "price": "2,70",
           "categoryId": "bebidas",
-          "subcategoryId": "refrescos",
+          "subcategoryId": "Refrescos",
           "image": "/images/drinks/beverages/agua-gas.jpg"
         },
         {
@@ -135,7 +135,7 @@
           },
           "price": "2,80",
           "categoryId": "bebidas",
-          "subcategoryId": "refrescos",
+          "subcategoryId": "Refrescos",
           "image": "/images/drinks/beverages/coca-cola.jpg"
         },
         {
@@ -160,7 +160,7 @@
           },
           "price": "2,80",
           "categoryId": "bebidas",
-          "subcategoryId": "refrescos",
+          "subcategoryId": "Refrescos",
           "image": "/images/drinks/beverages/coca-cola-zero.jpg"
         },
         {
@@ -185,7 +185,7 @@
           },
           "price": "2,80",
           "categoryId": "bebidas",
-          "subcategoryId": "refrescos",
+          "subcategoryId": "Refrescos",
           "image": "/images/drinks/beverages/fanta-naranja.jpg"
         },
         {
@@ -210,7 +210,7 @@
           },
           "price": "2,80",
           "categoryId": "bebidas",
-          "subcategoryId": "refrescos",
+          "subcategoryId": "Refrescos",
           "image": "/images/drinks/beverages/fanta-limon.jpg"
         },
         {
@@ -235,7 +235,7 @@
           },
           "price": "2,80",
           "categoryId": "bebidas",
-          "subcategoryId": "refrescos",
+          "subcategoryId": "Refrescos",
           "image": "/images/drinks/beverages/sprite.jpg"
         },
         {
@@ -260,7 +260,7 @@
           },
           "price": "3,20",
           "categoryId": "bebidas",
-          "subcategoryId": "refrescos",
+          "subcategoryId": "Refrescos",
           "image": "/images/drinks/beverages/fuzetea.jpg"
         },
 {
@@ -285,7 +285,7 @@
           },
           "price": "3,20",
           "categoryId": "bebidas",
-          "subcategoryId": "refrescos",
+          "subcategoryId": "Refrescos",
           "image": "/images/drinks/beverages/fuzetea.jpg"
         },
         {
@@ -310,7 +310,7 @@
           },
           "price": "2,90",
           "categoryId": "bebidas",
-          "subcategoryId": "refrescos",
+          "subcategoryId": "Refrescos",
           "image": "/images/drinks/beverages/bitter-kas.jpg"
         },
         {
@@ -335,7 +335,7 @@
           },
           "price": "2,80",
           "categoryId": "bebidas",
-          "subcategoryId": "refrescos",
+          "subcategoryId": "Refrescos",
           "image": "/images/drinks/beverages/tonica.jpg"
         },
         {
@@ -360,7 +360,7 @@
           },
           "price": "2,90",
           "categoryId": "bebidas",
-          "subcategoryId": "refrescos",
+          "subcategoryId": "Refrescos",
           "image": "/images/drinks/beverages/zumo-pina.jpg"
         },
         {
@@ -385,7 +385,7 @@
           },
           "price": "2,90",
           "categoryId": "bebidas",
-          "subcategoryId": "refrescos",
+          "subcategoryId": "Refrescos",
           "image": "/images/drinks/beverages/zumo-melocoton.jpg"
         },
 {
@@ -410,7 +410,7 @@
           },
           "price": "2,90",
           "categoryId": "bebidas",
-          "subcategoryId": "refrescos",
+          "subcategoryId": "Refrescos",
           "image": "/images/drinks/beverages/zumo-melocoton.jpg"
         },
         {
@@ -435,7 +435,7 @@
           },
           "price": "3,50",
           "categoryId": "bebidas",
-          "subcategoryId": "cervezas",
+          "subcategoryId": "Cervezas",
           "image": "/images/drinks/beverages/cana.jpg"
         },
         {
@@ -460,7 +460,7 @@
           },
           "price": "3,60",
           "categoryId": "bebidas",
-          "subcategoryId": "cervezas",
+          "subcategoryId": "Cervezas",
           "image": "/images/drinks/beverages/cana-sandy.jpg"
         },
         {
@@ -485,7 +485,7 @@
           },
           "price": "4,50",
           "categoryId": "bebidas",
-          "subcategoryId": "cervezas",
+          "subcategoryId": "Cervezas",
           "image": "/images/drinks/beverages/alhambra-citrus-ipa.jpg"
         },
         {
@@ -510,7 +510,7 @@
           },
           "price": "4,50",
           "categoryId": "bebidas",
-          "subcategoryId": "cervezas",
+          "subcategoryId": "Cervezas",
           "image": "/images/drinks/beverages/alhambra-1925.jpg"
         },
         {
@@ -535,7 +535,7 @@
           },
           "price": "4,50",
           "categoryId": "bebidas",
-          "subcategoryId": "cervezas",
+          "subcategoryId": "Cervezas",
           "image": "/images/drinks/beverages/alhambra-reserva-roja.jpg"
         },
         {
@@ -560,7 +560,7 @@
           },
           "price": "4,00",
           "categoryId": "bebidas",
-          "subcategoryId": "cervezas",
+          "subcategoryId": "Cervezas",
           "image": "/images/drinks/beverages/san-miguel-radler.jpg"
         },
         {
@@ -585,7 +585,7 @@
           },
           "price": "4,00",
           "categoryId": "bebidas",
-          "subcategoryId": "cervezas",
+          "subcategoryId": "Cervezas",
           "image": "/images/drinks/beverages/san-miguel-00.jpg"
         },
         {
@@ -610,7 +610,7 @@
           },
           "price": "4,00",
           "categoryId": "bebidas",
-          "subcategoryId": "cervezas",
+          "subcategoryId": "Cervezas",
           "image": "/images/drinks/beverages/san-miguel-00-tostada.jpg"
         },
         {
@@ -635,7 +635,7 @@
           },
           "price": "4,20",
           "categoryId": "bebidas",
-          "subcategoryId": "cervezas",
+          "subcategoryId": "Cervezas",
           "image": "/images/drinks/beverages/san-miguel-sin-gluten.jpg"
         },
         {
@@ -660,7 +660,7 @@
           },
           "price": "4,50",
           "categoryId": "bebidas",
-          "subcategoryId": "cervezas",
+          "subcategoryId": "Cervezas",
           "image": "/images/drinks/beverages/corona.jpg"
         },
         {
@@ -685,7 +685,7 @@
           },
           "price": "4,50",
           "categoryId": "bebidas",
-          "subcategoryId": "cervezas",
+          "subcategoryId": "Cervezas",
           "image": "/images/drinks/beverages/stella-artois.jpg"
         },
         {
@@ -710,7 +710,7 @@
           },
           "price": "4,80",
           "categoryId": "bebidas",
-          "subcategoryId": "cervezas",
+          "subcategoryId": "Cervezas",
           "image": "/images/drinks/beverages/leffe-blonde.jpg"
         },
         {
@@ -735,7 +735,7 @@
           },
           "price": "4,60",
           "categoryId": "bebidas",
-          "subcategoryId": "cervezas",
+          "subcategoryId": "Cervezas",
           "image": "/images/drinks/beverages/franciscaner-trigo.jpg"
         },
         {
@@ -760,7 +760,7 @@
           },
           "price": "8,90",
           "categoryId": "bebidas",
-          "subcategoryId": "combinados",
+          "subcategoryId": "Combinados",
           "image": "/images/drinks/beverages/smirnoff.jpg"
         },
         {
@@ -785,7 +785,7 @@
           },
           "price": "10,00",
           "categoryId": "bebidas",
-          "subcategoryId": "combinados",
+          "subcategoryId": "Combinados",
           "image": "/images/drinks/beverages/grey-goose.jpg"
         },
         {
@@ -810,7 +810,7 @@
           },
           "price": "8,90",
           "categoryId": "bebidas",
-          "subcategoryId": "combinados",
+          "subcategoryId": "Combinados",
           "image": "/images/drinks/beverages/tanqueray.jpg"
         },
         {
@@ -835,7 +835,7 @@
           },
           "price": "8,90",
           "categoryId": "bebidas",
-          "subcategoryId": "combinados",
+          "subcategoryId": "Combinados",
           "image": "/images/drinks/beverages/bombay-sapphire.jpg"
         },
 	{
@@ -860,7 +860,7 @@
           },
           "price": "8,90",
           "categoryId": "bebidas",
-          "subcategoryId": "combinados",
+          "subcategoryId": "Combinados",
           "image": "/images/drinks/beverages/puerto-indias-brockmans.jpg"
         },
         {
@@ -885,13 +885,14 @@
           },
           "price": "12,00",
           "categoryId": "bebidas",
-          "subcategoryId": "combinados",
+          "subcategoryId": "Combinados",
           "image": "/images/drinks/beverages/hendricks.jpg"
         },
         {
           "id": "gin-mare",
           "name": {
             "en": "Gin Mare",
+            
             "es": "Gin Mare",
             "ca": "Gin Mare",
             "fr": "Gin Mare",
@@ -910,7 +911,7 @@
           },
           "price": "12,00",
           "categoryId": "bebidas",
-          "subcategoryId": "combinados",
+          "subcategoryId": "Combinados",
           "image": "/images/drinks/beverages/gin-mare.jpg"
         },
         {
@@ -935,7 +936,7 @@
           },
           "price": "12,00",
           "categoryId": "bebidas",
-          "subcategoryId": "combinados",
+          "subcategoryId": "Combinados",
           "image": "/images/drinks/beverages/martin-millers.jpg"
         },
         {
@@ -960,7 +961,7 @@
           },
           "price": "12,00",
           "categoryId": "bebidas",
-          "subcategoryId": "combinados",
+          "subcategoryId": "Combinados",
           "image": "/images/drinks/beverages/gvine.jpg"
         },
         {
@@ -985,7 +986,7 @@
           },
           "price": "8,90",
           "categoryId": "bebidas",
-          "subcategoryId": "combinados",
+          "subcategoryId": "Combinados",
           "image": "/images/drinks/beverages/bacardi.jpg"
         },
         {

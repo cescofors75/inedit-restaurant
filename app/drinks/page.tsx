@@ -251,8 +251,17 @@ export default function DrinksPage() {
                 const sampleItem = categoryItems.find((item: { subcategoryId: unknown; }) => item.subcategoryId === id);
                 const subcatId = String(id);
                 
-                // Normalize the subcategory ID - capitalize first letter to ensure consistent lookup
-                const normalizedSubcatId = subcatId.charAt(0).toUpperCase() + subcatId.slice(1);
+                // Normalize the subcategory ID based on the category
+                // For "vinos" category, keep subcategory IDs lowercase
+                // For other categories, capitalize the first letter
+                let normalizedSubcatId;
+                if (category.id === "vinos") {
+                  // Keep the ID lowercase for wine subcategories
+                  normalizedSubcatId = subcatId.toLowerCase();
+                } else {
+                  // Capitalize first letter for other categories
+                  normalizedSubcatId = subcatId.charAt(0).toUpperCase() + subcatId.slice(1);
+                }
                 
                 // Check if we have predefined translations for this subcategory
                 // Use those if available, otherwise fallback to the normalized ID
@@ -337,7 +346,17 @@ export default function DrinksPage() {
       filteredItems = filteredItems.filter(item => {
         // Normalize the item's subcategoryId to match our normalized activeSubcategory
         const itemSubcatId = item.subcategoryId || "";
-        const normalizedItemSubcatId = itemSubcatId.charAt(0).toUpperCase() + itemSubcatId.slice(1);
+        let normalizedItemSubcatId;
+        
+        // Use the same normalization logic as when creating the subcategories
+        if (activeTab === "vinos") {
+          // Keep the ID lowercase for wine subcategories
+          normalizedItemSubcatId = itemSubcatId.toLowerCase();
+        } else {
+          // Capitalize first letter for other categories
+          normalizedItemSubcatId = itemSubcatId.charAt(0).toUpperCase() + itemSubcatId.slice(1);
+        }
+        
         return normalizedItemSubcatId === activeSubcategory;
       });
     }
