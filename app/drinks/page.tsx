@@ -11,7 +11,7 @@ interface MultiLanguageText {
   fr: string;
   it: string;
   de: string;
-  ru: string;
+  
   [key: string]: string;
 }
 
@@ -48,8 +48,8 @@ const subcategoryTranslations: Record<string, MultiLanguageText> = {
     ca: "Refrescs",
     fr: "Boissons Gazeuses",
     it: "Bibite",
-    de: "Erfrischungsgetränke",
-    ru: "Безалкогольные напитки"
+    de: "Erfrischungsgetränke"
+    
   },
   "Cervezas": {
     en: "Beers",
@@ -57,8 +57,8 @@ const subcategoryTranslations: Record<string, MultiLanguageText> = {
     ca: "Cerveses",
     fr: "Bières",
     it: "Birre",
-    de: "Biere",
-    ru: "Пиво"
+    de: "Biere"
+   
   },
   "Combinados": {
     en: "Mixed Drinks",
@@ -66,8 +66,8 @@ const subcategoryTranslations: Record<string, MultiLanguageText> = {
     ca: "Combinats",
     fr: "Boissons Mixtes",
     it: "Bevande Miste",
-    de: "Mixgetränke",
-    ru: "Смешанные напитки"
+    de: "Mixgetränke"
+   
   },
   "Licores": {
     en: "Liqueurs",
@@ -75,8 +75,8 @@ const subcategoryTranslations: Record<string, MultiLanguageText> = {
     ca: "Licors",
     fr: "Liqueurs",
     it: "Liquori",
-    de: "Liköre",
-    ru: "Ликеры"
+    de: "Liköre"
+    
   },
   "Brandy": {
     en: "Brandy",
@@ -84,8 +84,8 @@ const subcategoryTranslations: Record<string, MultiLanguageText> = {
     ca: "Brandy",
     fr: "Brandy",
     it: "Brandy",
-    de: "Brandy",
-    ru: "Бренди"
+    de: "Brandy"
+   
   },
   "Cognac": {
     en: "Cognac",
@@ -93,8 +93,8 @@ const subcategoryTranslations: Record<string, MultiLanguageText> = {
     ca: "Cognac",
     fr: "Cognac",
     it: "Cognac",
-    de: "Cognac",
-    ru: "Коньяк"
+    de: "Cognac"
+   
   },
   "Ron Premium": {
     en: "Premium Rum",
@@ -102,8 +102,8 @@ const subcategoryTranslations: Record<string, MultiLanguageText> = {
     ca: "Rom Premium",
     fr: "Rhum Premium",
     it: "Rum Premium",
-    de: "Premium Rum",
-    ru: "Премиальный ром"
+    de: "Premium Rum"
+    
   },
   "Whisky Premium": {
     en: "Premium Whisky",
@@ -111,8 +111,8 @@ const subcategoryTranslations: Record<string, MultiLanguageText> = {
     ca: "Whisky Premium",
     fr: "Whisky Premium",
     it: "Whisky Premium",
-    de: "Premium Whisky",
-    ru: "Премиальный виски"
+    de: "Premium Whisky"
+   
   },
   "Clásicos": {
     en: "Classics",
@@ -120,8 +120,8 @@ const subcategoryTranslations: Record<string, MultiLanguageText> = {
     ca: "Clàssics",
     fr: "Classiques",
     it: "Classici",
-    de: "Klassiker",
-    ru: "Классика"
+    de: "Klassiker"
+    
   },
   "Aperitivo": {
     en: "Aperitif",
@@ -129,8 +129,8 @@ const subcategoryTranslations: Record<string, MultiLanguageText> = {
     ca: "Aperitiu",
     fr: "Apéritif",
     it: "Aperitivo",
-    de: "Aperitif",
-    ru: "Аперитив"
+    de: "Aperitif"
+  
   },
   "De la Casa": {
     en: "House Specials",
@@ -138,8 +138,8 @@ const subcategoryTranslations: Record<string, MultiLanguageText> = {
     ca: "De la Casa",
     fr: "Spécialités Maison",
     it: "Specialità della Casa",
-    de: "Hausspezialitäten",
-    ru: "Фирменные"
+    de: "Hausspezialitäten"
+    
   },
   "Sin Alcohol": {
     en: "Non-Alcoholic",
@@ -147,8 +147,8 @@ const subcategoryTranslations: Record<string, MultiLanguageText> = {
     ca: "Sense Alcohol",
     fr: "Sans Alcool",
     it: "Analcolici",
-    de: "Alkoholfrei",
-    ru: "Безалкогольные"
+    de: "Alkoholfrei"
+   
   },
   "escumosos": {
     en: "Sparkling",
@@ -156,8 +156,8 @@ const subcategoryTranslations: Record<string, MultiLanguageText> = {
     ca: "Escumosos",
     fr: "Mousseux",
     it: "Spumanti",
-    de: "Schaumweine",
-    ru: "Игристые"
+    de: "Schaumweine"
+    
   },
   "blancs": {
     en: "White Wines",
@@ -165,8 +165,8 @@ const subcategoryTranslations: Record<string, MultiLanguageText> = {
     ca: "Vins Blancs",
     fr: "Vins Blancs",
     it: "Vini Bianchi",
-    de: "Weißweine",
-    ru: "Белые вина"
+    de: "Weißweine"
+    
   },
   "negres": {
     en: "Red Wines",
@@ -174,8 +174,8 @@ const subcategoryTranslations: Record<string, MultiLanguageText> = {
     ca: "Vins Negres",
     fr: "Vins Rouges",
     it: "Vini Rossi",
-    de: "Rotweine",
-    ru: "Красные вина"
+    de: "Rotweine"
+   
   },
   "rosats": {
     en: "Rosé Wines",
@@ -184,7 +184,7 @@ const subcategoryTranslations: Record<string, MultiLanguageText> = {
     fr: "Vins Rosés",
     it: "Vini Rosati",
     de: "Roséweine",
-    ru: "Розовые вина"
+    
   },
   "dolcos": {
     en: "Sweet Wines",
@@ -192,8 +192,8 @@ const subcategoryTranslations: Record<string, MultiLanguageText> = {
     ca: "Vins Dolços",
     fr: "Vins Doux",
     it: "Vini Dolci",
-    de: "Süßweine",
-    ru: "Сладкие вина"
+    de: "Süßweine"
+    
   }
 };
 
@@ -271,8 +271,8 @@ export default function DrinksPage() {
                   ca: normalizedSubcatId,
                   fr: normalizedSubcatId,
                   it: normalizedSubcatId,
-                  de: normalizedSubcatId,
-                  ru: normalizedSubcatId
+                  de: normalizedSubcatId
+                
                 };
                 
                 return {

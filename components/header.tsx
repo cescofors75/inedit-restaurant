@@ -82,7 +82,7 @@ export default function Header() {
               href="/drinks"
               className={`text-sm font-medium transition-colors hover:text-brand ${pathname === "/drinks" ? "text-brand" : "text-primary"}`}
             >
-              Bebidas
+               {t("nav.drinks")}
             </Link>
             <Link
               href="/gallery"
@@ -170,7 +170,7 @@ export default function Header() {
               className="block px-3 py-2 rounded-md text-base font-medium text-primary hover:text-brand hover:bg-muted"
               onClick={() => setIsMenuOpen(false)}
             >
-              Bebidas
+              {t("nav.drinks")}
             </Link>
             <Link
               href="/gallery"

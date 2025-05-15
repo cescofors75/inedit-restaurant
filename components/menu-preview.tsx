@@ -13,7 +13,7 @@ interface MultiLanguageText {
   fr: string;
   it: string;
   de: string;
-  ru: string;
+  
   [key: string]: string;
 }
 
