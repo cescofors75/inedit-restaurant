@@ -40,6 +40,163 @@ interface BeverageItem {
   grapes?: string;
 }
 
+// Define translations for common subcategory IDs
+const subcategoryTranslations: Record<string, MultiLanguageText> = {
+  "Refrescos": {
+    en: "Soft Drinks",
+    es: "Refrescos",
+    ca: "Refrescs",
+    fr: "Boissons Gazeuses",
+    it: "Bibite",
+    de: "Erfrischungsgetränke",
+    ru: "Безалкогольные напитки"
+  },
+  "Cervezas": {
+    en: "Beers",
+    es: "Cervezas",
+    ca: "Cerveses",
+    fr: "Bières",
+    it: "Birre",
+    de: "Biere",
+    ru: "Пиво"
+  },
+  "Combinados": {
+    en: "Mixed Drinks",
+    es: "Combinados",
+    ca: "Combinats",
+    fr: "Boissons Mixtes",
+    it: "Bevande Miste",
+    de: "Mixgetränke",
+    ru: "Смешанные напитки"
+  },
+  "Licores": {
+    en: "Liqueurs",
+    es: "Licores",
+    ca: "Licors",
+    fr: "Liqueurs",
+    it: "Liquori",
+    de: "Liköre",
+    ru: "Ликеры"
+  },
+  "Brandy": {
+    en: "Brandy",
+    es: "Brandy",
+    ca: "Brandy",
+    fr: "Brandy",
+    it: "Brandy",
+    de: "Brandy",
+    ru: "Бренди"
+  },
+  "Cognac": {
+    en: "Cognac",
+    es: "Cognac",
+    ca: "Cognac",
+    fr: "Cognac",
+    it: "Cognac",
+    de: "Cognac",
+    ru: "Коньяк"
+  },
+  "Ron Premium": {
+    en: "Premium Rum",
+    es: "Ron Premium",
+    ca: "Rom Premium",
+    fr: "Rhum Premium",
+    it: "Rum Premium",
+    de: "Premium Rum",
+    ru: "Премиальный ром"
+  },
+  "Whisky Premium": {
+    en: "Premium Whisky",
+    es: "Whisky Premium",
+    ca: "Whisky Premium",
+    fr: "Whisky Premium",
+    it: "Whisky Premium",
+    de: "Premium Whisky",
+    ru: "Премиальный виски"
+  },
+  "Clásicos": {
+    en: "Classics",
+    es: "Clásicos",
+    ca: "Clàssics",
+    fr: "Classiques",
+    it: "Classici",
+    de: "Klassiker",
+    ru: "Классика"
+  },
+  "Aperitivo": {
+    en: "Aperitif",
+    es: "Aperitivo",
+    ca: "Aperitiu",
+    fr: "Apéritif",
+    it: "Aperitivo",
+    de: "Aperitif",
+    ru: "Аперитив"
+  },
+  "De la Casa": {
+    en: "House Specials",
+    es: "De la Casa",
+    ca: "De la Casa",
+    fr: "Spécialités Maison",
+    it: "Specialità della Casa",
+    de: "Hausspezialitäten",
+    ru: "Фирменные"
+  },
+  "Sin Alcohol": {
+    en: "Non-Alcoholic",
+    es: "Sin Alcohol",
+    ca: "Sense Alcohol",
+    fr: "Sans Alcool",
+    it: "Analcolici",
+    de: "Alkoholfrei",
+    ru: "Безалкогольные"
+  },
+  "escumosos": {
+    en: "Sparkling",
+    es: "Espumosos",
+    ca: "Escumosos",
+    fr: "Mousseux",
+    it: "Spumanti",
+    de: "Schaumweine",
+    ru: "Игристые"
+  },
+  "blancs": {
+    en: "White Wines",
+    es: "Vinos Blancos",
+    ca: "Vins Blancs",
+    fr: "Vins Blancs",
+    it: "Vini Bianchi",
+    de: "Weißweine",
+    ru: "Белые вина"
+  },
+  "negres": {
+    en: "Red Wines",
+    es: "Vinos Tintos",
+    ca: "Vins Negres",
+    fr: "Vins Rouges",
+    it: "Vini Rossi",
+    de: "Rotweine",
+    ru: "Красные вина"
+  },
+  "rosats": {
+    en: "Rosé Wines",
+    es: "Vinos Rosados",
+    ca: "Vins Rosats",
+    fr: "Vins Rosés",
+    it: "Vini Rosati",
+    de: "Roséweine",
+    ru: "Розовые вина"
+  },
+  "dolcos": {
+    en: "Sweet Wines",
+    es: "Vinos Dulces",
+    ca: "Vins Dolços",
+    fr: "Vins Doux",
+    it: "Vini Dolci",
+    de: "Süßweine",
+    ru: "Сладкие вина"
+  }
+};
+
 export default function DrinksPage() {
   const { language, t } = useLanguage();
   const [searchTerm, setSearchTerm] = useState("");
@@ -92,17 +249,26 @@ export default function DrinksPage() {
               extractedSubcategories[category.id] = uniqueSubcatIds.map((id) => {
                 // Find the first item with this subcategoryId to get its name
                 const sampleItem = categoryItems.find((item: { subcategoryId: unknown; }) => item.subcategoryId === id);
+                const subcatId = String(id);
+                
+                // Normalize the subcategory ID - capitalize first letter to ensure consistent lookup
+                const normalizedSubcatId = subcatId.charAt(0).toUpperCase() + subcatId.slice(1);
+                
+                // Check if we have predefined translations for this subcategory
+                // Use those if available, otherwise fallback to the normalized ID
+                const multiLangName: MultiLanguageText = subcategoryTranslations[normalizedSubcatId] || {
+                  en: normalizedSubcatId,
+                  es: normalizedSubcatId,
+                  ca: normalizedSubcatId,
+                  fr: normalizedSubcatId,
+                  it: normalizedSubcatId,
+                  de: normalizedSubcatId,
+                  ru: normalizedSubcatId
+                };
+                
                 return {
-                  id: id as string,
-                  name: {
-                    en: id as string,
-                    es: id as string,
-                    ca: id as string,
-                    fr: id as string,
-                    it: id as string,
-                    de: id as string,
-                    ru: id as string
-                  }
+                  id: normalizedSubcatId, // Use the normalized ID consistently
+                  name: multiLangName
                 };
               });
             }
@@ -168,7 +334,12 @@ export default function DrinksPage() {
     
     // Then by subcategory if active
     if (activeSubcategory) {
-      filteredItems = filteredItems.filter(item => item.subcategoryId === activeSubcategory);
+      filteredItems = filteredItems.filter(item => {
+        // Normalize the item's subcategoryId to match our normalized activeSubcategory
+        const itemSubcatId = item.subcategoryId || "";
+        const normalizedItemSubcatId = itemSubcatId.charAt(0).toUpperCase() + itemSubcatId.slice(1);
+        return normalizedItemSubcatId === activeSubcategory;
+      });
     }
     
     // Then by search term if present
@@ -188,7 +359,15 @@ export default function DrinksPage() {
 
   // Get the currently selected subcategory name in the active language
   const getActiveSubcategoryName = () => {
-    return activeSubcategory || '';
+    // Find the active subcategory object
+    const activeSubcats = subcategories[activeTab];
+    if (!activeSubcats) return '';
+    
+    const activeSubcat = activeSubcats.find(subcat => subcat.id === activeSubcategory);
+    if (!activeSubcat) return '';
+    
+    // Return the localized name for the current language
+    return activeSubcat.name[language] || activeSubcat.name.en || activeSubcategory;
   };
 
   // Loading state
@@ -264,7 +443,7 @@ export default function DrinksPage() {
                     activeSubcategory === subcat.id ? "bg-amber-600 text-white font-medium" : "bg-amber-100 text-amber-800 hover:bg-amber-200"
                   }`}
                 >
-                  {subcat.id}
+                  {subcat.name[language] || subcat.name.en}
                 </button>
               ))}
             </div>
