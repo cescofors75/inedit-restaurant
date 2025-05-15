@@ -3,7 +3,7 @@
 import { createContext, useContext, useState, useEffect, ReactNode } from "react"
 import { fetchTranslations } from "@/lib/client-api" // Using client-safe API
 
-export type Language = "es" | "en" | "ca" | "fr" | "it" | "de" | "ru" // Supporting all languages
+export type Language = "es" | "en" | "ca" | "fr" | "it" | "de"  // Supporting all languages
 
 type LanguageContextType = {
   language: Language
@@ -77,11 +77,8 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
       }}
     >
       {isLoading && Object.keys(translations).length === 0 ? (
-        <div className="flex items-center justify-center min-h-screen">
-          <div className="text-center">
-            <div className="w-16 h-16 border-t-4 border-brand border-solid rounded-full animate-spin mx-auto"></div>
-            <p className="mt-4 text-primary">Loading translations...</p>
-          </div>
+        <div className="flex items-center justify-center fixed inset-0">
+          <div className="w-12 h-12 border-4 border-t-brand border-r-transparent border-b-transparent border-l-transparent rounded-full animate-spin"></div>
         </div>
       ) : (
         children
