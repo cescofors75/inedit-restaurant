@@ -8,6 +8,8 @@ import { ThemeProvider } from "next-themes"
 import { getPageBySlug } from "@/lib/api" // Using our JSON API
 import CriticalPreload from "./critical-preload"
 import { Analytics } from '@vercel/analytics/next';
+import MetaPixel from '@/components/MetaPixel'
+
 
 // Optimize font loading
 const inter = Inter({
@@ -114,6 +116,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem={false}>
           <LanguageProvider>
             <LayoutWrapper>
+               <MetaPixel />
               {children}
               <Analytics />
             </LayoutWrapper>

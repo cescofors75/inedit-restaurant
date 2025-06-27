@@ -168,7 +168,7 @@ export default function MenuContent() {
                     </div>
                     <span className="text-brand font-medium text-lg ml-4">{item.price} €</span>
                   </div>
-                  {/*item.image && (
+                  {item.image && (
                     <div className="mt-4">
                       <Image 
                         src={item.image}
@@ -178,7 +178,7 @@ export default function MenuContent() {
                         className="rounded-md object-cover max-h-48 w-auto mx-auto"
                       />
                     </div>
-                  )*/}
+                  )}
                 </div>
               ))
             ) : (
