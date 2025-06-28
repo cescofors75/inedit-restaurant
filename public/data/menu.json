@@ -307,13 +307,13 @@
     {
       "id": "ensalada-tomate",
       "name": {
-        "en": "Seasonal tomato salad with Kalamata olives and homemade confited tuna",
-        "es": "Ensalada de tomates de temporada, aceitunas kalamata y bonito confitado casero",
-        "ca": "Amanida de tomàquets de temporada, olives kalamata i bonítol confitat casolà",
-        "fr": "Salade de tomates de saison, olives kalamata et thon confit maison",
-        "it": "Insalata di pomodori di stagione, olive kalamata e tonno confit fatto in casa",
-        "de": "Salat mit Tomaten der Saison, Kalamata-Oliven und hausgemachtem konfiertem Thunfisch",
-        "ru": "Салат из сезонных помидоров с оливками каламата и домашним конфи из тунца"
+        "en": "Seasonal tomato salad with Kalamata olives and homemade confit tuna",
+        "es": "Ensalada de tomates de temporada, aceitunas kalamata y ventresca de atún confitada",
+        "ca": "Amanida de tomàquets de temporada, olives kalamata i ventresca de tonyina confitada",
+        "fr": "Salade de tomates de saison, olives Kalamata et ventresque de thon confite maison",
+        "it": "Insalata di pomodori di stagione con olive Kalamata e tonno confit fatto in casa",
+        "de": "Saisonale Tomatensalat mit Kalamata-Oliven und hausgemachtem Thunfisch-Confit",
+        "ru": "Салат из сезонных помидоров с оливками Каламата и домашним конфитюром из тунца"
       },
       "description": {
         "en": "",
@@ -508,13 +508,13 @@
         "ru": "Napolitana"
       },
       "description": {
-        "en": "Prosciutto, anchovy and fresh arugula",
-        "es": "Prosciutto, anchoa y rúcula fresca",
-        "ca": "Prosciutto, anxova i ruca fresca",
-        "fr": "Prosciutto, anchois et roquette fraîche",
-        "it": "Prosciutto, acciuga e rucola fresca",
-        "de": "Prosciutto, Sardelle und frischer Rucola",
-        "ru": "Прошутто, анчоусы и свежая руккола"
+        "en": "Bresaola, anchovy and fresh arugula",
+        "es": "Bresaola, anchoa y rúcula fresca",
+        "ca": "Bresaola, anxova i ruca fresca",
+        "fr": "Bresaola, anchois et roquette fraîche",
+        "it": "Bresaola, acciuga e rucola fresca",
+        "de": "Bresaola, Sardelle und frischer Rucola",
+        "ru": "Брезаола, анчоусы и свежий руккола"
       },
       "price": "14,20",
       "categoryId": "pizzas",
@@ -543,6 +543,78 @@
       "price": "15,20",
       "categoryId": "pizzas",
       "image": "/images/menu/pizza-bbq.jpg"
+    },
+    {
+      "id": "pizza-margherita",
+      "name": {
+        "en": "margherita",
+        "es": "margherita",
+        "ca": "margherita",
+        "fr": "margherita",
+        "it": "margherita",
+        "de": "margherita",
+        "ru": "margherita"
+      },
+      "description": {
+        "en": "Homemade tomato sauce, buffalo mozzarella, basil and garlic oil",
+        "es": "Salsa tomate casera, mozzarella de búfala y albahaca y aceite de ajos",
+        "ca": "Salsa de tomàquet casolana, mozzarella de búfala, alfàbrega i oli d'all",
+        "fr": "Sauce tomate maison, mozzarella de bufala, basilic et huile d'ail",
+        "it": "Salsa di pomodoro fatta in casa, mozzarella di bufala, basilico e olio all'aglio",
+        "de": "Hausgemachte Tomatensauce, Büffelmozzarella, Basilikum und Knoblauchöl",
+        "ru": "Домашний томатный соус, моцарелла из буйволиного молока, базилик и чесночное масло"
+      },
+      "price": "14,00",
+      "categoryId": "pizzas",
+      "image": "/images/menu/pizza-margherita.jpg"
+    },
+    {
+      "id": "pizza-carbonara",
+      "name": {
+        "en": "Carbonara",
+        "es": "Carbonara",
+        "ca": "Carbonara",
+        "fr": "Carbonara",
+        "it": "Carbonara",
+        "de": "Carbonara",
+        "ru": "Carbonara"
+      },
+      "description": {
+        "en": "Carbonara sauce with low-temperature cooked egg",
+        "es": "Salsa carbonara con huevo cocinado a baja temperatura",
+        "ca": "Salsa carbonara amb ou cuit a baixa temperatura",
+        "fr": "Sauce carbonara avec œuf cuit à basse température",
+        "it": "Salsa carbonara con uovo cotto a bassa temperatura",
+        "de": "Carbonara-Sauce mit Ei, das bei niedriger Temperatur gekocht wurde",
+        "ru": "Соус карбонара с яйцом, приготовленным при низкой температуре"
+      },
+      "price": "15,20",
+      "categoryId": "pizzas",
+      "image": "/images/menu/pizza-carbonara.jpg"
+    },
+    {
+      "id": "pizza-escalivada",
+      "name": {
+        "en": "Escalivada",
+        "es": "Escalivada",
+        "ca": "Escalivada",
+        "fr": "Escalivada",
+        "it": "Escalivada",
+        "de": "Escalivada",
+        "ru": "Escalivada"
+      },
+      "description": {
+        "en": "Catalan-style Roasted vegetables with pistachio pesto",
+        "es": "Escalivada con pesto de pistachos",
+        "ca": "Escalivada amb pesto de pinyons",
+        "fr": "Légumes rôtis à la catalane avec pesto de pistaches",
+        "it": "Escalivada con pesto di pistacchi",
+        "de": "Escalivada mit Pistazienpesto",
+        "ru": "Эскаливада с песто из фисташек"
+      },
+      "price": "15,50",
+      "categoryId": "pizzas",
+      "image": "/images/menu/pizza-escalivada.jpg"
     },
     {
       "id": "lomo-bajo",
@@ -619,10 +691,10 @@
     {
       "id": "solomillo",
       "name": {
-        "en": "Beef tenderloin with masked potato and its juice",
+        "en": "Beef fillet with mashed potato and jus",
         "es": "Solomillo acompañado de patata enmascarada y su jugo",
         "ca": "Filet acompanyat de patata emmascarada i el seu suc",
-        "fr": "Filet de bœuf accompagné de pomme de terre masquée et son jus",
+        "fr": "Filet de bœuf, purée de pomme de terre au boudin noir et son jus",
         "it": "Filetto di manzo accompagnato da patata mascherata e il suo sugo",
         "de": "Rinderfilet mit maskierter Kartoffel und seinem Saft",
         "ru": "Говяжья вырезка с картофельным пюре и соком"
@@ -763,13 +835,13 @@
     {
       "id": "chocolate",
       "name": {
-        "en": "Chocolate crémeux with cherries and lemon verbena",
-        "es": "Cremoso de chocolate con cerezas y hierbaluisa",
-        "ca": "Cremós de xocolata amb cireres i marialluïsa",
-        "fr": "Crémeux au chocolat, cerises et verveine citronnelle",
-        "it": "Cremoso al cioccolato con ciliegie e verbena odorosa",
-        "de": "Schokoladen-Crémeux mit Kirschen und Zitronenverbene",
-        "ru": "Шоколадный кремю с вишней и лимонной вербеной"
+        "en": "Financier chocolate crémaux and cherry coulis",
+        "es": "Financier cremoso de chocolate coni coulins de  cerezas",
+        "ca": "Financier cremeux de xocolata amb coulis de cireres ",
+        "fr": "Financier crémeux au chocolat, cerises",
+        "it": "Financier cremoso al cioccolato con ciliegie",
+        "de": "Financier schokoladen-Crémeux mit Kirschen",
+        "ru": "Финансист шоколадный крем с вишневым соусом"
       },
       "description": {
         "en": "",

@@ -92,7 +92,7 @@
         "de": "Kroketten aus reinem iberischem Schinken (5 Stück)",
         "ru": "Крокеты из чистой иберийской ветчины (5 шт.)"
       },
-      "price": "9",
+      "price": "9,00",
       "categoryId": "entrantes",
       "image": "/images/menu/croquetas.jpg"
     },
@@ -116,7 +116,7 @@
         "de": "Thunfisch-Tartar mit Avocado und asiatischem Dressing",
         "ru": "Тартар из тунца с авокадо и азиатской заправкой"
       },
-      "price": "17",
+      "price": "17,00",
       "categoryId": "entrantes",
       "image": "/images/menu/tartar-atun.jpg"
     },
@@ -140,7 +140,7 @@
         "de": "Carpaccio vom iberischen Schwein, mariniert in Izaguirre-Wermut, mit Pistazien und Chilischoten",
         "ru": "Карпаччо из иберийской свинины, маринованное в вермуте Изагирре, с фисташками и перцем чили"
       },
-      "price": "11",
+      "price": "11,00",
       "categoryId": "entrantes",
       "image": "/images/menu/carpaccio.jpg"
     },
@@ -165,7 +165,7 @@
         "de": "Penne mit scharfer Sauce aus Tomaten, Knoblauch, Chili und Olivenöl",
         "ru": "Пенне с острым соусом на основе томатов, чеснока, перца чили и оливкового масла"
       },
-      "price": "12",
+      "price": "12,00",
       "categoryId": "pastas-pizzas",
       "image": "/images/menu/arrabiata.jpg"
     },
@@ -189,7 +189,7 @@
         "de": "Rigatoni mit Carbonara-Sauce aus Guanciale und Parmesan",
         "ru": "Ригатони с соусом карбонара из гуанчале и пармезана"
       },
-      "price": "14",
+      "price": "14,00",
       "categoryId": "pastas-pizzas",
       "image": "/images/menu/carbonara.jpg"
     },
@@ -216,7 +216,7 @@
         "de": "Prosciutto, Sardelle und frischer Rucola",
         "ru": "Прошутто, анчоусы и свежая руккола"
       },
-      "price": "14.20",
+      "price": "14,20",
       "categoryId": "pastas-pizzas",
       "image": "/images/menu/pizza-napolitana.jpg"
     },
@@ -241,7 +241,7 @@
         "de": "Rinderlende aus Girona mit cremiger Sellerieknolle und ihrem Saft",
         "ru": "Говяжья вырезка из Жироны с кремовым сельдереем и соком"
       },
-      "price": "19.50",
+      "price": "19,50",
       "categoryId": "carnes-pescados",
       "image": "/images/menu/lomo-bajo.jpg"
     },
@@ -265,7 +265,7 @@
         "de": "Junges Hähnchen in seinem Saft, begleitet von Mini-Karotten mariniert mit Zitrusfrüchten",
         "ru": "Молодой цыпленок в собственном соку с мини-морковью, маринованной с цитрусовыми"
       },
-      "price": "16.50",
+      "price": "16,50",
       "categoryId": "carnes-pescados",
       "image": "/images/menu/pollo-picanton.jpg"
     },
@@ -289,7 +289,7 @@
         "de": "Lammschulter mit Salatherzen, Frühlingszwiebeln und am Holzfeuer gerösteten Paprika",
         "ru": "Лопатка ягненка с салатом из кочанного салата, зеленого лука и перцев, жаренных на дровах"
       },
-      "price": "24.50",
+      "price": "24,50",
       "categoryId": "carnes-pescados",
       "image": "/images/menu/cordero.jpg"
     }

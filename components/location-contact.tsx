@@ -62,8 +62,8 @@ export default function LocationContact() {
                     <Clock className="h-5 w-5 text-brand mr-2 mt-0.5" />
                     <div>
                       <p className="font-medium">{t("location.days")}</p>
-                      <p className="text-muted-foreground">13:00 - 16:00</p>
-                      <p className="text-muted-foreground">19:00 - 23:00</p>
+                      <p className="text-muted-foreground">13:00 - 23:30</p>
+                    
                     </div>
                   </li>
                 </ul>

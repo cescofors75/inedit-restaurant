@@ -63,7 +63,7 @@ export default function Footer() {
                 <Clock className="h-5 w-5 text-brand mr-2 mt-0.5" />
                 <div className="text-sm text-gray-300">
                   <p>{t("location.days")}</p>
-                  <p>13:00 - 16:00 / 19:00 - 23:00</p>
+                  <p>13:00 -  23:30</p>
                 </div>
               </li>
             </ul>

@@ -23,12 +23,12 @@ export default function HeroSlider() {
       title: t("hero.title2"),
       subtitle: t("hero.subtitle2"),
     },
-    {
+   /* {
       type: "image",
       image: "/images/slider3.jpg",
       title: t("hero.title3"),
       subtitle: t("hero.subtitle3"),
-    },
+    },*/
   ]
 
   useEffect(() => {
