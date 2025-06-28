@@ -36,6 +36,9 @@
   "beverages.title": "Beverages",
   "beverages.description": "Not everything good is on the plate. We also serve things that tickle, refresh conversations, and pair with everything, even with you. And if you just want something refreshing... We also have the usual: water, soft drinks, beers. But even that tastes different here.",
   "reservation.title": "Ready to Experience INÈDIT?",
-  "reservation.description": "Book your table now and embark on a culinary journey like no other. We look forward to meeting you!"
+  "reservation.description": "Book your table now and embark on a culinary journey like no other. We look forward to meeting you!",
+  "contact.private_events_title": "Private Events",
+  "contact.private_events_description": "INÈDIT offers elegant spaces for private dining and special events. Our team will work with you to create a memorable experience.",
+  "contact.private_events_cta": "For private event inquiries, please contact us at:"
 }
 

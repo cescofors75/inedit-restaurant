@@ -738,6 +738,61 @@
           "subcategoryId": "Cervezas",
           "image": "/images/drinks/beverages/franciscaner-trigo.jpg"
         },
+
+{
+          "id": "sangria-de-vino",
+          "name": {
+            "en": "Wine Sangria",
+            "es": "Sangría de vino",
+            "ca": "Sangria de vi",
+            "fr": "Sangria de vin",
+            "it": "Sangria di vino",
+            "de": "Sangria de vino",
+            "ru": "Сангрия из вина"
+          },
+          "description": {
+            "en": "Spanish wine sangria with fruits",
+            "es": "Sangría de vino español con frutas",
+            "ca": "Sangria de vi espanyol amb fruites",
+            "fr": "Sangria de vin espagnol avec des fruits",
+            "it": "Sangria di vino spagnolo con frutta",
+            "de": "Spanische Weinsangria mit Früchten",
+            "ru": "Испанская сангрия из вина с фруктами"
+          },
+          "price": "15,00",
+          "categoryId": "bebidas",
+          "subcategoryId": "Sangrias",
+          "image": "/images/drinks/beverages/sangria-vino.jpg"
+        },
+{
+          "id": "sangria-de-cava",
+          "name": {
+            "en": "Cava Sangria",
+            "es": "Sangría de cava",
+            "ca": "Sangria de cava",
+            "fr": "Sangria de cava",
+            "it": "Sangria di cava",
+            "de": "Sangria de cava",
+            "ru": "Сангрия из кавы"
+          },
+          "description": {
+            "en": "Spanish cava sangria with fruits",
+            "es": "Sangría de cava español con frutas",
+            "ca": "Sangria de cava espanyol amb fruites",
+            "fr": "Sangria de cava espagnol avec des fruits",
+            "it": "Sangria di cava spagnolo con frutta",
+            "de": "Spanische Cava-Sangria mit Früchten",
+            "ru": "Испанская сангрия из кавы с фруктами"
+          },
+          "price": "16,00",
+          "categoryId": "bebidas",
+          "subcategoryId": "Sangrias",
+          "image": "/images/drinks/beverages/sangria-cava.jpg"
+        },
+
+        
+        
+
         {
           "id": "smirnoff",
           "name": {

@@ -35,6 +35,9 @@
   "beverages.title": "Boissons",
   "beverages.description": "Tout ce qui est bon n'est pas dans l'assiette. Nous servons aussi des choses qui chatouillent, rafraîchissent les conversations et s'accordent avec tout, même avec vous. Et si vous voulez juste quelque chose de frais... Nous avons aussi l'habituel : eaux, sodas, bières. Mais même cela a un goût différent ici.",
   "reservation.title": "Prêt à Découvrir INÈDIT ?",
-  "reservation.description": "Réservez votre table dès maintenant et embarquez pour un voyage culinaire comme aucun autre. Nous sommes impatients de vous accueillir !"
+  "reservation.description": "Réservez votre table dès maintenant et embarquez pour un voyage culinaire comme aucun autre. Nous sommes impatients de vous accueillir !",
+  "contact.private_events_title": "Événements Privés",
+  "contact.private_events_description": "INÈDIT propose des espaces élégants pour des dîners privés et des événements spéciaux. Notre équipe travaillera avec vous pour créer une expérience mémorable.",
+  "contact.private_events_cta": "Pour les demandes d'événements privés, contactez-nous à :"
 }
 

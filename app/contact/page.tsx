@@ -62,8 +62,8 @@ export default function ContactPage() {
                   <Clock className="h-6 w-6 text-brand mr-3 mt-0.5" />
                   <div>
                     <p className="font-medium">{t("location.hours")}</p>
-                    <p className="text-muted-foreground">{t("location.days")}: 13:00 - 16:00</p>
-                    <p className="text-muted-foreground">{t("location.days")}: 19:00 - 23:00</p>
+                    <p className="text-muted-foreground">{t("location.days")}: 13:00 - 23:30</p>
+                  
                   </div>
                 </li>
               </ul>
@@ -86,13 +86,12 @@ export default function ContactPage() {
          
 
           <div className="bg-white p-8 rounded-lg shadow-sm">
-          <h2 className="text-2xl font-serif font-medium mb-6">Private Events</h2>
+          <h2 className="text-2xl font-serif font-medium mb-6">{t("contact.private_events_title")}</h2>
               <p className="text-muted-foreground mb-4">
-                INÈDIT offers elegant spaces for private dining and special events. Our team will work with you to
-                create a memorable experience.
+                {t("contact.private_events_description")}
               </p>
               <p className="text-muted-foreground">
-                For private event inquiries, please contact us at:
+                {t("contact.private_events_cta")}
                 <br />
                 <a href="mailto:inedit@ineditrestaurant.com" className="text-brand hover:underline">
                   inedit@ineditrestaurant.com

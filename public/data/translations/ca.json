@@ -35,6 +35,9 @@
   "beverages.title": "Begudes",
   "beverages.description": "No tot el bo està al plat. També servim coses que fan pessigolles, refresquen converses i mariden amb tot, fins i tot amb tu. I si només vols una cosa fresca... També tenim el de sempre: aigües, refrescs, cerveses. Però fins i tot això, té un gust diferent aquí.",
   "reservation.title": "A punt per experimentar INÈDIT?",
-  "reservation.description": "Reserva la teva taula ara i embarca't en un viatge culinari com cap altre. Estem desitjant donar-te la benvinguda!"
+  "reservation.description": "Reserva la teva taula ara i embarca't en un viatge culinari com cap altre. Estem desitjant donar-te la benvinguda!",
+  "contact.private_events_title": "Esdeveniments Privats",
+  "contact.private_events_description": "INÈDIT ofereix espais elegants per a sopars privats i esdeveniments especials. El nostre equip treballarà amb tu per crear una experiència memorable.",
+  "contact.private_events_cta": "Per a consultes sobre esdeveniments privats, contacta'ns a:"
 }
 

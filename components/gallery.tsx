@@ -36,6 +36,73 @@ export default function Gallery({ preview = false }: GalleryProps) {
       alt: "Comfortable dining experience",
     },
     {
+      src: "/images/gallery6.jpg",
+      alt: "Stylish restaurant ambiance",
+    },
+    {
+      src: "/images/gallery7.jpg",
+      alt: "Charming restaurant decor",
+    },
+    {
+      src: "/images/gallery8.jpg",
+      alt: "Inviting dining atmosphere",
+    },
+     {
+      src: "/images/gallery9.jpg",
+      alt: "Fine dining table setting",
+    },
+    {
+      src: "/images/gallery10.jpg",
+      alt: "Atmospheric wicker lighting",
+    },
+    {
+      src: "/images/gallery11.jpg",
+      alt: "Cozy restaurant interior with plants",
+    },
+    {
+      src: "/images/gallery12.jpg",
+      alt: "Comfortable dining experience",
+    },
+    {
+      src: "/images/gallery13.jpg",
+      alt: "Stylish restaurant ambiance",
+    },
+    {
+      src: "/images/gallery14.jpg",
+      alt: "Charming restaurant decor",
+    },
+    {
+      src: "/images/gallery15.jpg",
+      alt: "Inviting dining atmosphere",
+    },
+     {
+      src: "/images/gallery16.jpg",
+      alt: "Fine dining table setting",
+    },
+    {
+      src: "/images/gallery17.jpg",
+      alt: "Atmospheric wicker lighting",
+    },
+    {
+      src: "/images/gallery18.jpg",
+      alt: "Cozy restaurant interior with plants",
+    },
+    {
+      src: "/images/gallery19.jpg",
+      alt: "Comfortable dining experience",
+    },
+    {
+      src: "/images/gallery20.jpg",
+      alt: "Stylish restaurant ambiance",
+    },
+    {
+      src: "/images/gallery21.jpg",
+      alt: "Charming restaurant decor",
+    },
+    
+
+
+    {
       src: "/images/slider1.jpg",
       alt: "Signature dish presentation",
     },
