@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react"
 import { useLanguage } from "@/context/language-context"
+import { useLocalizedRoutes } from "@/hooks/use-localized-routes"
 import Link from "next/link"
 import Image from "next/image"
 
@@ -40,6 +41,7 @@ interface MenuData {
 
 export default function MenuPreview() {
   const { language, t } = useLanguage();
+  const { getLocalizedRoute } = useLocalizedRoutes();
   const [activeCategory, setActiveCategory] = useState("");
   const [menuItems, setMenuItems] = useState<MenuItem[]>([]);
   const [categories, setCategories] = useState<MenuCategory[]>([]);
@@ -189,7 +191,7 @@ export default function MenuPreview() {
             )}
           </div>
           <div className="mt-8 text-center">
-  <Link href="/menu" className="bg-gray-200 rounded-md p-4 text-brand font-medium inline-block">
+  <Link href={getLocalizedRoute('/menu')} className="bg-gray-200 rounded-md p-4 text-brand font-medium inline-block">
     {t("menu.view_full_menu")}
   </Link>
 </div>

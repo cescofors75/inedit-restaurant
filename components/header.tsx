@@ -4,6 +4,7 @@ import { useState, useEffect } from "react"
 import Image from "next/image"
 import Link from "next/link"
 import { useLanguage } from "@/context/language-context"
+import { useLocalizedRoutes } from "@/hooks/use-localized-routes"
 import { Menu, X, Globe } from "lucide-react"
 import { usePathname } from "next/navigation"
 //import { ThemeToggle } from "@/components/theme-toggle"
@@ -13,7 +14,23 @@ export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isLanguageOpen, setIsLanguageOpen] = useState(false)
   const { language, setLanguage, t } = useLanguage()
+  const { getLocalizedRoute, changeLanguageAndRoute } = useLocalizedRoutes()
   const pathname = usePathname()
+  
+  // Get current internal route from pathname
+  const getCurrentInternalRoute = () => {
+    const routeMappings = {
+      es: { '/carta': '/menu', '/bebidas': '/drinks', '/galeria': '/gallery', '/contacto': '/contact', '/reserva': '/reservation' },
+      ca: { '/menu': '/menu', '/begudes': '/drinks', '/galeria': '/gallery', '/contacte': '/contact', '/reserva': '/reservation' },
+      fr: { '/menu': '/menu', '/boissons': '/drinks', '/galerie': '/gallery', '/contact': '/contact', '/reservation': '/reservation' },
+      it: { '/menu': '/menu', '/bevande': '/drinks', '/galleria': '/gallery', '/contatti': '/contact', '/prenotazione': '/reservation' },
+      de: { '/menu': '/menu', '/getranke': '/drinks', '/galerie': '/gallery', '/kontakt': '/contact', '/reservierung': '/reservation' },
+      en: { '/menu': '/menu', '/drinks': '/drinks', '/gallery': '/gallery', '/contact': '/contact', '/reservation': '/reservation' }
+    };
+    
+    const langRoutes = routeMappings[language as keyof typeof routeMappings];
+    return langRoutes?.[pathname as keyof typeof langRoutes] || pathname;
+  }
 
   useEffect(() => {
     const handleScroll = () => {
@@ -32,8 +49,9 @@ export default function Header() {
   }
 
   const changeLanguage = (lang: "en" | "es" | "ca" | "fr" | "it" | "de" ) => {
-    setLanguage(lang)
-    setIsLanguageOpen(false)
+    const currentInternalRoute = getCurrentInternalRoute();
+    changeLanguageAndRoute(lang, currentInternalRoute);
+    setIsLanguageOpen(false);
   }
 
   const languageNames = {
@@ -73,29 +91,29 @@ export default function Header() {
               {t("nav.home")}
             </Link>
             <Link
-              href="/menu"
-              className={`text-sm font-medium transition-colors hover:text-brand ${pathname === "/menu" ? "text-brand" : "text-primary"}`}
+              href={getLocalizedRoute('/menu')}
+              className={`text-sm font-medium transition-colors hover:text-brand ${pathname === getLocalizedRoute('/menu') ? "text-brand" : "text-primary"}`}
             >
               {t("nav.menu")}
             </Link>
             <Link
-              href="/drinks"
-              className={`text-sm font-medium transition-colors hover:text-brand ${pathname === "/drinks" ? "text-brand" : "text-primary"}`}
+              href={getLocalizedRoute('/drinks')}
+              className={`text-sm font-medium transition-colors hover:text-brand ${pathname === getLocalizedRoute('/drinks') ? "text-brand" : "text-primary"}`}
             >
                {t("nav.drinks")}
             </Link>
             <Link
-              href="/gallery"
-              className={`text-sm font-medium transition-colors hover:text-brand ${pathname === "/gallery" ? "text-brand" : "text-primary"}`}
+              href={getLocalizedRoute('/gallery')}
+              className={`text-sm font-medium transition-colors hover:text-brand ${pathname === getLocalizedRoute('/gallery') ? "text-brand" : "text-primary"}`}
             >
               {t("nav.gallery")}
             </Link>
-            {<Link
-              href="/contact"
-              className={`text-sm font-medium transition-colors hover:text-brand ${pathname === "/contact" ? "text-brand" : "text-primary"}`}
+            <Link
+              href={getLocalizedRoute('/contact')}
+              className={`text-sm font-medium transition-colors hover:text-brand ${pathname === getLocalizedRoute('/contact') ? "text-brand" : "text-primary"}`}
             >
               {t("nav.contact")}
-            </Link>}
+            </Link>
           </nav>
 
           <div className="hidden md:flex items-center space-x-4">
@@ -128,7 +146,7 @@ export default function Header() {
             </div>
 
             {/* Book a Table Button */}
-            <Link href="/reservation" className="btn-primary">
+            <Link href={getLocalizedRoute('/reservation')} className="btn-primary">
               {t("hero.cta")}
             </Link>
           </div>
@@ -159,33 +177,33 @@ export default function Header() {
               {t("nav.home")}
             </Link>
             <Link
-              href="/menu"
+              href={getLocalizedRoute('/menu')}
               className="block px-3 py-2 rounded-md text-base font-medium text-primary hover:text-brand hover:bg-muted"
               onClick={() => setIsMenuOpen(false)}
             >
               {t("nav.menu")}
             </Link>
             <Link
-              href="/drinks"
+              href={getLocalizedRoute('/drinks')}
               className="block px-3 py-2 rounded-md text-base font-medium text-primary hover:text-brand hover:bg-muted"
               onClick={() => setIsMenuOpen(false)}
             >
               {t("nav.drinks")}
             </Link>
             <Link
-              href="/gallery"
+              href={getLocalizedRoute('/gallery')}
               className="block px-3 py-2 rounded-md text-base font-medium text-primary hover:text-brand hover:bg-muted"
               onClick={() => setIsMenuOpen(false)}
             >
               {t("nav.gallery")}
             </Link>
-           {<Link
-              href="/contact"
+            <Link
+              href={getLocalizedRoute('/contact')}
               className="block px-3 py-2 rounded-md text-base font-medium text-primary hover:text-brand hover:bg-muted"
               onClick={() => setIsMenuOpen(false)}
             >
               {t("nav.contact")}
-            </Link>}
+            </Link>
           </div>
 
           <div className="pt-4 pb-3 border-t border-muted">
@@ -214,7 +232,7 @@ export default function Header() {
             {/* Book a Table Button Mobile */}
             <div className="px-3 py-2">
               <Link
-                href="/reservation"
+                href={getLocalizedRoute('/reservation')}
                 className="block w-full text-center px-3 py-2 rounded-md text-base font-medium text-white bg-brand hover:bg-brand/90"
                 onClick={() => setIsMenuOpen(false)}
               >

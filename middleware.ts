@@ -1,9 +1,99 @@
 import { NextResponse, type NextRequest } from 'next/server';
 
+// Route mappings for different languages
+const routeMappings = {
+  es: {
+    '/menu': '/carta',
+    '/drinks': '/bebidas',
+    '/gallery': '/galeria',
+    '/contact': '/contacto',
+    '/reservation': '/reserva'
+  },
+  ca: {
+    '/menu': '/menu',
+    '/drinks': '/begudes',
+    '/gallery': '/galeria',
+    '/contact': '/contacte',
+    '/reservation': '/reserva'
+  },
+  fr: {
+    '/menu': '/menu',
+    '/drinks': '/boissons',
+    '/gallery': '/galerie',
+    '/contact': '/contact',
+    '/reservation': '/reservation'
+  },
+  it: {
+    '/menu': '/menu',
+    '/drinks': '/bevande',
+    '/gallery': '/galleria',
+    '/contact': '/contatti',
+    '/reservation': '/prenotazione'
+  },
+  de: {
+    '/menu': '/menu',
+    '/drinks': '/getranke',
+    '/gallery': '/galerie',
+    '/contact': '/kontakt',
+    '/reservation': '/reservierung'
+  },
+  en: {
+    '/menu': '/menu',
+    '/drinks': '/drinks',
+    '/gallery': '/gallery',
+    '/contact': '/contact',
+    '/reservation': '/reservation'
+  }
+};
+
+// Reverse mapping to convert localized routes back to internal routes
+const reverseRouteMappings: Record<string, Record<string, string>> = {};
+Object.entries(routeMappings).forEach(([lang, routes]) => {
+  reverseRouteMappings[lang] = {};
+  Object.entries(routes).forEach(([internal, localized]) => {
+    reverseRouteMappings[lang][localized] = internal;
+  });
+});
+
+// Supported languages
+const supportedLanguages = ['es', 'en', 'ca', 'fr', 'it', 'de'];
+
 export function middleware(request: NextRequest) {
+  const pathname = request.nextUrl.pathname;
+  const searchParams = request.nextUrl.searchParams;
+  
+  // Get language from cookie or default to 'es'
+  let language = request.cookies.get('language')?.value || 'es';
+  
+  // Validate language
+  if (!supportedLanguages.includes(language)) {
+    language = 'es';
+  }
+  
+  // Check if we're on a localized route and need to redirect to internal route
+  const localizedRoutes = reverseRouteMappings[language];
+  if (localizedRoutes && localizedRoutes[pathname]) {
+    const internalRoute = localizedRoutes[pathname];
+    const url = request.nextUrl.clone();
+    url.pathname = internalRoute;
+    
+    // Add language parameter to search params for internal handling
+    url.searchParams.set('lang', language);
+    
+    return NextResponse.rewrite(url);
+  }
+  
   const response = NextResponse.next();
   
-  // Only apply these changes in production environment
+  // Set language cookie if not present
+  if (!request.cookies.get('language')) {
+    response.cookies.set('language', language, {
+      path: '/',
+      maxAge: 60 * 60 * 24 * 365, // 1 year
+    });
+  }
+  
+  // Only apply cache changes in production environment
   if (process.env.NODE_ENV === 'production') {
     // Remove noindex header to allow search engines to index the site
     response.headers.delete('x-robots-tag');

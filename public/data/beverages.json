@@ -740,53 +740,53 @@
         },
 
 {
-          "id": "sangria-de-vino",
+          "id": "sangría-de-vino",
           "name": {
-            "en": "Wine Sangria",
+            "en": "Wine Sangría",
             "es": "Sangría de vino",
-            "ca": "Sangria de vi",
-            "fr": "Sangria de vin",
-            "it": "Sangria di vino",
-            "de": "Sangria de vino",
+            "ca": "Sangría de vi",
+            "fr": "Sangría de vin",
+            "it": "Sangría di vino",
+            "de": "Sangría de vino",
             "ru": "Сангрия из вина"
           },
           "description": {
-            "en": "Spanish wine sangria with fruits",
+            "en": "Spanish wine sangría with fruits",
             "es": "Sangría de vino español con frutas",
-            "ca": "Sangria de vi espanyol amb fruites",
-            "fr": "Sangria de vin espagnol avec des fruits",
-            "it": "Sangria di vino spagnolo con frutta",
-            "de": "Spanische Weinsangria mit Früchten",
+            "ca": "Sangría de vi espanyol amb fruites",
+            "fr": "Sangría de vin espagnol avec des fruits",
+            "it": "Sangría di vino spagnolo con frutta",
+            "de": "Spanische Weinsangría mit Früchten",
             "ru": "Испанская сангрия из вина с фруктами"
           },
           "price": "15,00",
           "categoryId": "bebidas",
-          "subcategoryId": "Sangrias",
+          "subcategoryId": "Sangrías",
           "image": "/images/drinks/beverages/sangria-vino.jpg"
         },
 {
-          "id": "sangria-de-cava",
+          "id": "sangría-de-cava",
           "name": {
-            "en": "Cava Sangria",
+            "en": "Cava Sangría",
             "es": "Sangría de cava",
-            "ca": "Sangria de cava",
-            "fr": "Sangria de cava",
-            "it": "Sangria di cava",
-            "de": "Sangria de cava",
+            "ca": "Sangría de cava",
+            "fr": "Sangría de cava",
+            "it": "Sangría di cava",
+            "de": "Sangría de cava",
             "ru": "Сангрия из кавы"
           },
           "description": {
-            "en": "Spanish cava sangria with fruits",
+            "en": "Spanish cava sangría with fruits",
             "es": "Sangría de cava español con frutas",
-            "ca": "Sangria de cava espanyol amb fruites",
-            "fr": "Sangria de cava espagnol avec des fruits",
-            "it": "Sangria di cava spagnolo con frutta",
-            "de": "Spanische Cava-Sangria mit Früchten",
+            "ca": "Sangría de cava espanyol amb fruites",
+            "fr": "Sangría de cava espagnol avec des fruits",
+            "it": "Sangría di cava spagnolo con frutta",
+            "de": "Spanische Cava-Sangría mit Früchten",
             "ru": "Испанская сангрия из кавы с фруктами"
           },
           "price": "16,00",
           "categoryId": "bebidas",
-          "subcategoryId": "Sangrias",
+          "subcategoryId": "Sangrías",
           "image": "/images/drinks/beverages/sangria-cava.jpg"
         },
 

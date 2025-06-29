@@ -4,6 +4,7 @@ import { useState } from "react"
 import Image from "next/image"
 import Link from "next/link"
 import { useLanguage } from "@/context/language-context"
+import { useLocalizedRoutes } from "@/hooks/use-localized-routes"
 import { X, ChevronLeft, ChevronRight } from "lucide-react"
 
 interface GalleryProps {
@@ -12,6 +13,7 @@ interface GalleryProps {
 
 export default function Gallery({ preview = false }: GalleryProps) {
   const { t } = useLanguage()
+  const { getLocalizedRoute } = useLocalizedRoutes()
   const [selectedImage, setSelectedImage] = useState<number | null>(null)
 
   const images = [
@@ -164,8 +166,8 @@ export default function Gallery({ preview = false }: GalleryProps) {
 
         {preview && (
           <div className="text-center mt-12">
-            <Link href="/gallery" className="btn-secondary">
-            {t("gallery.button")}
+            <Link href={getLocalizedRoute('/gallery')} className="btn-secondary">
+              {t("gallery.button")}
             </Link>
           </div>
         )}

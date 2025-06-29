@@ -1,10 +1,12 @@
 "use client"
 
 import { useLanguage } from "@/context/language-context"
+import { useLocalizedRoutes } from "@/hooks/use-localized-routes"
 import Link from "next/link"
 
 export default function ReservationCTA() {
   const { t } = useLanguage()
+  const { getLocalizedRoute } = useLocalizedRoutes()
 
   return (
     <section className="py-16 bg-brand text-white">
@@ -14,7 +16,7 @@ export default function ReservationCTA() {
         {t("reservation.description")}
         </p>
         <Link
-          href="/reservation"
+          href={getLocalizedRoute('/reservation')}
           className="inline-flex items-center justify-center px-8 py-4 text-base font-medium text-brand bg-white rounded-md hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-brand transition-colors"
         >
           {t("hero.cta")}
